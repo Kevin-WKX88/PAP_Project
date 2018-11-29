@@ -7,10 +7,7 @@ Le code devra être commenté en utilisant la syntaxe de **Doxygen**.
 Le rapport sera écrit en LATEX et inclura les choix, les problèmes techniques qui se posent et les solutions trouvées (la conception (dont un diagramme UML complet) et réalisation).
 
 # Instalation 
-cd libpng-1.6.35
-./configure
-make check
-make install
+brew install libpng
 
 # Language 
 + C++
