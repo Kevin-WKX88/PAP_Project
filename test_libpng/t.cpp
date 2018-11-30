@@ -1,18 +1,24 @@
-//============================================================================
-// Name        : Projet_PAP.cpp
-// Author      : Kevin XU & Ziheng LI
-// Version     :
-// Copyright   : Your copyright notice
-// Description : PAP Project - Courbes de Bézier et police de caractères
-//============================================================================
 
-#include <iostream>
-using namespace std;
+/*
+ * A simple libpng example program
+ * http://zarb.org/~gc/html/libpng.html
+ *
+ * Modified by Yoshimasa Niwa to make it much simpler
+ * and support all defined color_type.
+ *
+ * To build, use the next instruction on OS X.
+ * $ brew install libpng
+ * $ clang -lz -lpng15 libpng_test.c
+ *
+ * Copyright 2002-2010 Guillaume Cottenceau.
+ *
+ * This software may be freely redistributed under the terms
+ * of the X11 license.
+ *
+ */
 
-//int main() {
-//	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-//	return 0;
-//}
+#include<iostream>
+#include <stdlib.h>
 
 #include <png.h>
 
@@ -99,7 +105,7 @@ void write_png_file(char *filename) {
   png_init_io(png, fp);
 
   // Output is 8bit depth, RGBA format.
-
+  
 
   png_set_IHDR(
     png,
@@ -144,7 +150,7 @@ void process_png_file() {
 int main(int argc, char *argv[]) {
  // if(argc != 3) abort();
 
-
+    
   read_png_file(argv[1]);
    process_png_file();
   write_png_file(argv[2]);
