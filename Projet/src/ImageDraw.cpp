@@ -1,46 +1,47 @@
 /*!
- * \file Point.h
+ * \file Image.h
  * \brief Class Point
  * \author Kevin XU
  * \date 30 Novembre 2018
  */
 
-#ifndef POINT_H_
-#define POINT_H_
+#ifndef IMAGE_H_
+#define IMAGE_H_
 
-#include <iostream>
+#include <stdlib.h>
+#include <png.h>
 
-class Point {
+class Image {
 	private:
-		int x_;
-		int y_;
+		FILE *fp;
+		char *title;
+		png_structp png_ptr;
+		png_infop info_ptr;
+		int width;
+		int height;
+		png_byte color_type = PNG_COLOR_TYPE_RGB;
+		png_byte bit_depth = 8;
 
 	public:
-		Point();
+		Image();
 		/**
 		 * @brief Valued constructor
 		 * @param x An int
 		 * @param y An int
 		 */
-		Point(int x, int y);
+		Image(int x, int y);
 
 		/**
 		 * @brief Copy-constructor
 		 * @param P Point
 		 */
-		Point(const Point &P);
+		Image(const Image &P);
 
 		/**
 		 * @brief Getter for x
 		 * @return return x
 		 */
 		int get_x() const;
-
-		/**
-		 * @brief Getter for y
-		 * @return return y
-		 */
-		int get_y() const;
 
 		/**
 		 * @brief Setter for x
@@ -55,6 +56,4 @@ class Point {
 		void set_y(int y);
 };
 
-std::ostream & operator <<(std::ostream & out, const Point & P);
-
-#endif /* POINT_H_ */
+#endif /* IMAGE_H_ */

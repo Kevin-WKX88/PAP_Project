@@ -13,10 +13,10 @@ all : $(BINDIR)/$(PROG)
 $(OBJDIR)/main.o : $(SRCDIR)/main.cpp
 	$(CC) -c $< -o $@
 
-#$(OBJDIR)/Tuiles.o : $(SRCDIR)/Tuiles.c $(SRCDIR)/Tuiles.h
-#	$(CC) -c $< -o $@
+$(OBJDIR)/Point.o : $(SRCDIR)/Point.cpp $(SRCDIR)/Point.h
+	$(CC) -c $< -o $@
 
-$(BINDIR)/$(PROG) : $(OBJDIR)/main.o 
+$(BINDIR)/$(PROG) : $(OBJDIR)/main.o $(OBJDIR)/Point.o
 	g++ $(CC_LIBPNG) $^ -o $@ 
 
 #TEST UNITAIRE

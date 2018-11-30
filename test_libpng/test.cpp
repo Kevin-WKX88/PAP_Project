@@ -159,46 +159,6 @@ void process_png_file() {
       px[1] =0;
       px[2] =0;
   }
-
-  for(int y = 0; y < height; y++) {
-    png_bytep row = row_pointers[y];
-      png_bytep px = &(row[200 * 4]);
-      // Do something awesome for each pixel here...
-      px[0] =0;
-      px[1] =0;
-      px[2] =0;
-  }
-
-   for(int x = 0; x < width; x++) {
-    png_bytep row = row_pointers[100];
-      png_bytep px = &(row[x * 4]);
-      // Do something awesome for each pixel here...
-      px[0] =0;
-      px[1] =0;
-      px[2] =0;
-  }
-
-
-  for(int y = 0; y < height; y++) {
-    png_bytep row = row_pointers[y];
-    for(int x = 20; x < 100; x++) {
-      png_bytep px = &(row[x * 4]);
-      // Do something awesome for each pixel here...
-      px[0] =0;
-      px[2] =0;
-    }
-  }
-
-  for(int y = 50; y < 70; y++) {
-    png_bytep row = row_pointers[y];
-    for(int x = 0; x < width; x++) {
-      png_bytep px = &(row[x * 4]);
-      // Do something awesome for each pixel here...
-      px[0] =0;
-      px[1] =0;
-      px[2] =255;
-    }
-  }
 }
 
 void drawPixel() {
@@ -210,10 +170,12 @@ int main(int argc, char *argv[]) {
  // if(argc != 3) abort();
 
     
-  read_png_file(argv[1]);
-   process_png_file();
-  write_png_file(argv[2]);
-    std::cout<<"weight: "<<width<<std::endl<<"heignt: "<<height<<std::endl;
+    read_png_file(argv[1]);
+    process_png_file();
+    write_png_file(argv[2]);
+    std::cout<<"weight: "<<width<<std::endl<<"height: "<<height<<std::endl;
+
+    
 
   return 0;
 }
