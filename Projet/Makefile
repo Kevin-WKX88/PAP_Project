@@ -17,7 +17,7 @@ $(OBJDIR)/main.o : $(SRCDIR)/main.cpp
 #	$(CC) -c $< -o $@
 
 $(BINDIR)/$(PROG) : $(OBJDIR)/main.o 
-	$(CC) $(CC_LIBPNG) $^ -o $@ 
+	g++ $(CC_LIBPNG) $^ -o $@ 
 
 #TEST UNITAIRE
 # $(OBJDIR)/test.o: $(TESTDIR)/test.c
@@ -32,6 +32,3 @@ $(BINDIR)/$(PROG) : $(OBJDIR)/main.o
 clean :
 	rm -rf $(OBJDIR)/*.o
 	rm -rf $(BINDIR)/$(PROG)
-	# rm -rf $(TESTDIR)/test
-	# rm -rf doc/html
-	# rm -rf doc/latex

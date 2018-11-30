@@ -141,13 +141,13 @@ void process_png_file() {
   }
 }
 
-int main(int argc, char *argv[]) {
+int main() {
  // if(argc != 3) abort();
 
 
-  read_png_file(argv[1]);
+  read_png_file("test.png");
    process_png_file();
-  write_png_file(argv[2]);
+  write_png_file("test2.png");
     std::cout<<"weight: "<<width<<std::endl<<"heignt: "<<height<<std::endl;
 
   return 0;

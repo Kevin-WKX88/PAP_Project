@@ -24,8 +24,9 @@ sudo ln -s libpng15.dylib ./libpng15.15.dylib
 g++ `libpng-config --cflags --ldflags` file.cpp
 
 # Makefile
+Depuis Eclipse : Problème ...
 https://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.cdt.doc.user%2Fgetting_started%2Fcdt_w_import.htm
-make
+make DEPUIS terminal
 
 # Language 
 + C++
