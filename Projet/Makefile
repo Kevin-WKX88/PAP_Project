@@ -16,7 +16,10 @@ $(OBJDIR)/main.o : $(SRCDIR)/main.cpp
 $(OBJDIR)/Point.o : $(SRCDIR)/Point.cpp $(SRCDIR)/Point.h
 	$(CC) -c $< -o $@
 
-$(BINDIR)/$(PROG) : $(OBJDIR)/main.o $(OBJDIR)/Point.o
+$(OBJDIR)/Image.o : $(SRCDIR)/Image.cpp $(SRCDIR)/Image.h
+	$(CC) -c $< -o $@
+
+$(BINDIR)/$(PROG) : $(OBJDIR)/main.o $(OBJDIR)/Point.o $(OBJDIR)/Image.o
 	g++ $(CC_LIBPNG) $^ -o $@ 
 
 #TEST UNITAIRE
