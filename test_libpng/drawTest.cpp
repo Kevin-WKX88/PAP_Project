@@ -88,6 +88,50 @@ int main(int argc, char *argv[]) {
   	}
 
 
+  	// en diagonale
+  	int x = 250;
+  	int c = 0;
+  	for(int y = 100; y < 200; y++) {
+  		c++;
+  		if (c%10 == 0) {
+  			x++;
+  		}
+	    png_bytep row = row_pointers[y];
+		png_bytep px = &(row[x * 3]);
+		px[0] = 255;
+		px[1] = 0;
+		px[2] = 255;
+  	}
+
+  	// en diagonale
+  	x = 0;
+  	c = 0;
+  	for(int y = 300; y < 500; y++) {
+  		c++;
+  		if (c%1 == 0) {
+  			x++;
+  		}
+	    png_bytep row = row_pointers[y];
+		png_bytep px = &(row[x * 3]);
+		px[0] = 255;
+		px[1] = 0;
+		px[2] = 255;
+  	}
+
+  	x = 500;
+  	c = 0;
+  	for(int y = 200; y < 450; y++) {
+  		c++;
+  		if (c%2 == 0) {
+  			x--;
+  		}
+	    png_bytep row = row_pointers[y];
+		png_bytep px = &(row[x * 3]);
+		px[0] = 255;
+		px[1] = 0;
+		px[2] = 255;
+  	}
+
 
 	// If you don’t want to write the whole image at once,
 	// png_write_rows(png_ptr, row_pointers, number_of_rows);
