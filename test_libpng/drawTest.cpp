@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include <png.h>
+#include <cmath>
 
 
 int main(int argc, char *argv[]) {
@@ -131,6 +132,122 @@ int main(int argc, char *argv[]) {
 		px[1] = 0;
 		px[2] = 255;
   	}
+
+
+  	x = 800;
+  	c = 0;
+  	for(int y = 200; y < 450; y++) {
+  		c++;
+  		if (c%2 == 0) {
+  			x--;
+  		}
+	    png_bytep row = row_pointers[y];
+		png_bytep px = &(row[x * 3]);
+		px[0] = 255;
+		px[1] = 0;
+		px[2] = 255;
+  	}
+
+
+
+
+
+
+
+
+
+
+
+
+  	// TEST DE CLASS IMAGE -> DRAW LINE
+  	int x1 = 1;
+  	int x2 = 380;
+  	int y1 = 1;
+  	int y2 = 499;
+  	int coef = double(y2-y1)/double(x2-x1) - (y2-y1)/(x2-x1) > 0.5 ? (y2-y1)/(x2-x1) + 1 : (y2-y1)/(x2-x1);
+  	int step = 0;
+
+  // 	std::cout << "taux = " << coef << std::endl;
+  // 	for(int y = y1; y < y2; ) {
+  // 		step++;
+  // 		if (step%coef == 0) {
+  // 			if (abs(y2-y) + abs(x2-(x1+1)) < abs(y2-(y+1)) + abs(x2-x1)) {
+	 //  			x1++;
+	 //  		}
+	 //  		else if (abs(y2-y) + abs(x2-(x1+1)) == abs(y2-(y+1)) + abs(x2-x1)){
+	 //  			x1++;
+	 //  			y++;
+	 //  		}
+	 //  		else {
+	 //  			y++;
+	 //  		}
+  // 		}
+  // 		else {
+  // 			y++;
+  // 		}
+  		
+
+	 //    png_bytep row = row_pointers[y];
+		// png_bytep px = &(row[x1 * 3]);
+		// px[0] = 0;
+		// px[1] = 0;
+		// px[2] = 0;
+  // 	}
+
+
+  	// IF X2-X1 > Y2-Y1
+  	x1 = 1;
+	x2 = 350;
+	y1 = 1;
+	y2 = 50;
+	x = x1;
+  	double h = sqrt(pow(y2-y1, 2) + pow(x2-x1, 2))/double(std::min(x2-x1+1, y2-y1+1));
+  	  	std::cout << "h = " << h << std::endl;
+
+  	step = 0;
+  	int n = 1;
+  	int y = y1;
+  	while (y < y2 || x < x2) {
+  	  	std::cout << "taille = " << sqrt(pow(y1-y, 2) + pow(x1-x, 2)) << std::endl;
+	  	std::cout << "n = " << n << std::endl;
+
+  		if (abs(sqrt(pow(y1-y, 2) + pow(x1-x, 2)) - (h*n)) < 1) {
+  			if (x2-x1+1 < y2-y1+1) {
+  				x++;
+  			}
+  			else {
+  				y++;
+  			}
+  			//x++;
+  			n++;
+		  	std::cout << "x = " << x << " y = " << y << std::endl;
+
+  		}
+  		else {
+  			if (x2-x1+1 < y2-y1+1) {
+  				y++;
+  			}
+  			else {
+  				x++;
+  			}
+  		}
+	    png_bytep row = row_pointers[y];
+		png_bytep px = &(row[x * 3]);
+		px[0] = 0;
+		px[1] = 0;
+		px[2] = 0;
+  	}
+	std::cout << "x = " << x << " y = " << y << std::endl;
+
+
+
+
+
+
+
+
+
+
 
 
 	// If you don’t want to write the whole image at once,

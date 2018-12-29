@@ -5,10 +5,8 @@
  * \date 30 Novembre 2018
  */
 
-#include "Image.h"
 #include <iostream>
-
-//Image::Image();
+#include "Image.h"
 
 Image::Image(char* fileName, int width, int height) {
 	// File creation
@@ -63,14 +61,15 @@ Image::Image(char* fileName, int width, int height) {
 	);
 	png_write_info(pngPtr_, infoPtr_);
 
-	rowPointers_ = (png_bytep*) malloc(height_ * sizeof(png_bytep));
+	pixels_ = (png_bytep*) malloc(height_ * sizeof(png_bytep));
 	// Allocate memory for one row (3 bytes per pixel - RGB)
 	for (int y = 0; y < height_; y++) {
-    	rowPointers_[y] = (png_byte*) malloc(3 * width_ * sizeof(png_byte));
+    	pixels_[y] = (png_byte*) malloc(3 * width_ * sizeof(png_byte));
   	}
 
+  	// Set white background
   	for(int y = 0; y < height_; y++) {
-	    png_bytep row = rowPointers_[y];
+	    png_bytep row = pixels_[y];
 	    for(int x = 0; x < width_; x++) {
 			png_bytep px = &(row[x * 3]);
 			px[0] = 255;
@@ -85,9 +84,9 @@ Image::Image(char* fileName, int width, int height) {
 Image::~Image() {
 	// Freeing memory and closing
   	for(int y = 0; y < height_; y++) {
-	    free(rowPointers_[y]);
+	    free(pixels_[y]);
 	  }
-  	free(rowPointers_);
+  	free(pixels_);
   	fclose(fp_);
   	if (pngPtr_ && infoPtr_) {
         png_destroy_write_struct(&pngPtr_, &infoPtr_);
@@ -95,9 +94,22 @@ Image::~Image() {
 }
 
 void Image::writeImage() {
-	png_write_image(pngPtr_, rowPointers_);
+	png_write_image(pngPtr_, pixels_);
   	png_write_end(pngPtr_, NULL);
 }
+
+png_bytep* Image::getPixels() const {
+	return pixels_;
+}
+
+void Image::draw(Line L) {
+	Point P1 = L.getP1();
+	Point P2 = L.getP2();
+
+	// Test of bounds ?
+	
+}
+
 
 
 

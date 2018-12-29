@@ -10,6 +10,7 @@
 
 #include <stdlib.h>
 #include <png.h>
+#include "Line.h"
 
 class Image {
 	private:
@@ -21,15 +22,15 @@ class Image {
 		int height_;
 		static const png_byte colorType_ = PNG_COLOR_TYPE_RGB;
 		static const png_byte bitDepth_ = 8;
-		png_bytep *rowPointers_;
+		png_bytep *pixels_;
 		//int backgroundRGB_[3];
 
 	public:
 		//Image();
 		/**
 		 * @brief Valued constructor
-		 * @param x An int
-		 * @param y An int
+		 * @param x coordinate
+		 * @param y coordinate
 		 */
 		Image(char* fileName, int width, int height);
 
@@ -48,6 +49,27 @@ class Image {
 		 * @brief Produce the image
 		 */
 		void writeImage();
+
+		/**
+		 * @brief Getter for pixels_
+		 * @return the pixels_ ponter
+		 */
+		png_bytep* getPixels() const;
+
+		/**
+		 * @brief Setter for pixels_
+		 * @param pixels the pixels of the image
+		 */
+		//void setPixels(png_bytep *pixels); // PAS BESOIN car pointeur
+
+		// Draw methods
+
+		/**
+		 * @brief Draw the line L
+		 * @details Modify the pixels on the image to draw a line
+		 * @param L The line to draw
+		 */
+		void draw(Line L);
 };
 
 #endif /* IMAGE_H_ */

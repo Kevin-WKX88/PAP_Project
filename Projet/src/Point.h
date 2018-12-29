@@ -32,29 +32,43 @@ class Point {
 
 		/**
 		 * @brief Getter for x
-		 * @return return x
+		 * @return x_
 		 */
-		int get_x() const;
+		int getX() const;
 
 		/**
-		 * @brief Getter for y
-		 * @return return y
+		 * @brief Getter for y_
+		 * @return y_
 		 */
-		int get_y() const;
+		int getY() const;
 
 		/**
-		 * @brief Setter for x
-		 * @param x A int
+		 * @brief Setter for x_
+		 * @param x 
 		 */
-		void set_x(int x);
+		void setX(int x);
 
 		/**
-		 * @brief Setter for y
-		 * @param y A int
+		 * @brief Setter for y_
+		 * @param y 
 		 */
-		void set_y(int y);
+		void setY(int y);
+
+		/**
+		 * @brief Euclidian distance between two points
+		 * @param P The other point
+		 * @param n The dimension of the scalar product
+		 * @return The euclidian distance
+		 */
+		double dist(Point P, int n = 2);
 };
 
+/**
+ * @brief Overload of the operator <<
+ * @param out the output stream
+ * @param P 
+ * @return out
+ */
 std::ostream & operator <<(std::ostream & out, const Point & P);
 
 #endif /* POINT_H_ */
