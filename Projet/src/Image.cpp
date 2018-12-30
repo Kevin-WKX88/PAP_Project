@@ -137,7 +137,6 @@ void Image::draw(Line L) {
   						}
   					}
   					else {
-  						// vecteur oblique proche de la verticale, dans le 2d octant
   						int e = dy; // e > 0
   						dy *= 2;
   						dx *= 2;
