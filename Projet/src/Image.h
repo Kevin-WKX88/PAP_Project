@@ -64,7 +64,14 @@ class Image {
 
 		// Draw methods
 		/**
-		 * @brief Draw the line L
+		 * @brief Draw a point P
+		 * @details Modify the pixels on the image to draw a point
+		 * @param P the point to draw
+		 */
+		void draw(Point P);
+		
+		/**
+		 * @brief Draw a line L
 		 * @details Modify the pixels on the image to draw a line
 		 * @param L The line to draw
 		 */

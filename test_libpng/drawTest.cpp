@@ -563,7 +563,10 @@ for (int k = 0; k<5; k++) {
  
 
 
-
+	png_bytep px = &(row_pointers[1][488 * 3]);
+	px[0] = 0;
+	px[1] = 0;
+	px[2] = 0;
 
 	// If you don’t want to write the whole image at once,
 	// png_write_rows(png_ptr, row_pointers, number_of_rows);

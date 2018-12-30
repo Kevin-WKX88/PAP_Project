@@ -102,6 +102,14 @@ png_bytep* Image::getPixels() const {
 	return pixels_;
 }
 
+void Image::draw(Point P) {
+	png_bytep px = &(pixels_[P.getY()][P.getX() * 3]);
+	unsigned int *color = P.getColor();
+	px[0] = color[0];
+	px[1] = color[1];
+	px[2] = color[2];
+}
+
 void Image::draw(Line L) {
   	int x1 = L.getP1().getX();
   	int y1 = L.getP1().getY();

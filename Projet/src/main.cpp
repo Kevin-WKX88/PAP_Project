@@ -57,6 +57,10 @@ int main() {
     img.draw(L3);
 
 
+    // draw Point
+    Point P7(1, 1);
+    img.draw(P7); 
+
 
 
   	//img.setPixels(pixels);

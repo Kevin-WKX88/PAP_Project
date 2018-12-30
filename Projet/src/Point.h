@@ -14,6 +14,7 @@ class Point {
 	private:
 		int x_;
 		int y_;
+		unsigned int *color_;
 
 	public:
 		Point();
@@ -22,13 +23,18 @@ class Point {
 		 * @param x An int
 		 * @param y An int
 		 */
-		Point(int x, int y);
+		Point(int x, int y, unsigned int R = 0, unsigned int G = 0, unsigned int B = 0);
 
 		/**
 		 * @brief Copy-constructor
 		 * @param P Point
 		 */
 		Point(const Point &P);
+
+		/**
+		 * @brief Destructor
+		 */
+		~Point();
 
 		/**
 		 * @brief Getter for x
@@ -53,6 +59,13 @@ class Point {
 		 * @param y 
 		 */
 		void setY(int y);
+
+		/**
+		 * @brief Getter for color_
+		 * @return color_
+		 */
+		unsigned int* getColor();
+
 
 		/**
 		 * @brief Euclidian distance between two points
