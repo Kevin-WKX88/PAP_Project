@@ -127,12 +127,7 @@ void Image::draw(Line L) {
   						dx *= 2;
   						dy *= 2;
   						while (1) {
-  							png_bytep row = pixels_[y1];
-							png_bytep px = &(row[x1 * 3]);
-							px[0] = 0;
-							px[1] = 255;
-							px[2] = 0;
-
+							draw(Point(x1, y1));
 							if (x1++ == x2) break;
 							e -= dy;
 							if (e < 0) {
@@ -147,12 +142,7 @@ void Image::draw(Line L) {
   						dy *= 2;
   						dx *= 2;
   						while (1) {
-  							png_bytep row = pixels_[y1];
-							png_bytep px = &(row[x1 * 3]);
-							px[0] = 0;
-							px[1] = 255;
-							px[2] = 0;
-
+							draw(Point(x1, y1));
 							if (y1++ == y2) break;
 							if ((e -= dx) < 0) {
 								x1++;
@@ -167,12 +157,7 @@ void Image::draw(Line L) {
   						dx *= 2;
   						dy *= 2;
   						while (1) {
-  							png_bytep row = pixels_[y1];
-							png_bytep px = &(row[x1 * 3]);
-							px[0] = 0;
-							px[1] = 255;
-							px[2] = 0;
-
+							draw(Point(x1, y1));
 							if (x1++ == x2) break;
 							if ((e += dy) < 0) {
 								y1--;
@@ -186,12 +171,7 @@ void Image::draw(Line L) {
   						dy *= 2;
 
   						while (1) {
-  							png_bytep row = pixels_[y1];
-							png_bytep px = &(row[x1 * 3]);
-							px[0] = 0;
-							px[1] = 255;
-							px[2] = 0;
-
+							draw(Point(x1, y1));
 							if (y1-- == y2) break;
 							if ((e += dx) > 0) {
 								x1++;
@@ -205,11 +185,7 @@ void Image::draw(Line L) {
   			else { // dy == 0 && dx > 0
 				// vector horizontal vers la droite
 				do {
-					png_bytep row = pixels_[y1];
-					png_bytep px = &(row[x1 * 3]);
-					px[0] = 0;
-					px[1] = 255;
-					px[2] = 0;
+					draw(Point(x1, y1));
 				} while (++x1 != x2); 
 			}
   		}
@@ -222,12 +198,7 @@ void Image::draw(Line L) {
   						dy *= 2;
 
   						while (1) {
-  							png_bytep row = pixels_[y1];
-							png_bytep px = &(row[x1 * 3]);
-							px[0] = 0;
-							px[1] = 255;
-							px[2] = 0;
-
+  							draw(Point(x1, y1));
 							if (x1-- == x2) break;
   							if ((e += dy) >= 0) {
   								y1++;
@@ -241,12 +212,7 @@ void Image::draw(Line L) {
   						dy *= 2;
 
   						while (1) {
-  							png_bytep row = pixels_[y1];
-							png_bytep px = &(row[x1 * 3]);
-							px[0] = 0;
-							px[1] = 255;
-							px[2] = 0;
-
+  							draw(Point(x1, y1));
 							if (y1++ == y2) break;
   							if ((e += dx) <= 0) {
   								x1--;
@@ -261,12 +227,7 @@ void Image::draw(Line L) {
   						dx *= 2;
   						dy *= 2;
   						while (1) {
-  							png_bytep row = pixels_[y1];
-							png_bytep px = &(row[x1 * 3]);
-							px[0] = 0;
-							px[1] = 255;
-							px[2] = 0;
-
+  							draw(Point(x1, y1));
 							if (x1-- == x2) break;
 							if ((e -= dy) >= 0) {
 								y1--;
@@ -279,12 +240,7 @@ void Image::draw(Line L) {
   						dx *= 2;
   						dy *= 2;
   						while (1) {
-  							png_bytep row = pixels_[y1];
-							png_bytep px = &(row[x1 * 3]);
-							px[0] = 0;
-							px[1] = 255;
-							px[2] = 0;
-
+  							draw(Point(x1, y1));
 							if (y1-- == y2) break;
 							if ((e -= dx) >= 0) {
 								x1--;
@@ -296,11 +252,7 @@ void Image::draw(Line L) {
   			}
   			else { //dy == 0 && dx < 0
   				do {
-					png_bytep row = pixels_[y1];
-					png_bytep px = &(row[x1 * 3]);
-					px[0] = 0;
-					px[1] = 255;
-					px[2] = 0;
+  					draw(Point(x1, y1));
 				} while (--x1 != x2);
   			}
   		}
@@ -309,20 +261,12 @@ void Image::draw(Line L) {
   		if (dy != 0) {
   			if (dy > 0) {
   				do {
-  					png_bytep row = pixels_[y1];
-					png_bytep px = &(row[x1 * 3]);
-					px[0] = 0;
-					px[1] = 255;
-					px[2] = 0;
+  					draw(Point(x1, y1));
   				} while (++y1 != y2);
   			}
   			else { // dy < 0 && dx == 0
   				do {
-  					png_bytep row = pixels_[y1];
-					png_bytep px = &(row[x1 * 3]);
-					px[0] = 0;
-					px[1] = 255;
-					px[2] = 0;
+  					draw(Point(x1, y1));
   				} while (--y1 != y2);
   			}
   		}
@@ -331,24 +275,15 @@ void Image::draw(Line L) {
 }
 
 void Image::drawStraightLine(Line L) {
-	unsigned int *color = L.getColor();
-
 	if (L.getP1().getX() == L.getP2().getX()) {
 		for (int y = L.getP1().getY(); y < L.getP2().getY(); y++) {
-		    png_bytep row = pixels_[y];
-			png_bytep px = &(row[L.getP1().getX() * 3]);
-			px[0] = color[0];
-			px[1] = color[1];
-			px[2] = color[2];
+			draw(Point(L.getP1().getX(), y));
   		}
 	}
 	else {
-		png_bytep row = pixels_[L.getP1().getY()];
+		int y = L.getP1().getY();
 		for (int x = L.getP1().getX(); x < L.getP2().getX(); x++) {
-			png_bytep px = &(row[x * 3]);
-			px[0] = color[0];
-			px[1] = color[1];
-			px[2] = color[2];
+			draw(Point(x, y));
   		}
 	}
 }
