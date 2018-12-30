@@ -16,13 +16,16 @@ $(OBJDIR)/main.o : $(SRCDIR)/main.cpp
 $(OBJDIR)/Point.o : $(SRCDIR)/Point.cpp $(SRCDIR)/Point.h
 	$(CC) -c $< -o $@
 
+$(OBJDIR)/BezierCurve.o : $(SRCDIR)/BezierCurve.cpp $(SRCDIR)/BezierCurve.h
+	$(CC) -c $< -o $@
+
 $(OBJDIR)/Line.o : $(SRCDIR)/Line.cpp $(SRCDIR)/Line.h
 	$(CC) -c $< -o $@
 
 $(OBJDIR)/Image.o : $(SRCDIR)/Image.cpp $(SRCDIR)/Image.h
 	$(CC) -c $< -o $@
 
-$(BINDIR)/$(PROG) : $(OBJDIR)/main.o $(OBJDIR)/Point.o $(OBJDIR)/Line.o $(OBJDIR)/Image.o 
+$(BINDIR)/$(PROG) : $(OBJDIR)/main.o $(OBJDIR)/Point.o $(OBJDIR)/Line.o $(OBJDIR)/Image.o $(OBJDIR)/BezierCurve.o
 	g++ $(CC_LIBPNG) $^ -o $@ 
 
 #TEST UNITAIRE
