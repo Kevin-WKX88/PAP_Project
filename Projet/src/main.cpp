@@ -12,7 +12,30 @@
 #include "Image.h"
 #include "Line.h"
 
-//using namespace std;
+#include <vector>
+#include <cmath>
+
+Point getCJPoint(int r, int index, double t, std::vector<Point> points) {
+	if (r == 0) return points[index];
+	Point P1 = getCJPoint(r-1, index, t, points);
+	Point P2 = getCJPoint(r-1, index+1, t, points);
+	return Point(round((1-t) * P1.getX() + t * P2.getX()), round((1-t) * P1.getY() + t * P2.getY()));
+}
+
+std::vector<Point> drawCJ(std::vector<Point> points) {
+	std::vector<Point> res;
+	for (double t = 0.0; t <= 1; t+=0.00001) {
+		Point P = getCJPoint(points.size() - 1, 0, t, points);
+		res.push_back(P);
+	}
+	return res;
+}
+
+
+Point CJquadratic(Point P1, Point P2, Point P3) {
+
+}
+
 
 int main() {
     std::cout << "!!!Hello World!!!" << std::endl;
@@ -38,10 +61,10 @@ int main() {
 
   	// Test horizontal line 
     Point P1(2500, 10);
-    Point P2(2500, 4500);
-  	Line L1(P1, P2);
-    std::cout << L1 << std::endl;
-    img.drawStraightLine(L1);
+    Point P2(2500, 4999);
+  	// Line L1(P1, P2);
+   //  std::cout << L1 << std::endl;
+   //  img.drawStraightLine(L1);
 
   	// Test horizontal line 
     Point P3(5, 4500);
@@ -61,7 +84,31 @@ int main() {
     Point P7(1, 1);
     img.draw(P7); 
 
+    // draw curve
+    Point P10(1, 2500);
+    Point P11(1400, 1000);
+    Point P12(2500, 2600);
+    Point P13(4888, 500);
 
+    std::vector<Point> points;
+    points.push_back(P10);
+    points.push_back(P11);
+    points.push_back(P12);
+
+    std::vector<Point> result = drawCJ(points);
+    for (std::vector<Point>::iterator it = result.begin(); it != result.end(); it++) {
+    	img.draw(*it);
+    }
+
+
+    std::vector<Point> points2;
+    points2.push_back(P1);
+    points2.push_back(P2);
+
+    std::vector<Point> result2 = drawCJ(points2);
+    for (std::vector<Point>::iterator it = result2.begin(); it != result2.end(); it++) {
+    	img.draw(*it);
+    }
 
   	//img.setPixels(pixels);
     img.writeImage();
