@@ -50,6 +50,13 @@ int main() {
     std::cout << L2 << std::endl;
     img.drawStraightLine(L2);
 
+    Point P5(5, 3000);
+    Point P6(5000, 4500);
+  	Line L3(P5, P6);
+    std::cout << L3 << std::endl;
+    img.draw(L3);
+
+
 
 
   	//img.setPixels(pixels);

@@ -57,10 +57,9 @@ class Point {
 		/**
 		 * @brief Euclidian distance between two points
 		 * @param P The other point
-		 * @param n The dimension of the scalar product
 		 * @return The euclidian distance
 		 */
-		double dist(Point P, int n = 2);
+		double dist(Point P);
 };
 
 /**

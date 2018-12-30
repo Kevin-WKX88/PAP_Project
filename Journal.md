@@ -22,7 +22,9 @@
 	 	rester au mileu, pas aller vers les bords
 
 	 - Attention lorsqu'on trace selon les x ou y ?
-	 - 
+
+
+	 - IF x2-x1 excède la distance verticale y2-y1
 
 
  + Draw(Curve) 
@@ -30,8 +32,7 @@
 
 ## Class Point
 + Dist(Point)
-
-## Class Color ?
++ color ?
 
 
 # Problems

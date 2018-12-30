@@ -103,10 +103,222 @@ png_bytep* Image::getPixels() const {
 }
 
 void Image::draw(Line L) {
-	// Point P1 = L.getP1();
-	// Point P2 = L.getP2();
+  	int x1 = L.getP1().getX();
+  	int y1 = L.getP1().getY();
+  	int x2 = L.getP2().getX();
+  	int y2 = L.getP2().getY();
+	int dx = x2-x1;
+  	int dy = y2-y1;
 
-	// Test of bounds ?
+  	if (dx != 0) {
+  		if (dx > 0) {
+  			if (dy != 0) {
+  				if (dy > 0) {
+  					if (dx >= dy) {
+  						int e = dx; // e > 0
+  						dx *= 2;
+  						dy *= 2;
+  						while (1) {
+  							png_bytep row = pixels_[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (x1++ == x2) break;
+							e -= dy;
+							if (e < 0) {
+								y1++;
+								e += dx;
+							}
+  						}
+  					}
+  					else {
+  						// vecteur oblique proche de la verticale, dans le 2d octant
+  						int e = dy; // e > 0
+  						dy *= 2;
+  						dx *= 2;
+  						while (1) {
+  							png_bytep row = pixels_[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (y1++ == y2) break;
+							if ((e -= dx) < 0) {
+								x1++;
+								e += dy;
+							}
+  						}
+  					}
+  				}
+  				else { // dy < 0 && dx > 0
+  					if (dx >= -dy) {
+  						int e = dx;
+  						dx *= 2;
+  						dy *= 2;
+  						while (1) {
+  							png_bytep row = pixels_[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (x1++ == x2) break;
+							if ((e += dy) < 0) {
+								y1--;
+								e += dx;
+							}
+  						}
+  					}
+  					else {
+  						int e = dy; // e < 0
+  						dx *= 2; 
+  						dy *= 2;
+
+  						while (1) {
+  							png_bytep row = pixels_[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (y1-- == y2) break;
+							if ((e += dx) > 0) {
+								x1++;
+								e += dy;
+							}
+  						}
+  					}
+
+  				}
+  			}
+  			else { // dy == 0 && dx > 0
+				// vector horizontal vers la droite
+				do {
+					png_bytep row = pixels_[y1];
+					png_bytep px = &(row[x1 * 3]);
+					px[0] = 0;
+					px[1] = 255;
+					px[2] = 0;
+				} while (++x1 != x2); 
+			}
+  		}
+  		else { // dx < 0
+  			if (dy != 0) {
+  				if (dy > 0) {
+  					if (-dx >= dy) {
+  						int e = dx; // e < 0
+  						dx *= 2;
+  						dy *= 2;
+
+  						while (1) {
+  							png_bytep row = pixels_[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (x1-- == x2) break;
+  							if ((e += dy) >= 0) {
+  								y1++;
+  								e += dx;
+  							}
+  						}
+  					}
+  					else {
+  						int e = dy; // e > 0
+  						dx *= 2;
+  						dy *= 2;
+
+  						while (1) {
+  							png_bytep row = pixels_[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (y1++ == y2) break;
+  							if ((e += dx) <= 0) {
+  								x1--;
+  								e += dy;
+  							}
+  						}
+  					}
+  				}
+  				else { // dy < 0 && dx < 0
+  					if (dx <= dy) {
+  						int e = dx; // e < 0
+  						dx *= 2;
+  						dy *= 2;
+  						while (1) {
+  							png_bytep row = pixels_[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (x1-- == x2) break;
+							if ((e -= dy) >= 0) {
+								y1--;
+								e += dx;
+							}
+  						}
+  					}
+  					else {
+  						int e = dy; // e < 0
+  						dx *= 2;
+  						dy *= 2;
+  						while (1) {
+  							png_bytep row = pixels_[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (y1-- == y2) break;
+							if ((e -= dx) >= 0) {
+								x1--;
+								e += dy;
+							}
+  						}
+  					}
+  				}
+  			}
+  			else { //dy == 0 && dx < 0
+  				do {
+					png_bytep row = pixels_[y1];
+					png_bytep px = &(row[x1 * 3]);
+					px[0] = 0;
+					px[1] = 255;
+					px[2] = 0;
+				} while (--x1 != x2);
+  			}
+  		}
+  	}
+  	else { // dx == 0
+  		if (dy != 0) {
+  			if (dy > 0) {
+  				do {
+  					png_bytep row = pixels_[y1];
+					png_bytep px = &(row[x1 * 3]);
+					px[0] = 0;
+					px[1] = 255;
+					px[2] = 0;
+  				} while (++y1 != y2);
+  			}
+  			else { // dy < 0 && dx == 0
+  				do {
+  					png_bytep row = pixels_[y1];
+					png_bytep px = &(row[x1 * 3]);
+					px[0] = 0;
+					px[1] = 255;
+					px[2] = 0;
+  				} while (--y1 != y2);
+  			}
+  		}
+  	}
 	
 }
 
@@ -114,7 +326,7 @@ void Image::drawStraightLine(Line L) {
 	unsigned int *color = L.getColor();
 
 	if (L.getP1().getX() == L.getP2().getX()) {
-		for(int y = L.getP1().getY(); y < L.getP2().getY(); y++) {
+		for (int y = L.getP1().getY(); y < L.getP2().getY(); y++) {
 		    png_bytep row = pixels_[y];
 			png_bytep px = &(row[L.getP1().getX() * 3]);
 			px[0] = color[0];
@@ -124,7 +336,7 @@ void Image::drawStraightLine(Line L) {
 	}
 	else {
 		png_bytep row = pixels_[L.getP1().getY()];
-		for(int x = L.getP1().getX(); x < L.getP2().getX(); x++) {
+		for (int x = L.getP1().getX(); x < L.getP2().getX(); x++) {
 			png_bytep px = &(row[x * 3]);
 			px[0] = color[0];
 			px[1] = color[1];
@@ -132,6 +344,8 @@ void Image::drawStraightLine(Line L) {
   		}
 	}
 }
+
+
 
 
 

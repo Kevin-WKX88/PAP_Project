@@ -42,6 +42,6 @@ std::ostream & operator <<(std::ostream & out, const Point & P) {
 	return out;
 }
 
-double Point::dist(Point P, int n) {
-	return pow(pow(x_ - P.getX(), n) + pow(y_ - P.getY(), n), 1/n);
+double Point::dist(Point P) {
+	return sqrt(pow(x_ - P.getX(), 2) + pow(y_ - P.getY(), 2));
 }

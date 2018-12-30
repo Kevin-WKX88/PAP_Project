@@ -309,6 +309,261 @@ for (int k = 0; k<5; k++) {
 
 
 
+  	// ALGO WIKIPEDIA : Algorithme de tracé de segment de Bresenham
+  // 	x1=1;
+  // 	y1=1;
+  // 	x2 = 499;
+  // 	y2 = 20;
+
+  // 	int dx, dy;
+  // 	x = 0;
+  // 	y = 0;
+  // 	double e, e1, e0;
+  // 	dy = y2-y1;
+  // 	dx = x2-x1;
+  // 	y = y1;
+  // 	e = 0.0;
+  // 	e1 = double(dy)/double(dx);
+  // 	e0 = -1.0;
+  // 	for (x = x1; x < x2; x++) {
+  // 		png_bytep row = row_pointers[y];
+		// png_bytep px = &(row[x * 3]);
+		// px[0] = 0;
+		// px[1] = 255;
+		// px[2] = 0;
+
+		// e = e + e1;
+		// if (e >= 0.5) {
+		// 	y++;
+		// 	e = e+e0;
+		// }
+  // 	}
+
+
+  	// ALGO WIKIPEDIA : generalisé
+  	x1=499;
+  	y1=99;
+  	x2 = 1;
+  	y2 = 178;
+
+  	int dx = x2-x1;
+  	int dy = y2-y1;
+  	x = 0;
+  	y = 0;
+
+  	if (dx != 0) {
+  		if (dx > 0) {
+  			if (dy != 0) {
+  				if (dy > 0) {
+  					if (dx >= dy) {
+  						int e = dx; // e > 0
+  						dx *= 2;
+  						dy *= 2;
+  						while (1) {
+  							png_bytep row = row_pointers[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (x1++ == x2) break;
+							e -= dy;
+							if (e < 0) {
+								y1++;
+								e += dx;
+							}
+  						}
+  					}
+  					else {
+  						// vecteur oblique proche de la verticale, dans le 2d octant
+  						int e = dy; // e > 0
+  						dy *= 2;
+  						dx *= 2;
+  						while (1) {
+  							png_bytep row = row_pointers[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (y1++ == y2) break;
+							if ((e -= dx) < 0) {
+								x1++;
+								e += dy;
+							}
+  						}
+  					}
+  				}
+  				else { // dy < 0 && dx > 0
+  					if (dx >= -dy) {
+  						int e = dx;
+  						dx *= 2;
+  						dy *= 2;
+  						while (1) {
+  							png_bytep row = row_pointers[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (x1++ == x2) break;
+							if ((e += dy) < 0) {
+								y1--;
+								e += dx;
+							}
+  						}
+  					}
+  					else {
+  						int e = dy; // e < 0
+  						dx *= 2; 
+  						dy *= 2;
+
+  						while (1) {
+  							png_bytep row = row_pointers[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (y1-- == y2) break;
+							if ((e += dx) > 0) {
+								x1++;
+								e += dy;
+							}
+  						}
+  					}
+
+  				}
+  			}
+  			else { // dy == 0 && dx > 0
+				// vector horizontal vers la droite
+				do {
+					png_bytep row = row_pointers[y1];
+					png_bytep px = &(row[x1 * 3]);
+					px[0] = 0;
+					px[1] = 255;
+					px[2] = 0;
+				} while (++x1 != x2); 
+			}
+  		}
+  		else { // dx < 0
+  			if (dy != 0) {
+  				if (dy > 0) {
+  					if (-dx >= dy) {
+  						int e = dx; // e < 0
+  						dx *= 2;
+  						dy *= 2;
+
+  						while (1) {
+  							png_bytep row = row_pointers[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (x1-- == x2) break;
+  							if ((e += dy) >= 0) {
+  								y1++;
+  								e += dx;
+  							}
+  						}
+  					}
+  					else {
+  						int e = dy; // e > 0
+  						dx *= 2;
+  						dy *= 2;
+
+  						while (1) {
+  							png_bytep row = row_pointers[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (y1++ == y2) break;
+  							if ((e += dx) <= 0) {
+  								x1--;
+  								e += dy;
+  							}
+  						}
+  					}
+  				}
+  				else { // dy < 0 && dx < 0
+  					if (dx <= dy) {
+  						int e = dx; // e < 0
+  						dx *= 2;
+  						dy *= 2;
+  						while (1) {
+  							png_bytep row = row_pointers[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (x1-- == x2) break;
+							if ((e -= dy) >= 0) {
+								y1--;
+								e += dx;
+							}
+  						}
+  					}
+  					else {
+  						int e = dy; // e < 0
+  						dx *= 2;
+  						dy *= 2;
+  						while (1) {
+  							png_bytep row = row_pointers[y1];
+							png_bytep px = &(row[x1 * 3]);
+							px[0] = 0;
+							px[1] = 255;
+							px[2] = 0;
+
+							if (y1-- == y2) break;
+							if ((e -= dx) >= 0) {
+								x1--;
+								e += dy;
+							}
+  						}
+  					}
+  				}
+  			}
+  			else { //dy == 0 && dx < 0
+  				do {
+					png_bytep row = row_pointers[y1];
+					png_bytep px = &(row[x1 * 3]);
+					px[0] = 0;
+					px[1] = 255;
+					px[2] = 0;
+				} while (--x1 != x2);
+  			}
+  		}
+  	}
+  	else { // dx == 0
+  		if (dy != 0) {
+  			if (dy > 0) {
+  				do {
+  					png_bytep row = row_pointers[y1];
+					png_bytep px = &(row[x1 * 3]);
+					px[0] = 0;
+					px[1] = 255;
+					px[2] = 0;
+  				} while (++y1 != y2);
+  			}
+  			else { // dy < 0 && dx == 0
+  				do {
+  					png_bytep row = row_pointers[y1];
+					png_bytep px = &(row[x1 * 3]);
+					px[0] = 0;
+					px[1] = 255;
+					px[2] = 0;
+  				} while (--y1 != y2);
+  			}
+  		}
+  	}
+ 
+
+
+
 
 	// If you don’t want to write the whole image at once,
 	// png_write_rows(png_ptr, row_pointers, number_of_rows);
