@@ -77,16 +77,6 @@ class Image {
 		 * @param points The list of points
 		 */
 		void draw(std::vector<Point> points);
-
-		/**
-		 * @brief Draw a line L
-		 * @details Modify the pixels on the image to draw a line
-		 * @param L The line to draw
-		 */
-		void draw(Line L);
-
-		void drawStraightLine(Line L);
-
 };
 
 

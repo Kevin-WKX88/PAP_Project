@@ -37,26 +37,6 @@ int main() {
  //  	}
 
 
-  	// Test horizontal line 
-    Point P1(2500, 10);
-    Point P2(2500, 4999);
-  	// Line L1(P1, P2);
-   //  std::cout << L1 << std::endl;
-   //  img.drawStraightLine(L1);
-
-  	// Test horizontal line 
-    Point P3(5, 4500);
-    Point P4(5000, 4500);
-  	Line L2(P3, P4);
-    std::cout << L2 << std::endl;
-    img.drawStraightLine(L2);
-
-    Point P5(5, 3000);
-    Point P6(5000, 4500);
-  	Line L3(P5, P6);
-    std::cout << L3 << std::endl;
-    img.draw(L3);
-
 
     // draw Point
     Point P7(1, 1);
