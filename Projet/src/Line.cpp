@@ -8,7 +8,7 @@
 #include <iostream>
 #include "Line.h"
 
-Line::Line(Point P1, Point P2, unsigned int R, unsigned int G, unsigned int B, int thickness) : P1_(P1), P2_(P2), thickness_(thickness) {
+Line::Line(Point P1, Point P2, unsigned int R, unsigned int G, unsigned int B, unsigned int thickness) : P1_(P1), P2_(P2), thickness_(thickness) {
 	color_ = new unsigned int[3];
 	color_[0] = R;
 	color_[1] = G;
@@ -30,7 +30,7 @@ void Line::setP2(Point P2) {
 	P2_ = P2;
 }
 
-void Line::setThickness(int thickness) {
+void Line::setThickness(unsigned int thickness) {
 	thickness_ = thickness;
 }
 
@@ -38,6 +38,10 @@ void Line::setColor(unsigned int R, unsigned int G, unsigned int B) {
 	color_[0] = R;
 	color_[1] = G;
 	color_[2] = B;
+}
+
+unsigned int* Line::getColor() const {
+	return color_;
 }
 
 std::ostream & operator <<(std::ostream & out, const Line & L) {

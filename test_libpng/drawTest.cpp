@@ -80,12 +80,12 @@ int main(int argc, char *argv[]) {
 	    }
   	}
 
-  	for(int y = 100; y < 200; y++) {
+  	for(int y = 100; y < 400; y++) {
 	    png_bytep row = row_pointers[y];
-			png_bytep px = &(row[250 * 3]);
-			px[0] = 255;
-			px[1] = 0;
-			px[2] = 255;
+		png_bytep px = &(row[250 * 3]);
+		px[0] = 255;
+		px[1] = 0;
+		px[2] = 255;
   	}
 
 
@@ -195,30 +195,37 @@ int main(int argc, char *argv[]) {
   // 	}
 
 
-  	// IF X2-X1 > Y2-Y1
-  	x1 = 1;
-	x2 = 350;
-	y1 = 1;
-	y2 = 50;
-	x = x1;
-  	double h = sqrt(pow(y2-y1, 2) + pow(x2-x1, 2))/double(std::min(x2-x1+1, y2-y1+1));
-  	  	std::cout << "h = " << h << std::endl;
 
-  	step = 0;
-  	int n = 1;
+
+
+//Thickness
+	x1 = 1;
+	y1 = 1;
+	x2 = 350;
+	y2 = 400;
+
+    double h = sqrt(pow(y2-y1, 2) + pow(x2-x1, 2))/double(std::min(x2-x1+1, y2-y1+1));
+  	std::cout << "h = " << h << std::endl;
+
+for (int k = 0; k<5; k++) {
+	x1++;
+	x2++;	
+	x = x1;
   	int y = y1;
+  	int n = 1;
   	while (y < y2 || x < x2) {
   	  	std::cout << "taille = " << sqrt(pow(y1-y, 2) + pow(x1-x, 2)) << std::endl;
 	  	std::cout << "n = " << n << std::endl;
 
   		if (abs(sqrt(pow(y1-y, 2) + pow(x1-x, 2)) - (h*n)) < 1) {
-  			if (x2-x1+1 < y2-y1+1) {
-  				x++;
-  			}
-  			else {
-  				y++;
-  			}
-  			//x++;
+  			// if (x2-x1+1 < y2-y1+1) {
+  			// 	x++;
+  			// }
+  			// else {
+  			// }
+  			x++;
+			y++;
+
   			n++;
 		  	std::cout << "x = " << x << " y = " << y << std::endl;
 
@@ -231,6 +238,55 @@ int main(int argc, char *argv[]) {
   				x++;
   			}
   		}
+  		//x++;
+	    png_bytep row = row_pointers[y];
+		png_bytep px = &(row[x * 3]);
+		px[0] = 0;
+		px[1] = 0;
+		px[2] = 0;
+  	}
+	std::cout << "x = " << x << " y = " << y << std::endl;
+}
+
+
+  	// IF X2-X1 > Y2-Y1
+  	x1 = 20;
+	y1 = 20;
+	x2 = 240;
+	y2 = 450;
+
+  	h = sqrt(pow(y2-y1, 2) + pow(x2-x1, 2))/double(std::min(x2-x1+1, y2-y1+1));
+  	std::cout << "h = " << h << std::endl;
+
+	x = x1;
+  	int y = y1;
+  	int n = 1;
+  	while (y < y2 || x < x2) {
+  	  	std::cout << "taille = " << sqrt(pow(y1-y, 2) + pow(x1-x, 2)) << std::endl;
+	  	std::cout << "n = " << n << std::endl;
+
+  		if (abs(sqrt(pow(y1-y, 2) + pow(x1-x, 2)) - (h*n)) < 1) {
+  			// if (x2-x1+1 < y2-y1+1) {
+  			// 	x++;
+  			// }
+  			// else {
+  			// }
+  			x++;
+			y++;
+
+  			n++;
+		  	std::cout << "x = " << x << " y = " << y << std::endl;
+
+  		}
+  		else {
+  			if (x2-x1+1 < y2-y1+1) {
+  				y++;
+  			}
+  			else {
+  				x++;
+  			}
+  		}
+  		//x++;
 	    png_bytep row = row_pointers[y];
 		png_bytep px = &(row[x * 3]);
 		px[0] = 0;
@@ -240,9 +296,13 @@ int main(int argc, char *argv[]) {
 	std::cout << "x = " << x << " y = " << y << std::endl;
 
 
-
-
-
+	png_bytep row = row_pointers[250];
+	for(int x = 100; x < 400; x++) {
+		png_bytep px = &(row[x * 3]);
+		px[0] = 255;
+		px[1] = 0;
+		px[2] = 255;
+  	}
 
 
 

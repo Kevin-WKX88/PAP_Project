@@ -68,7 +68,7 @@ Image::Image(char* fileName, int width, int height) {
   	}
 
   	// Set white background
-  	for(int y = 0; y < height_; y++) {
+  	for (int y = 0; y < height_; y++) {
 	    png_bytep row = pixels_[y];
 	    for(int x = 0; x < width_; x++) {
 			png_bytep px = &(row[x * 3]);
@@ -83,7 +83,7 @@ Image::Image(char* fileName, int width, int height) {
 
 Image::~Image() {
 	// Freeing memory and closing
-  	for(int y = 0; y < height_; y++) {
+  	for (int y = 0; y < height_; y++) {
 	    free(pixels_[y]);
 	  }
   	free(pixels_);
@@ -103,13 +103,35 @@ png_bytep* Image::getPixels() const {
 }
 
 void Image::draw(Line L) {
-	Point P1 = L.getP1();
-	Point P2 = L.getP2();
+	// Point P1 = L.getP1();
+	// Point P2 = L.getP2();
 
 	// Test of bounds ?
 	
 }
 
+void Image::drawStraightLine(Line L) {
+	unsigned int *color = L.getColor();
+
+	if (L.getP1().getX() == L.getP2().getX()) {
+		for(int y = L.getP1().getY(); y < L.getP2().getY(); y++) {
+		    png_bytep row = pixels_[y];
+			png_bytep px = &(row[L.getP1().getX() * 3]);
+			px[0] = color[0];
+			px[1] = color[1];
+			px[2] = color[2];
+  		}
+	}
+	else {
+		png_bytep row = pixels_[L.getP1().getY()];
+		for(int x = L.getP1().getX(); x < L.getP2().getX(); x++) {
+			png_bytep px = &(row[x * 3]);
+			px[0] = color[0];
+			px[1] = color[1];
+			px[2] = color[2];
+  		}
+	}
+}
 
 
 

@@ -15,7 +15,7 @@ class Line {
 	private:
 		Point P1_;
 		Point P2_;
-		int thickness_; // Nb of pixels
+		unsigned int thickness_; // Nb of pixels
 		unsigned int *color_;
 
 	public:
@@ -28,7 +28,7 @@ class Line {
 		 * @param B Blue level
 		 * @param thickness thickness of the line
 		 */
-		Line(Point P1, Point P2, unsigned int R = 0, unsigned int G = 0, unsigned int B = 0, int thickness = 1);
+		Line(Point P1, Point P2, unsigned int R = 0, unsigned int G = 0, unsigned int B = 0, unsigned int thickness = 1);
 
 		/**
 		 * @brief Getter for P1_
@@ -58,7 +58,7 @@ class Line {
 		 * @brief Getter for thickness_
 		 * @param thickness 
 		 */
-		void setThickness(int thickness);
+		void setThickness(unsigned int thickness);
 
 		/**
 		 * @brief Setter for color_
@@ -67,6 +67,12 @@ class Line {
 		 * @param B Blue level
 		 */
 		void setColor(unsigned int R, unsigned int G, unsigned int B);
+
+		/**
+		 * @brief Getter for color_
+		 * @return color_
+		 */
+		unsigned int* getColor() const;
 };
 
 /**

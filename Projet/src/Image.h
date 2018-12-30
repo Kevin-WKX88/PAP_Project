@@ -63,13 +63,16 @@ class Image {
 		//void setPixels(png_bytep *pixels); // PAS BESOIN car pointeur
 
 		// Draw methods
-
 		/**
 		 * @brief Draw the line L
 		 * @details Modify the pixels on the image to draw a line
 		 * @param L The line to draw
 		 */
 		void draw(Line L);
+
+		void drawStraightLine(Line L);
+
 };
+
 
 #endif /* IMAGE_H_ */

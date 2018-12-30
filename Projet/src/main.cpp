@@ -21,27 +21,36 @@ int main() {
     std::cout << P << std::endl;
 
     char fileName[] = "img.png";
-    Image img(fileName, 10000, 10000);
+    Image img(fileName, 5000, 5000);
 
     // Modif pixels
-	png_bytep* pixels = img.getPixels();
-	for(int y = 0; y < 10000; y++) {
-	    png_bytep row = pixels[y];
-	    for(int x = 0; x < 1000; x++) {
-			png_bytep px = &(row[x * 3]);
-			px[0] = 0;
-			px[1] = 255;
-			px[2] = 0;
-	    }
-  	}
+	// png_bytep* pixels = img.getPixels();
+	// for(int y = 0; y < 10000; y++) {
+	//     png_bytep row = pixels[y];
+	//     for(int x = 0; x < 1000; x++) {
+	// 		png_bytep px = &(row[x * 3]);
+	// 		px[0] = 0;
+	// 		px[1] = 255;
+	// 		px[2] = 0;
+	//     }
+ //  	}
 
 
-  	// Test Creation of Line 
-    Point P1(1000, 0);
-    Point P2(1000, 2000);
+  	// Test horizontal line 
+    Point P1(2500, 10);
+    Point P2(2500, 4500);
   	Line L1(P1, P2);
-
     std::cout << L1 << std::endl;
+    img.drawStraightLine(L1);
+
+  	// Test horizontal line 
+    Point P3(5, 4500);
+    Point P4(5000, 4500);
+  	Line L2(P3, P4);
+    std::cout << L2 << std::endl;
+    img.drawStraightLine(L2);
+
+
 
   	//img.setPixels(pixels);
     img.writeImage();

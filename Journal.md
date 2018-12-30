@@ -33,5 +33,6 @@
 
 ## Class Color ?
 
+
 # Problems
  + Taille des méthodes : Image.cpp
