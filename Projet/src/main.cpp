@@ -11,31 +11,9 @@
 #include "Point.h"
 #include "Image.h"
 #include "Line.h"
+#include "BezierCurve.h"
 
 #include <vector>
-#include <cmath>
-
-Point getCJPoint(int r, int index, double t, std::vector<Point> points) {
-	if (r == 0) return points[index];
-	Point P1 = getCJPoint(r-1, index, t, points);
-	Point P2 = getCJPoint(r-1, index+1, t, points);
-	return Point(round((1-t) * P1.getX() + t * P2.getX()), round((1-t) * P1.getY() + t * P2.getY()));
-}
-
-std::vector<Point> drawCJ(std::vector<Point> points) {
-	std::vector<Point> res;
-	for (double t = 0.0; t <= 1; t+=0.00001) {
-		Point P = getCJPoint(points.size() - 1, 0, t, points);
-		res.push_back(P);
-	}
-	return res;
-}
-
-
-Point CJquadratic(Point P1, Point P2, Point P3) {
-
-}
-
 
 int main() {
     std::cout << "!!!Hello World!!!" << std::endl;
@@ -85,32 +63,59 @@ int main() {
     img.draw(P7); 
 
     // draw curve
-    Point P10(1, 2500);
-    Point P11(1400, 1000);
-    Point P12(2500, 2600);
-    Point P13(4888, 500);
+    Point P10(1, 1);
+    //Point P11(2, 2);
+    Point P12(2500, 4999);
 
     std::vector<Point> points;
     points.push_back(P10);
-    points.push_back(P11);
+    //points.push_back(P11);
     points.push_back(P12);
 
-    std::vector<Point> result = drawCJ(points);
-    for (std::vector<Point>::iterator it = result.begin(); it != result.end(); it++) {
-    	img.draw(*it);
-    }
+    BezierCurve C1(points);
+    img.draw(C1.getCurvePoints());
 
-
-    std::vector<Point> points2;
-    points2.push_back(P1);
-    points2.push_back(P2);
-
-    std::vector<Point> result2 = drawCJ(points2);
-    for (std::vector<Point>::iterator it = result2.begin(); it != result2.end(); it++) {
-    	img.draw(*it);
-    }
-
-  	//img.setPixels(pixels);
     img.writeImage();
+
+
+    // 1.D
+    char fileName1D[] = "1.D.png";
+    Image img1D(fileName1D, 5000, 5000);
+
+	std::vector<Point> pointsD;
+    pointsD.push_back(Point(1000, 1500));
+    pointsD.push_back(Point(1000, 3500));
+    BezierCurve curve1D(pointsD);
+    img1D.draw(curve1D.getCurvePoints());
+
+    // With One curve
+  	pointsD.clear();
+    pointsD.push_back(Point(1000, 1500));
+    pointsD.push_back(Point(2500, 1500));
+    pointsD.push_back(Point(2500, 3500));
+    pointsD.push_back(Point(1000, 3500));
+    BezierCurve curve1D2(pointsD);
+    img1D.draw(curve1D2.getCurvePoints());
+
+    // With 2 quadratic curve
+    pointsD.clear();
+    pointsD.push_back(Point(1000, 1500));
+    pointsD.push_back(Point(2500, 1500));
+    pointsD.push_back(Point(2500, 2500));
+    BezierCurve curve1D4(pointsD);
+    img1D.draw(curve1D4.getCurvePoints());
+
+	pointsD.clear();
+    pointsD.push_back(Point(2500, 2500));
+    pointsD.push_back(Point(2500, 3500));
+    pointsD.push_back(Point(1000, 3500));
+    BezierCurve curve1D5(pointsD);
+    img1D.draw(curve1D5.getCurvePoints());
+
+    img1D.writeImage();
+
+
+
+
     return 0;
 }

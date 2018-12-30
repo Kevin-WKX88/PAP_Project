@@ -110,6 +110,12 @@ void Image::draw(Point P) {
 	px[2] = color[2];
 }
 
+void Image::draw(std::vector<Point> points) {
+    for (auto it = points.begin(); it != points.end(); it++) {
+        draw(*it);
+    }
+}
+
 void Image::draw(Line L) {
   	int x1 = L.getP1().getX();
   	int y1 = L.getP1().getY();

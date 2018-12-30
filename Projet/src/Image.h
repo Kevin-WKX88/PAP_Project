@@ -10,6 +10,8 @@
 
 #include <stdlib.h>
 #include <png.h>
+#include <vector>
+
 #include "Line.h"
 
 class Image {
@@ -70,6 +72,12 @@ class Image {
 		 */
 		void draw(Point P);
 		
+		/**
+		 * @brief Draw the points in the vector
+		 * @param points The list of points
+		 */
+		void draw(std::vector<Point> points);
+
 		/**
 		 * @brief Draw a line L
 		 * @details Modify the pixels on the image to draw a line
