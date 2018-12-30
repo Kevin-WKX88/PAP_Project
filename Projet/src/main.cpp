@@ -58,39 +58,60 @@ int main() {
     img.writeImage();
 
 
+    int thickness = 300;
     // 1.D
     char fileName1D[] = "1.D.png";
     Image img1D(fileName1D, 5000, 5000);
 
 	std::vector<Point> pointsD;
-    pointsD.push_back(Point(1000, 1500));
-    pointsD.push_back(Point(1000, 3500));
+    pointsD.push_back(Point(2000, 1500));
+    pointsD.push_back(Point(2000, 3500));
     BezierCurve curve1D(pointsD);
     img1D.draw(curve1D.getCurvePoints());
 
-    // With One curve
-  	pointsD.clear();
-    pointsD.push_back(Point(1000, 1500));
-    pointsD.push_back(Point(2500, 1500));
-    pointsD.push_back(Point(2500, 3500));
-    pointsD.push_back(Point(1000, 3500));
+    pointsD.clear();
+    pointsD.push_back(Point(2000+thickness, 1500+thickness));
+    pointsD.push_back(Point(2000+thickness, 3500-thickness));
     BezierCurve curve1D2(pointsD);
     img1D.draw(curve1D2.getCurvePoints());
 
+    // With One curve
+  	// pointsD.clear();
+   //  pointsD.push_back(Point(1000, 1500));
+   //  pointsD.push_back(Point(2500, 1500));
+   //  pointsD.push_back(Point(2500, 3500));
+   //  pointsD.push_back(Point(1000, 3500));
+   //  BezierCurve curve1D2(pointsD);
+   //  img1D.draw(curve1D2.getCurvePoints());
+
     // With 2 quadratic curve
     pointsD.clear();
-    pointsD.push_back(Point(1000, 1500));
-    pointsD.push_back(Point(2500, 1500));
-    pointsD.push_back(Point(2500, 2500));
+    pointsD.push_back(Point(1999, 1500));
+    pointsD.push_back(Point(3500, 1500));
+    pointsD.push_back(Point(3500, 2500));
     BezierCurve curve1D4(pointsD);
     img1D.draw(curve1D4.getCurvePoints());
 
 	pointsD.clear();
-    pointsD.push_back(Point(2500, 2500));
-    pointsD.push_back(Point(2500, 3500));
-    pointsD.push_back(Point(1000, 3500));
+    pointsD.push_back(Point(3500, 2500));
+    pointsD.push_back(Point(3500, 3500));
+    pointsD.push_back(Point(2000, 3500));
     BezierCurve curve1D5(pointsD);
     img1D.draw(curve1D5.getCurvePoints());
+
+    pointsD.clear();
+    pointsD.push_back(Point(2000+thickness, 1500+thickness));
+    pointsD.push_back(Point(3500-thickness, 1500+thickness));
+    pointsD.push_back(Point(3500-thickness, 2500));
+    BezierCurve curve1D6(pointsD);
+    img1D.draw(curve1D6.getCurvePoints());
+
+	pointsD.clear();
+    pointsD.push_back(Point(3500-thickness, 2500));
+    pointsD.push_back(Point(3500-thickness, 3500-thickness));
+    pointsD.push_back(Point(2000+thickness, 3500-thickness));
+    BezierCurve curve1D7(pointsD);
+    img1D.draw(curve1D7.getCurvePoints());
 
     img1D.writeImage();
 
