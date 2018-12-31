@@ -20,6 +20,11 @@ class BezierCurve {
 
 	public:
 		/**
+		 * @brief Default constructor
+		 */
+		BezierCurve() {};
+
+		/**
 		 * @brief Valued constructor
 		 * @param points Vector of points of the Bezier curve
 		 */
@@ -38,7 +43,7 @@ class BezierCurve {
 
 		/**
 		 * @brief Get the point computed by De Casteljau's algorithm
-		 * @param c 
+		 * @param c The size of the current points vector
 		 * @param index 
 		 * @param t Parameter
 		 * @return The computed Point
