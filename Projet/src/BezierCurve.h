@@ -32,6 +32,11 @@ class BezierCurve {
 		void addPoint(Point P);
 
 		/**
+		 * @brief Empty the vector points
+		 */
+		void clearPoints();
+
+		/**
 		 * @brief Get the point computed by De Casteljau's algorithm
 		 * @param c 
 		 * @param index 

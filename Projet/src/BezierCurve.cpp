@@ -20,6 +20,11 @@ void BezierCurve::addPoint(Point P) {
 	points_.push_back(P);
 }
 
+void BezierCurve::clearPoints() {
+	points_.clear();
+}
+
+
 Point BezierCurve::getCasteljauPoint(int c, int index, double t) {
 	if (c == 0) {
 		return points_[index];

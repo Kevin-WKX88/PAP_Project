@@ -92,6 +92,7 @@ int main() {
     BezierCurve curve1D4(pointsD);
     img1D.draw(curve1D4.getCurvePoints());
 
+    curve1D4.clearPoints();
 	pointsD.clear();
     pointsD.push_back(Point(3500, 2500));
     pointsD.push_back(Point(3500, 3500));
