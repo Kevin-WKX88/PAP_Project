@@ -31,7 +31,7 @@ Point BezierCurve::getCasteljauPoint(int c, int index, double t) {
 	}
 	Point P1 = getCasteljauPoint(c-1, index, t);
 	Point P2 = getCasteljauPoint(c-1, index+1, t);
-	return Point(round((1-t) * P1.getX() + t * P2.getX()), round((1-t) * P1.getY() + t * P2.getY()));
+	return Point(round((1-t) * P1.getX() + t * P2.getX()), round((1-t) * P1.getY() + t * P2.getY()), points_.begin()->getColor()[0], points_.begin()->getColor()[1], points_.begin()->getColor()[2]);
 }
 
 std::vector<Point> BezierCurve::getCurvePoints() {

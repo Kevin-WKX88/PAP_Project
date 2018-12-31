@@ -18,10 +18,14 @@ class Point {
 
 	public:
 		Point();
+
 		/**
 		 * @brief Valued constructor
-		 * @param x An int
-		 * @param y An int
+		 * @param x [description]
+		 * @param y [description]
+ 		 * @param R Red level
+		 * @param G Green level
+		 * @param B Blue level
 		 */
 		Point(int x, int y, unsigned int R = 0, unsigned int G = 0, unsigned int B = 0);
 
