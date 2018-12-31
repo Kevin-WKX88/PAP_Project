@@ -103,7 +103,7 @@ png_bytep* Image::getPixels() const {
 }
 
 void Image::draw(Point P) {
-	png_bytep px = &(pixels_[P.getY()][P.getX() * 3]);
+	png_bytep px = &(pixels_[height_-P.getY()][P.getX() * 3]);
 	unsigned int *color = P.getColor();
 	px[0] = color[0];
 	px[1] = color[1];
