@@ -12,6 +12,7 @@
 #include "Image.h"
 #include "Line.h"
 #include "BezierCurve.h"
+#include "FontV1.h"
 
 #include <vector>
 
@@ -44,10 +45,26 @@ int main() {
 
    //  img.writeImage();
 
+    //test FontV1D
+    int thickness = 20;
 
-     int thickness = 20;
+    char fileName1D[] = "FontV1_D.png";
+    Image img1D(fileName1D, 5000, 5000);
+    FontV1 letter1D;
+
+    letter1D.F1D(thickness);
+    int size = letter1D.size();
+    for(int i = 0; i < size; i++){
+        img1D.draw(letter1D[i].getCurvePoints());
+    }
+    img1D.writeImage();
+    //finish test FontV1D
+
+     
 
    //  // 1.D
+   //  int thickness = 20;
+
    //  char fileName1D[] = "FontV1_D.png";
    //  Image img1D(fileName1D, 5000, 5000);
    //  BezierCurve curve1D;
@@ -96,11 +113,14 @@ int main() {
    //  img1D.draw(curve1D.getCurvePoints());
 
    //  img1D.writeImage();
+   //  // finish 1.D
 
 
-    thickness = 20;
+
+
     // // 2.D
-    double size = 0.1;
+    // thickness = 20;
+    // double size = 0.1;
     // char fileName2D[] = "FontV2_D.png";
     // Image img2D(fileName2D, 5000*size, 5000*size);
     // BezierCurve curve2D;
@@ -129,80 +149,117 @@ int main() {
     // }
 
     // img2D.writeImage();
+    //finish 2.D
 
-    //3.D
-    size = 0.02;
-    thickness = 5;
-    char fileName3D[] = "FontV3_D.png";
-    Image img3D(fileName3D, 5000*size, 5000*size);
-    BezierCurve curve3D;
 
-	curve3D.clearPoints();
-    curve3D.addPoint(Point(2000*size, 1500*size));
-    curve3D.addPoint(Point(2000*size, 3500*size));
-    img3D.draw(curve3D.getCurvePoints());
+ //    //3.D
+ //    size = 0.02;
+ //    thickness = 5;
+ //    char fileName3D[] = "FontV3_D.png";
+ //    Image img3D(fileName3D, 5000*size, 5000*size);
+ //    BezierCurve curve3D;
 
-    for (int i = 1; i < 3; i++) {
-    	// Extérieur gauche
-    	curve3D.clearPoints();
-		curve3D.addPoint(Point(2000*size-i, 1500*size-2, 255));
-		curve3D.addPoint(Point(2000*size-i, 3500*size+2, 255));
-		img3D.draw(curve3D.getCurvePoints());
+	// curve3D.clearPoints();
+ //    curve3D.addPoint(Point(2000*size, 1500*size));
+ //    curve3D.addPoint(Point(2000*size, 3500*size));
+ //    img3D.draw(curve3D.getCurvePoints());
 
-		// Intérieur gauche
-		curve3D.clearPoints();
-		curve3D.addPoint(Point(2000*size+thickness+i, 1500*size+thickness-2, 255));
-		curve3D.addPoint(Point(2000*size+thickness+i, 3500*size-thickness+2, 255));
-		img3D.draw(curve3D.getCurvePoints());
+ //    for (int i = 1; i < 3; i++) {
+ //    	// Extérieur gauche
+ //    	curve3D.clearPoints();
+	// 	curve3D.addPoint(Point(2000*size-i, 1500*size-2, 255));
+	// 	curve3D.addPoint(Point(2000*size-i, 3500*size+2, 255));
+	// 	img3D.draw(curve3D.getCurvePoints());
 
-    	// Extérieur
-	    curve3D.clearPoints();
-	    curve3D.addPoint(Point(2000*size-i, 1500*size-i, 255));
-	    curve3D.addPoint(Point(3500*size+i, 1500*size-i, 255));
-	    curve3D.addPoint(Point(3500*size+i, 2500*size, 255));
-	    img3D.draw(curve3D.getCurvePoints());
+	// 	// Intérieur gauche
+	// 	curve3D.clearPoints();
+	// 	curve3D.addPoint(Point(2000*size+thickness+i, 1500*size+thickness-2, 255));
+	// 	curve3D.addPoint(Point(2000*size+thickness+i, 3500*size-thickness+2, 255));
+	// 	img3D.draw(curve3D.getCurvePoints());
 
-	    curve3D.clearPoints();
-	    curve3D.addPoint(Point(3500*size+i, 2500*size, 255));
-	    curve3D.addPoint(Point(3500*size+i, 3500*size+i, 255));
-	    curve3D.addPoint(Point(2000*size-i, 3500*size+i, 255));
-	    img3D.draw(curve3D.getCurvePoints());
+ //    	// Extérieur
+	//     curve3D.clearPoints();
+	//     curve3D.addPoint(Point(2000*size-i, 1500*size-i, 255));
+	//     curve3D.addPoint(Point(3500*size+i, 1500*size-i, 255));
+	//     curve3D.addPoint(Point(3500*size+i, 2500*size, 255));
+	//     img3D.draw(curve3D.getCurvePoints());
 
-	    // Intérieur
-	    curve3D.clearPoints();
-	    curve3D.addPoint(Point(2000*size+thickness+i, 1500*size+thickness+i, 255));
-	    curve3D.addPoint(Point(3500*size-thickness-i, 1500*size+thickness+i, 255));
-	    curve3D.addPoint(Point(3500*size-thickness-i, 2500*size, 255));
-	    img3D.draw(curve3D.getCurvePoints());
+	//     curve3D.clearPoints();
+	//     curve3D.addPoint(Point(3500*size+i, 2500*size, 255));
+	//     curve3D.addPoint(Point(3500*size+i, 3500*size+i, 255));
+	//     curve3D.addPoint(Point(2000*size-i, 3500*size+i, 255));
+	//     img3D.draw(curve3D.getCurvePoints());
 
-	    curve3D.clearPoints();
-	    curve3D.addPoint(Point(3500*size-thickness-i, 2500*size, 255));
-	    curve3D.addPoint(Point(3500*size-thickness-i, 3500*size-thickness-i, 255));
-	    curve3D.addPoint(Point(2000*size+thickness+i, 3500*size-thickness-i, 255));
-	    img3D.draw(curve3D.getCurvePoints());
-    }
+	//     // Intérieur
+	//     curve3D.clearPoints();
+	//     curve3D.addPoint(Point(2000*size+thickness+i, 1500*size+thickness+i, 255));
+	//     curve3D.addPoint(Point(3500*size-thickness-i, 1500*size+thickness+i, 255));
+	//     curve3D.addPoint(Point(3500*size-thickness-i, 2500*size, 255));
+	//     img3D.draw(curve3D.getCurvePoints());
 
-    for (int i = 0; i <= thickness; i++) {
-    	curve3D.clearPoints();
-	    curve3D.addPoint(Point(2000*size+i, 1500*size+i));
-	    curve3D.addPoint(Point(2000*size+i, 3500*size-i));
-	    img3D.draw(curve3D.getCurvePoints());
+	//     curve3D.clearPoints();
+	//     curve3D.addPoint(Point(3500*size-thickness-i, 2500*size, 255));
+	//     curve3D.addPoint(Point(3500*size-thickness-i, 3500*size-thickness-i, 255));
+	//     curve3D.addPoint(Point(2000*size+thickness+i, 3500*size-thickness-i, 255));
+	//     img3D.draw(curve3D.getCurvePoints());
+ //    }
 
-	    curve3D.clearPoints();
-	    curve3D.addPoint(Point(2000*size +i, 1500*size +i));
-	    curve3D.addPoint(Point(3500*size -i, 1500*size +i));
-	    curve3D.addPoint(Point(3500*size -i, 2500*size));
-	    img3D.draw(curve3D.getCurvePoints());
+ //    for (int i = 0; i <= thickness; i++) {
+ //    	curve3D.clearPoints();
+	//     curve3D.addPoint(Point(2000*size+i, 1500*size+i));
+	//     curve3D.addPoint(Point(2000*size+i, 3500*size-i));
+	//     img3D.draw(curve3D.getCurvePoints());
 
-	    curve3D.clearPoints();
-	    curve3D.addPoint(Point(3500*size-i, 2500*size));
-	    curve3D.addPoint(Point(3500*size-i, 3500*size-i));
-	    curve3D.addPoint(Point(2000*size+i, 3500*size-i));
-	    img3D.draw(curve3D.getCurvePoints());
-    }
+	//     curve3D.clearPoints();
+	//     curve3D.addPoint(Point(2000*size +i, 1500*size +i));
+	//     curve3D.addPoint(Point(3500*size -i, 1500*size +i));
+	//     curve3D.addPoint(Point(3500*size -i, 2500*size));
+	//     img3D.draw(curve3D.getCurvePoints());
 
-    img3D.writeImage();
+	//     curve3D.clearPoints();
+	//     curve3D.addPoint(Point(3500*size-i, 2500*size));
+	//     curve3D.addPoint(Point(3500*size-i, 3500*size-i));
+	//     curve3D.addPoint(Point(2000*size+i, 3500*size-i));
+	//     img3D.draw(curve3D.getCurvePoints());
+ //    }
+
+ //    img3D.writeImage();
+ //    // finish 3.D
 
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
