@@ -12,6 +12,7 @@
 #include "Image.h"
 #include "Line.h"
 #include "BezierCurve.h"
+#include "FontV1.h"
 
 #include <vector>
 
@@ -99,43 +100,43 @@ int main() {
 
 
     // // 2.D
-    double size = 0.1;
-    thickness = 200*size;
+    // double size = 0.1;
+    // thickness = 200*size;
 
-    char fileName2D[] = "FontV2_D.png";
-    int width = 5000*size;
-    int height = width;
-    Image img2D(fileName2D, width, height);
-    BezierCurve curve2D;
+    // char fileName2D[] = "FontV2_D.png";
+    // int width = 5000*size;
+    // int height = width;
+    // Image img2D(fileName2D, width, height);
+    // BezierCurve curve2D;
 
-    curve2D.addPoint(Point(2000*size, 1500*size));
-    curve2D.addPoint(Point(2000*size, 3500*size));
-    std::vector<Point> gauche = curve2D.getCurvePoints();
+    // curve2D.addPoint(Point(2000*size, 1500*size));
+    // curve2D.addPoint(Point(2000*size, 3500*size));
+    // std::vector<Point> gauche = curve2D.getCurvePoints();
 
-    for (int i = 0; i <= thickness; i++) {
-    	for (auto it = gauche.begin(); it != gauche.end(); it++) {
-    		img2D.draw(Point(it->getX()+i, it->getY()));
-    	}
+    // for (int i = 0; i <= thickness; i++) {
+    // 	for (auto it = gauche.begin(); it != gauche.end(); it++) {
+    // 		img2D.draw(Point(it->getX()+i, it->getY()));
+    // 	}
 
-    	// curve2D.clearPoints();
-	    // curve2D.addPoint(Point(2000*size+i, 1500*size+i));
-	    // curve2D.addPoint(Point(2000*size+i, 3500*size-i));
-	    // img2D.draw(curve2D.getCurvePoints());
+    // 	// curve2D.clearPoints();
+	   //  // curve2D.addPoint(Point(2000*size+i, 1500*size+i));
+	   //  // curve2D.addPoint(Point(2000*size+i, 3500*size-i));
+	   //  // img2D.draw(curve2D.getCurvePoints());
 
-	    curve2D.clearPoints();
-	    curve2D.addPoint(Point(2000*size +i, 1500*size +i));
-	    curve2D.addPoint(Point(3500*size -i, 1500*size +i));
-	    curve2D.addPoint(Point(3500*size -i, 2500*size));
-	    img2D.draw(curve2D.getCurvePoints());
+	   //  curve2D.clearPoints();
+	   //  curve2D.addPoint(Point(2000*size +i, 1500*size +i));
+	   //  curve2D.addPoint(Point(3500*size -i, 1500*size +i));
+	   //  curve2D.addPoint(Point(3500*size -i, 2500*size));
+	   //  img2D.draw(curve2D.getCurvePoints());
 
-	    curve2D.clearPoints();
-	    curve2D.addPoint(Point(3500*size-i, 2500*size));
-	    curve2D.addPoint(Point(3500*size-i, 3500*size-i));
-	    curve2D.addPoint(Point(2000*size+i, 3500*size-i));
-	    img2D.draw(curve2D.getCurvePoints());
-    }
+	   //  curve2D.clearPoints();
+	   //  curve2D.addPoint(Point(3500*size-i, 2500*size));
+	   //  curve2D.addPoint(Point(3500*size-i, 3500*size-i));
+	   //  curve2D.addPoint(Point(2000*size+i, 3500*size-i));
+	   //  img2D.draw(curve2D.getCurvePoints());
+    // }
 
-    img2D.writeImage();
+    // img2D.writeImage();
 
     //3.D
  //    size = 0.02;
@@ -420,5 +421,25 @@ int main() {
 	 //    img3Z.draw(curve3Z.getCurvePoints());
   //   }
   //   img3Z.writeImage();
+
+    FontV1 LZ;
+    double size = 0.5;
+    char fileName1Z[] = "FontV1_Z.png";
+    Image img1Z(fileName1Z, 5000*size, 5000*size);
+
+    img1Z.draw(LZ.Z(size, 200*size));
+
+	img1Z.writeImage();
+
+
     return 0;
 }
+
+
+
+
+
+
+
+
+

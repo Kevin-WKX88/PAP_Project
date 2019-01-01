@@ -39,8 +39,19 @@ class FontV1{
 
 		/**
 		 * @brief Draw the letter D
+		 * @param thickness 
+		 * @return letter_
 		 */
 		std::vector<BezierCurve> F1D(int thickness);
+
+		/**
+		 * @brief The curves to draw the letter Z
+		 * @param size [description]
+		 * @param thickness [description]
+		 * @return letter_
+		 */
+		std::vector<BezierCurve> Z(double size, int thickness);
+
 
 		/**
 		 * @brief Get the vector of curves to draw the letter

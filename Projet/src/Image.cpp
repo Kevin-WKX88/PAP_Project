@@ -116,6 +116,13 @@ void Image::draw(std::vector<Point> points) {
     }
 }
 
+void Image::draw(std::vector<BezierCurve> curves) {
+	for (auto it = curves.begin(); it != curves.end(); it++) {
+        draw(it->getCurvePoints());
+        std::cout << 6 << std::endl;
+    } 
+}
+
 
 
 

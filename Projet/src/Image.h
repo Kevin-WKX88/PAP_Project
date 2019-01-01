@@ -12,7 +12,8 @@
 #include <png.h>
 #include <vector>
 
-#include "Line.h"
+#include "Point.h"
+#include "BezierCurve.h"
 
 class Image {
 	private:
@@ -77,6 +78,12 @@ class Image {
 		 * @param points The list of points
 		 */
 		void draw(std::vector<Point> points);
+
+		/**
+		 * @brief Draw the Bezier curves
+		 * @param curves The curves to draw
+		 */
+		void draw(std::vector<BezierCurve> curves);
 };
 
 
