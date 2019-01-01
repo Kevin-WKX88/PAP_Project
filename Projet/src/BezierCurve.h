@@ -16,7 +16,7 @@
 class BezierCurve {
 	private:
 		std::vector<Point> points_;
-		double precision_ = 0.000001;
+		double ratio_ = 0.0001;
 
 	public:
 		/**
