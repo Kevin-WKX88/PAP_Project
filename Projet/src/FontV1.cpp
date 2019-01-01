@@ -57,6 +57,102 @@ std::vector<BezierCurve> FontV1::F1D(int thickness){
     return letter_;
 }
 
+std::vector<BezierCurve> FontV1::O(double size, int thickness) {
+    BezierCurve curve1O;
+
+    // haut droite
+    curve1O.clearPoints();
+    curve1O.addPoint(Point(3300*size, 2500*size));
+    curve1O.addPoint(Point(3300*size, 3500*size));
+    curve1O.addPoint(Point(2500*size, 3500*size));
+    letter_.push_back(curve1O);
+
+    // haut gauche
+    curve1O.clearPoints();
+    curve1O.addPoint(Point(1700*size, 2500*size));
+    curve1O.addPoint(Point(1700*size, 3500*size));
+    curve1O.addPoint(Point(2500*size, 3500*size));
+    letter_.push_back(curve1O);
+
+    // bas gauche
+    curve1O.clearPoints();
+    curve1O.addPoint(Point(1700*size, 2500*size));
+    curve1O.addPoint(Point(1700*size, 1500*size));
+    curve1O.addPoint(Point(2500*size, 1500*size));
+    letter_.push_back(curve1O);
+
+    // bas droite
+    curve1O.clearPoints();
+    curve1O.addPoint(Point(3300*size, 2500*size));
+    curve1O.addPoint(Point(3300*size, 1500*size));
+    curve1O.addPoint(Point(2500*size, 1500*size));
+    letter_.push_back(curve1O);
+
+
+    // Small
+    // haut droite
+    curve1O.clearPoints();
+    curve1O.addPoint(Point(3300*size-thickness, 2500*size));
+    curve1O.addPoint(Point(3300*size-thickness, 3500*size-thickness));
+    curve1O.addPoint(Point(2500*size, 3500*size-thickness));
+    letter_.push_back(curve1O);
+
+    // haut gauche
+    curve1O.clearPoints();
+    curve1O.addPoint(Point(1700*size+thickness, 2500*size));
+    curve1O.addPoint(Point(1700*size+thickness, 3500*size-thickness));
+    curve1O.addPoint(Point(2500*size, 3500*size-thickness));
+    letter_.push_back(curve1O);
+
+    // bas gauche
+    curve1O.clearPoints();
+    curve1O.addPoint(Point(1700*size+thickness, 2500*size));
+    curve1O.addPoint(Point(1700*size+thickness, 1500*size+thickness));
+    curve1O.addPoint(Point(2500*size, 1500*size+thickness));
+    letter_.push_back(curve1O);
+
+    // bas droite
+    curve1O.clearPoints();
+    curve1O.addPoint(Point(3300*size-thickness, 2500*size));
+    curve1O.addPoint(Point(3300*size-thickness, 1500*size+thickness));
+    curve1O.addPoint(Point(2500*size, 1500*size+thickness));
+    letter_.push_back(curve1O);
+
+    // for (int i = thickness; i > 0; i--) {
+    //     // haut droite
+    //     curve1O.clearPoints();
+    //     curve1O.addPoint(Point(3300*size-i, 2500*size));
+    //     curve1O.addPoint(Point(3300*size-i, 3500*size-i));
+    //     curve1O.addPoint(Point(2500*size, 3500*size-i));
+    //     letter_.push_back(curve1O);
+
+    //     // haut gauche
+    //     curve1O.clearPoints();
+    //     curve1O.addPoint(Point(1700*size+i, 2500*size));
+    //     curve1O.addPoint(Point(1700*size+i, 3500*size-i));
+    //     curve1O.addPoint(Point(2500*size, 3500*size-i));
+    //     letter_.push_back(curve1O);
+
+    //     // bas gauche
+    //     curve1O.clearPoints();
+    //     curve1O.addPoint(Point(1700*size+i, 2500*size));
+    //     curve1O.addPoint(Point(1700*size+i, 1500*size+i));
+    //     curve1O.addPoint(Point(2500*size, 1500*size+i));
+    //     letter_.push_back(curve1O);
+
+    //     // bas droite
+    //     curve1O.clearPoints();
+    //     curve1O.addPoint(Point(3300*size-i, 2500*size));
+    //     curve1O.addPoint(Point(3300*size-i, 1500*size+i));
+    //     curve1O.addPoint(Point(2500*size, 1500*size+i));
+    //     letter_.push_back(curve1O);
+    // }
+    
+
+    return letter_;
+}
+
+
 std::vector<BezierCurve> FontV1::Z(double size, int thickness){
     BezierCurve curve1Z;
 

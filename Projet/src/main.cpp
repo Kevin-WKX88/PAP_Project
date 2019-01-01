@@ -422,15 +422,26 @@ int main() {
   //   }
   //   img3Z.writeImage();
 
-    FontV1 LZ;
-    double size = 0.5;
-    char fileName1Z[] = "FontV1_Z.png";
-    Image img1Z(fileName1Z, 5000*size, 5000*size);
+ //    FontV1 LZ;
+ //    double size = 0.5;
+ //    char fileName1Z[] = "FontV1_Z.png";
+ //    Image img1Z(fileName1Z, 5000*size, 5000*size);
 
-    img1Z.draw(LZ.Z(size, 200*size));
+ //    img1Z.draw(LZ.Z(size, 200*size));
 
-	img1Z.writeImage();
+	// img1Z.writeImage();
 
+
+
+    // 1.O
+	FontV1 LO;
+    double size = 0.1;
+    char fileName1O[] = "FontV1_O.png";
+    Image img1O(fileName1O, 5000*size, 5000*size);
+
+    img1O.draw(LO.O(size, 200*size));
+
+	img1O.writeImage();
 
     return 0;
 }
