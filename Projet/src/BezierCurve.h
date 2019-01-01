@@ -16,7 +16,7 @@
 class BezierCurve {
 	private:
 		std::vector<Point> points_;
-		double ratio_ = 0.0001;
+		double ratio_ = 0.000001;
 
 	public:
 		/**
@@ -31,8 +31,14 @@ class BezierCurve {
 		BezierCurve(std::vector<Point> points);
 
 		/**
+		 * @brief Getter for points_
+		 * @return points_
+		 */
+		std::vector<Point> getPoints() const;
+
+		/**
 		 * @brief Add a new point in the Bezier Curve
-		 * @param P The new point to add
+		 * @return The computed Point
 		 */
 		void addPoint(Point P);
 

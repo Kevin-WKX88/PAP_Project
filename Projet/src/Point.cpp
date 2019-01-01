@@ -37,13 +37,13 @@ Point::~Point() {
 	}
 }
 
-int Point::getX() const {
-	return x_;
-}
+// int Point::getX() const {
+// 	return x_;
+// }
 
-int Point::getY() const {
-	return y_;
-}
+// int Point::getY() const {
+// 	return y_;
+// }
 
 void Point::setX(int x) {
 	x_ = x;
@@ -53,9 +53,9 @@ void Point::setY(int y) {
 	y_ = y;
 }
 
-unsigned int* Point::getColor() {
-	return color_;
-}
+// unsigned int* Point::getColor() {
+// 	return color_;
+// }
 
 
 std::ostream & operator <<(std::ostream & out, const Point & P) {

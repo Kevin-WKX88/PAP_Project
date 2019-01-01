@@ -44,13 +44,13 @@ class Point {
 		 * @brief Getter for x
 		 * @return x_
 		 */
-		int getX() const;
+		inline int getX() const {return x_;}
 
 		/**
 		 * @brief Getter for y_
 		 * @return y_
 		 */
-		int getY() const;
+		inline int getY() const {return y_;}
 
 		/**
 		 * @brief Setter for x_
@@ -68,7 +68,7 @@ class Point {
 		 * @brief Getter for color_
 		 * @return color_
 		 */
-		unsigned int* getColor();
+		inline unsigned int* getColor() {return color_;};
 
 
 		/**

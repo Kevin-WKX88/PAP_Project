@@ -98,50 +98,44 @@ int main() {
    //  img1D.writeImage();
 
 
-    thickness = 2;
     // // 2.D
-    double size = 0.02;
-    // char fileName2D[] = "FontV2_D.png";
-    // int width = 5000*size;
-    // int height = width;
-    // Image img2D(fileName2D, width, height);
-    // BezierCurve curve2D;
+    double size = 0.1;
+    thickness = 200*size;
 
-    // curve2D.addPoint(Point(2000*size, 1500*size));
-    // curve2D.addPoint(Point(2000*size, 3500*size));
-    // img2D.draw(curve2D.getCurvePoints());
+    char fileName2D[] = "FontV2_D.png";
+    int width = 5000*size;
+    int height = width;
+    Image img2D(fileName2D, width, height);
+    BezierCurve curve2D;
 
-    // for (int i = 0; i <= thickness; i++) {
-    // 	curve2D.clearPoints();
-	   //  curve2D.addPoint(Point(2000*size+i, 1500*size+i));
-	   //  curve2D.addPoint(Point(2000*size+i, 3500*size-i));
-	   //  img2D.draw(curve2D.getCurvePoints());
+    curve2D.addPoint(Point(2000*size, 1500*size));
+    curve2D.addPoint(Point(2000*size, 3500*size));
+    std::vector<Point> gauche = curve2D.getCurvePoints();
 
-	   //  curve2D.clearPoints();
-	   //  curve2D.addPoint(Point(2000*size +i, 1500*size +i));
-	   //  curve2D.addPoint(Point(3500*size -i, 1500*size +i));
-	   //  curve2D.addPoint(Point(3500*size -i, 2500*size));
-	   //  img2D.draw(curve2D.getCurvePoints());
+    for (int i = 0; i <= thickness; i++) {
+    	for (auto it = gauche.begin(); it != gauche.end(); it++) {
+    		img2D.draw(Point(it->getX()+i, it->getY()));
+    	}
 
-	   //  curve2D.clearPoints();
-	   //  curve2D.addPoint(Point(3500*size-i, 2500*size));
-	   //  curve2D.addPoint(Point(3500*size-i, 3500*size-i));
-	   //  curve2D.addPoint(Point(2000*size+i, 3500*size-i));
-	   //  img2D.draw(curve2D.getCurvePoints());
-    // }
+    	// curve2D.clearPoints();
+	    // curve2D.addPoint(Point(2000*size+i, 1500*size+i));
+	    // curve2D.addPoint(Point(2000*size+i, 3500*size-i));
+	    // img2D.draw(curve2D.getCurvePoints());
 
+	    curve2D.clearPoints();
+	    curve2D.addPoint(Point(2000*size +i, 1500*size +i));
+	    curve2D.addPoint(Point(3500*size -i, 1500*size +i));
+	    curve2D.addPoint(Point(3500*size -i, 2500*size));
+	    img2D.draw(curve2D.getCurvePoints());
 
+	    curve2D.clearPoints();
+	    curve2D.addPoint(Point(3500*size-i, 2500*size));
+	    curve2D.addPoint(Point(3500*size-i, 3500*size-i));
+	    curve2D.addPoint(Point(2000*size+i, 3500*size-i));
+	    img2D.draw(curve2D.getCurvePoints());
+    }
 
-    // Test de contour rouge
-    //png_bytep* pixels = img2D.getPixels();
-    		//std::cout << pixels[height-5][5 * 3][1] << std::endl;
-    // for (int x = 1; x < width; x++) {
-    // 	for (int y = 1; y < width; y++) {
-    		
-    // 	}
-    // }
-
-    //img2D.writeImage();
+    img2D.writeImage();
 
     //3.D
  //    size = 0.02;
@@ -286,120 +280,145 @@ int main() {
 
 
     // 2.Z
-  //   size = 0.5;
-  //   thickness = 100*size;
+ //    double size = 0.5;
+ //    thickness = 100*size;
 
-  //   char fileName2Z[] = "FontV2_Z.png";
-  //   Image img2Z(fileName2Z, 5000*size, 5000*size);
-  //   BezierCurve curve2Z;
+ //    char fileName2Z[] = "FontV2_Z.png";
+ //    Image img2Z(fileName2Z, 5000*size, 5000*size);
+ //    BezierCurve curve2Z;
 
-  //   for (int i = 0; i <= thickness; i++) {
-  //   	// Bas
-  //   	curve2Z.clearPoints();
-		// curve2Z.addPoint(Point(1900*size, 1500*size+i));
-		// curve2Z.addPoint(Point(3100*size, 1500*size+i));
-		// img2Z.draw(curve2Z.getCurvePoints());
+	// // Bas
+ //    curve2Z.clearPoints();
+	// curve2Z.addPoint(Point(1900*size, 1500*size));
+	// curve2Z.addPoint(Point(3100*size, 1500*size));
+	// std::vector<Point> bas = curve2Z.getCurvePoints();
 
-		// // Haut
-		// curve2Z.clearPoints();
-	 //    curve2Z.addPoint(Point(1900*size, 3500*size-i));
-	 //    curve2Z.addPoint(Point(3100*size, 3500*size-i));
-	 //    img2Z.draw(curve2Z.getCurvePoints());
+	// // Haut
+	// curve2Z.clearPoints();
+ //    curve2Z.addPoint(Point(1900*size, 3500*size));
+ //    curve2Z.addPoint(Point(3100*size, 3500*size));
+	// std::vector<Point> haut = curve2Z.getCurvePoints();
 
-	 //    // Diagonale
-	 //    curve2Z.clearPoints();
-	 //    curve2Z.addPoint(Point(1900*size+i, 1500*size+thickness));
-	 //    curve2Z.addPoint(Point(3100*size-thickness+i, 3500*size-thickness));
-	 //    img2Z.draw(curve2Z.getCurvePoints());
-  //   }
-  //   img2Z.writeImage();
+	// // Diagonale
+ //    curve2Z.clearPoints();
+ //    curve2Z.addPoint(Point(1900*size, 1500*size+thickness));
+ //    curve2Z.addPoint(Point(3100*size-thickness, 3500*size-thickness));
+ //    std::vector<Point> diag = curve2Z.getCurvePoints();
+
+ //    for (int i = 0; i <= thickness; i++) {
+ //    	for (auto it = bas.begin(); it != bas.end(); it++) {
+ //    		img2Z.draw(Point(it->getX(), it->getY()+i));
+ //    	}
+
+ //    	for (auto it = haut.begin(); it != haut.end(); it++) {
+ //    		img2Z.draw(Point(it->getX(), it->getY()-i));
+ //    	}
+
+ //    	for (auto it = diag.begin(); it != diag.end(); it++) {
+ //    		img2Z.draw(Point(it->getX()+i, it->getY()));
+ //    	}
+ //    }
+ //    img2Z.writeImage();
 
     // 3.Z
-    size = 0.5;
-    thickness = 200*size;
+  //   size = 0.5;
+  //   thickness = 200*size;
 
-    char fileName3Z[] = "FontV3_Z.png";
-    Image img3Z(fileName3Z, 5000*size, 5000*size);
-    BezierCurve curve3Z;
+  //   char fileName3Z[] = "FontV3_Z.png";
+  //   Image img3Z(fileName3Z, 5000*size, 5000*size);
+  //   BezierCurve curve3Z;
 
-    for (int i = 0; i <= thickness; i++) {
-    	// Bas
-    	curve3Z.clearPoints();
-		curve3Z.addPoint(Point(1900*size, 1500*size+i));
-		curve3Z.addPoint(Point(3100*size, 1500*size+i));
-		img3Z.draw(curve3Z.getCurvePoints());
+    // Bas
+ //    curve3Z.clearPoints();
+	// curve3Z.addPoint(Point(1900*size, 1500*size));
+	// curve3Z.addPoint(Point(3100*size, 1500*size));
+	// std::vector<Point> bas = curve3Z.getCurvePoints();
 
-		// Haut
-		curve3Z.clearPoints();
-	    curve3Z.addPoint(Point(1900*size, 3500*size-i));
-	    curve3Z.addPoint(Point(3100*size, 3500*size-i));
-	    img3Z.draw(curve3Z.getCurvePoints());
+	// // Haut
+	// curve3Z.clearPoints();
+ //    curve3Z.addPoint(Point(1900*size, 3500*size));
+ //    curve3Z.addPoint(Point(3100*size, 3500*size));
+	// std::vector<Point> haut = curve3Z.getCurvePoints();
 
-	    // Diagonale
-	    curve3Z.clearPoints();
-	    curve3Z.addPoint(Point(1900*size+i, 1500*size+thickness));
-	    curve3Z.addPoint(Point(3100*size-thickness+i, 3500*size-thickness));
-	    img3Z.draw(curve3Z.getCurvePoints());
-    }
+	// // Diagonale
+ //    curve3Z.clearPoints();
+ //    curve3Z.addPoint(Point(1900*size, 1500*size+thickness));
+ //    curve3Z.addPoint(Point(3100*size-thickness, 3500*size-thickness));
+ //    std::vector<Point> diag = curve3Z.getCurvePoints();
 
-    for (int i = 1; i < 3; i++) {
-    	// Bas
-    	curve3Z.clearPoints();
-		curve3Z.addPoint(Point(1900*size, 1500*size-i, 255));
-		curve3Z.addPoint(Point(3100*size, 1500*size-i, 255));
-		img3Z.draw(curve3Z.getCurvePoints());
+ //    for (int i = 0; i <= thickness; i++) {
+ //    	for (auto it = bas.begin(); it != bas.end(); it++) {
+ //    		img3Z.draw(Point(it->getX(), it->getY()+i));
+ //    	}
 
-		curve3Z.clearPoints();
-		curve3Z.addPoint(Point(1900*size+thickness+2, 1500*size+thickness+i, 255));
-		curve3Z.addPoint(Point(3100*size, 1500*size+thickness+i, 255));
-		img3Z.draw(curve3Z.getCurvePoints());
+ //    	for (auto it = haut.begin(); it != haut.end(); it++) {
+ //    		img3Z.draw(Point(it->getX(), it->getY()-i));
+ //    	}
 
-		// Bas gauche
-		curve3Z.clearPoints();
-	    curve3Z.addPoint(Point(1900*size-i, 1500*size-2, 255));
-	    curve3Z.addPoint(Point(1900*size-i, 1500*size+thickness+2, 255));
-	    img3Z.draw(curve3Z.getCurvePoints());
+ //    	for (auto it = diag.begin(); it != diag.end(); it++) {
+ //    		img3Z.draw(Point(it->getX()+i, it->getY()));
+ //    	}
+ //    }
 
-	    // Bas droit
-		curve3Z.clearPoints();
-	    curve3Z.addPoint(Point(3100*size+i, 1500*size-2, 255));
-	    curve3Z.addPoint(Point(3100*size+i, 1500*size+thickness+2, 255));
-	    img3Z.draw(curve3Z.getCurvePoints());
 
-		// Haut
-		curve3Z.clearPoints();
-	    curve3Z.addPoint(Point(1900*size, 3500*size+i, 255));
-	    curve3Z.addPoint(Point(3100*size, 3500*size+i, 255));
-	    img3Z.draw(curve3Z.getCurvePoints());
+  //   for (int i = 1; i < 3; i++) {
+  //   	// Bas
+  //   	curve3Z.clearPoints();
+		// curve3Z.addPoint(Point(1900*size, 1500*size-i, 255));
+		// curve3Z.addPoint(Point(3100*size, 1500*size-i, 255));
+		// img3Z.draw(curve3Z.getCurvePoints());
 
-	    curve3Z.clearPoints();
-	    curve3Z.addPoint(Point(1900*size, 3500*size-thickness-i, 255));
-	    curve3Z.addPoint(Point(3100*size-thickness-2, 3500*size-thickness-i, 255));
-	    img3Z.draw(curve3Z.getCurvePoints());
+		// curve3Z.clearPoints();
+		// curve3Z.addPoint(Point(1900*size+thickness+2, 1500*size+thickness+i, 255));
+		// curve3Z.addPoint(Point(3100*size, 1500*size+thickness+i, 255));
+		// img3Z.draw(curve3Z.getCurvePoints());
 
-	    // Haut gauche
-		curve3Z.clearPoints();
-	    curve3Z.addPoint(Point(1900*size-i, 3500*size+2, 255));
-	    curve3Z.addPoint(Point(1900*size-i, 3500*size-thickness-2, 255));
-	    img3Z.draw(curve3Z.getCurvePoints());
+		// // Bas gauche
+		// curve3Z.clearPoints();
+	 //    curve3Z.addPoint(Point(1900*size-i, 1500*size-2, 255));
+	 //    curve3Z.addPoint(Point(1900*size-i, 1500*size+thickness+2, 255));
+	 //    img3Z.draw(curve3Z.getCurvePoints());
 
-	    // Haut droit
-		curve3Z.clearPoints();
-	    curve3Z.addPoint(Point(3100*size+i, 3500*size+2, 255));
-	    curve3Z.addPoint(Point(3100*size+i, 3500*size-thickness-2, 255));
-	    img3Z.draw(curve3Z.getCurvePoints());
+	 //    // Bas droit
+		// curve3Z.clearPoints();
+	 //    curve3Z.addPoint(Point(3100*size+i, 1500*size-2, 255));
+	 //    curve3Z.addPoint(Point(3100*size+i, 1500*size+thickness+2, 255));
+	 //    img3Z.draw(curve3Z.getCurvePoints());
 
-	    // Diagonale
-	    curve3Z.clearPoints();
-	    curve3Z.addPoint(Point(1900*size-i, 1500*size+thickness+1, 255));
-	    curve3Z.addPoint(Point(3100*size-thickness-i, 3500*size-thickness-1, 255));
-	    img3Z.draw(curve3Z.getCurvePoints());
+		// // Haut
+		// curve3Z.clearPoints();
+	 //    curve3Z.addPoint(Point(1900*size, 3500*size+i, 255));
+	 //    curve3Z.addPoint(Point(3100*size, 3500*size+i, 255));
+	 //    img3Z.draw(curve3Z.getCurvePoints());
 
-	    curve3Z.clearPoints();
-	    curve3Z.addPoint(Point(1900*size+thickness+i, 1500*size+thickness+1, 255));
-	    curve3Z.addPoint(Point(3100*size+i, 3500*size-thickness-1, 255));
-	    img3Z.draw(curve3Z.getCurvePoints());
-    }
-    img3Z.writeImage();
+	 //    curve3Z.clearPoints();
+	 //    curve3Z.addPoint(Point(1900*size, 3500*size-thickness-i, 255));
+	 //    curve3Z.addPoint(Point(3100*size-thickness-2, 3500*size-thickness-i, 255));
+	 //    img3Z.draw(curve3Z.getCurvePoints());
+
+	 //    // Haut gauche
+		// curve3Z.clearPoints();
+	 //    curve3Z.addPoint(Point(1900*size-i, 3500*size+2, 255));
+	 //    curve3Z.addPoint(Point(1900*size-i, 3500*size-thickness-2, 255));
+	 //    img3Z.draw(curve3Z.getCurvePoints());
+
+	 //    // Haut droit
+		// curve3Z.clearPoints();
+	 //    curve3Z.addPoint(Point(3100*size+i, 3500*size+2, 255));
+	 //    curve3Z.addPoint(Point(3100*size+i, 3500*size-thickness-2, 255));
+	 //    img3Z.draw(curve3Z.getCurvePoints());
+
+	 //    // Diagonale
+	 //    curve3Z.clearPoints();
+	 //    curve3Z.addPoint(Point(1900*size-i, 1500*size+thickness+1, 255));
+	 //    curve3Z.addPoint(Point(3100*size-thickness-i, 3500*size-thickness-1, 255));
+	 //    img3Z.draw(curve3Z.getCurvePoints());
+
+	 //    curve3Z.clearPoints();
+	 //    curve3Z.addPoint(Point(1900*size+thickness+i, 1500*size+thickness+1, 255));
+	 //    curve3Z.addPoint(Point(3100*size+i, 3500*size-thickness-1, 255));
+	 //    img3Z.draw(curve3Z.getCurvePoints());
+  //   }
+  //   img3Z.writeImage();
     return 0;
 }
