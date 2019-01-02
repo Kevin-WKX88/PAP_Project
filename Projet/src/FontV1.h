@@ -63,6 +63,12 @@ class FontV1{
 		std::vector<BezierCurve> O();
 
 		/**
+		 * @brief The curves to draw the letter S
+		 * @return letter_
+		 */
+		std::vector<BezierCurve> S();
+
+		/**
 		 * @brief The curves to draw the letter Z
 		 * @return letter_
 		 */

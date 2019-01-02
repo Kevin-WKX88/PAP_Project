@@ -439,7 +439,7 @@ int main() {
  //    char fileName1O[] = "FontV1_O.png";
  //    Image img1O(fileName1O, 5000*size, 5000*size);
 
- //    img1O.draw(LO.O(size, 200*size));
+ //    img1O.draw(LO.O());
 
 	// img1O.writeImage();
 
@@ -465,14 +465,19 @@ int main() {
 
 
   // 1.B
-	FontV1 LB;
-    char fileName1B[] = "FontV1_B.png";
-    Image img1B(fileName1B, 500, 500);
-    img1B.draw(LB.B());
-	img1B.writeImage();
+	// FontV1 LB;
+ //    char fileName1B[] = "FontV1_B.png";
+ //    Image img1B(fileName1B, 500, 500);
+ //    img1B.draw(LB.B());
+	// img1B.writeImage();
 
 
-
+	// 1.S
+	FontV1 LS;
+    char fileName1S[] = "FontV1_S.png";
+    Image img1S(fileName1S, 500, 500);
+    img1S.draw(LS.S());
+	img1S.writeImage();
 
 
 

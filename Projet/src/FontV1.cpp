@@ -377,11 +377,71 @@ std::vector<BezierCurve> FontV1::O() {
 }
 
 
+std::vector<BezierCurve> FontV1::S() {
+    BezierCurve curve1S;
+
+    // haut
+    curve1S.addPoint(Point(210, 320));
+    curve1S.addPoint(Point(220, 340));
+    curve1S.addPoint(Point(255, 340));
+    letter_.push_back(curve1S);
+
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(255, 340));
+    curve1S.addPoint(Point(290, 340));
+    curve1S.addPoint(Point(300, 320));
+    letter_.push_back(curve1S);
+
+    // gauche
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(210, 320));
+    curve1S.addPoint(Point(200, 300));
+    curve1S.addPoint(Point(220, 290));
+    letter_.push_back(curve1S);
+
+    // middle
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(220, 290));
+    curve1S.addPoint(Point(235, 280));
+    curve1S.addPoint(Point(255, 280));
+    letter_.push_back(curve1S);
+
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(255, 280));
+    curve1S.addPoint(Point(270, 280));
+    curve1S.addPoint(Point(290, 270));
+    letter_.push_back(curve1S);
+
+    // droite
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(290, 270));
+    curve1S.addPoint(Point(310, 260));
+    curve1S.addPoint(Point(300, 240));
+    letter_.push_back(curve1S);
+
+    // bas
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(300, 240));
+    curve1S.addPoint(Point(290, 220));
+    curve1S.addPoint(Point(255, 220));
+    letter_.push_back(curve1S);
+
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(210, 240));
+    curve1S.addPoint(Point(220, 220));
+    curve1S.addPoint(Point(255, 220));
+    letter_.push_back(curve1S);
+
+    // Small
+    
+    return letter_;
+}
+
+
 std::vector<BezierCurve> FontV1::Z(){
     BezierCurve curve1Z;
 
     // Bas
-    curve1Z.clearPoints();
     curve1Z.addPoint(Point(190, 150));
     curve1Z.addPoint(Point(310, 150));
     letter_.push_back(curve1Z);
