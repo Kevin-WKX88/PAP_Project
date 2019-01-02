@@ -18,6 +18,7 @@
 class FontV1{
 	private:
 		std::vector<BezierCurve> letter_;
+		int thickness_ = 20;
 
 	public:
 		/**
@@ -32,33 +33,40 @@ class FontV1{
 		FontV1(std::vector<BezierCurve> letter);
 
 		/**
-		 * @brief Add a new curve in the letter
-		 * @param C The new curve to add
-		 */
-		void addCurve(BezierCurve C);
-
-		/**
-		 * @brief Draw the letter D
-		 * @param thickness 
+		 * @brief The curves to draw the letter A
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> F1D(int thickness);
+		std::vector<BezierCurve> A();
+
+		/**
+		 * @brief The curves to draw the letter B
+		 * @return letter_
+		 */
+		std::vector<BezierCurve> B();
+
+		/**
+		 * @brief The curves to draw the letter C
+		 * @return letter_
+		 */
+		std::vector<BezierCurve> C();
+
+		/**
+		 * @brief The curves to draw the letter D
+		 * @return letter_
+		 */
+		std::vector<BezierCurve> D();
 
 		/**
 		 * @brief The curves to draw the letter O
-		 * @param size [description]
-		 * @param thickness [description]
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> O(double size, int thickness);
+		std::vector<BezierCurve> O();
 
 		/**
 		 * @brief The curves to draw the letter Z
-		 * @param size [description]
-		 * @param thickness [description]
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> Z(double size, int thickness);
+		std::vector<BezierCurve> Z();
 
 
 		/**

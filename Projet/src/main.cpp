@@ -46,7 +46,7 @@ int main() {
    //  img.writeImage();
 
 
-     int thickness = 20;
+     // int thickness = 20;
 
    //  // 1.D
    //  char fileName1D[] = "FontV1_D.png";
@@ -433,15 +433,57 @@ int main() {
 
 
 
-    // 1.O
-	FontV1 LO;
-    double size = 0.1;
-    char fileName1O[] = "FontV1_O.png";
-    Image img1O(fileName1O, 5000*size, 5000*size);
+ //    // 1.O
+	// FontV1 LO;
+ //    double size = 0.1;
+ //    char fileName1O[] = "FontV1_O.png";
+ //    Image img1O(fileName1O, 5000*size, 5000*size);
 
-    img1O.draw(LO.O(size, 200*size));
+ //    img1O.draw(LO.O(size, 200*size));
 
-	img1O.writeImage();
+	// img1O.writeImage();
+
+
+
+	// // 1.D
+	// FontV1 LD;
+ //    double size = 0.1;
+ //    char fileName1D[] = "FontV1_D.png";
+ //    Image img1D(fileName1D, 5000*size, 5000*size);
+
+ //    img1D.draw(LD.D(size, 200*size));
+
+	// img1D.writeImage();
+
+
+ //    // 1.A
+	// FontV1 LA;
+ //    char fileName1A[] = "FontV1_A.png";
+ //    Image img1A(fileName1A, 500, 500);
+ //    img1A.draw(LA.A());
+	// img1A.writeImage();
+
+
+  // 1.B
+	FontV1 LB;
+    char fileName1B[] = "FontV1_B.png";
+    Image img1B(fileName1B, 500, 500);
+    img1B.draw(LB.B());
+	img1B.writeImage();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     return 0;
 }
