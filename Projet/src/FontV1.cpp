@@ -281,6 +281,78 @@ std::vector<BezierCurve> FontV1::D(){
     return letter_;
 }
 
+
+std::vector<BezierCurve> FontV1::G() {
+    BezierCurve curve1G;
+
+    // haut droite
+    curve1G.clearPoints();
+    curve1G.addPoint(Point(320, 320));
+    curve1G.addPoint(Point(300, 350));
+    curve1G.addPoint(Point(250, 350));
+    letter_.push_back(curve1G);
+
+    // haut gauche
+    curve1G.clearPoints();
+    curve1G.addPoint(Point(170, 250));
+    curve1G.addPoint(Point(170, 350));
+    curve1G.addPoint(Point(250, 350));
+    letter_.push_back(curve1G);
+
+    // bas gauche
+    curve1G.clearPoints();
+    curve1G.addPoint(Point(170, 250));
+    curve1G.addPoint(Point(170, 150));
+    curve1G.addPoint(Point(250, 150));
+    letter_.push_back(curve1G);
+
+    // bas droite
+    curve1G.clearPoints();
+    curve1G.addPoint(Point(330, 250));
+    curve1G.addPoint(Point(330, 150));
+    curve1G.addPoint(Point(250, 150));
+    letter_.push_back(curve1G);
+
+    // trait droite
+    curve1G.clearPoints();
+    curve1G.addPoint(Point(330, 250));
+    curve1G.addPoint(Point(330, 150));
+    letter_.push_back(curve1G);
+
+
+    // Small
+    // // haut droite
+    // curve1G.clearPoints();
+    // curve1G.addPoint(Point(330-thickness_, 250));
+    // curve1G.addPoint(Point(330-thickness_, 350-thickness_));
+    // curve1G.addPoint(Point(250, 350-thickness_));
+    // letter_.push_back(curve1G);
+
+    // // haut gauche
+    // curve1G.clearPoints();
+    // curve1G.addPoint(Point(170+thickness_, 250));
+    // curve1G.addPoint(Point(170+thickness_, 350-thickness_));
+    // curve1G.addPoint(Point(250, 350-thickness_));
+    // letter_.push_back(curve1G);
+
+    // // bas gauche
+    // curve1G.clearPoints();
+    // curve1G.addPoint(Point(170+thickness_, 250));
+    // curve1G.addPoint(Point(170+thickness_, 150+thickness_));
+    // curve1G.addPoint(Point(250, 150+thickness_));
+    // letter_.push_back(curve1G);
+
+    // // bas droite
+    // curve1G.clearPoints();
+    // curve1G.addPoint(Point(330-thickness_, 250));
+    // curve1G.addPoint(Point(330-thickness_, 150+thickness_));
+    // curve1G.addPoint(Point(250, 150+thickness_));
+    // letter_.push_back(curve1G);
+
+    return letter_;
+}
+
+
 std::vector<BezierCurve> FontV1::O() {
     BezierCurve curve1O;
 

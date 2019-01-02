@@ -473,14 +473,19 @@ int main() {
 
 
 	// 1.S
-	FontV1 LS;
-    char fileName1S[] = "FontV1_S.png";
-    Image img1S(fileName1S, 500, 500);
-    img1S.draw(LS.S());
-	img1S.writeImage();
+	// FontV1 LS;
+ //    char fileName1S[] = "FontV1_S.png";
+ //    Image img1S(fileName1S, 500, 500);
+ //    img1S.draw(LS.S());
+	// img1S.writeImage();
 
 
-
+	// 1.S
+	FontV1 LG;
+    char fileName1G[] = "FontV1_G.png";
+    Image img1G(fileName1G, 500, 500);
+    img1G.draw(LG.G());
+	img1G.writeImage();
 
 
 
