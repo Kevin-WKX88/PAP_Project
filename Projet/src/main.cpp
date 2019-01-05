@@ -500,6 +500,8 @@ int main() {
  //    char fileName1G[] = "FontV1_G.png";
  //    Image img1G(fileName1G, 500, 500);
  //    img1G.draw(LG.G());
+	// seedFill(img1G, 250, 160);
+
 	// img1G.writeImage();
 
 	// 1.C
@@ -510,18 +512,18 @@ int main() {
 	// img1C.writeImage();
 
 	// 2.C
-	FontV2 LC;
-    char fileName2C[] = "FontV2_C.png";
-    Image img2C(fileName2C, 500, 500);
-    img2C.draw(LC.C());
+	// FontV2 LC;
+ //    char fileName2C[] = "FontV2_C.png";
+ //    Image img2C(fileName2C, 500, 500);
+ //    img2C.draw(LC.C());
 
 
-	seedFill(img2C, 250, 160);
+	// seedFill(img2C, 250, 160);
 	
-	img2C.writeImage();
+	// img2C.writeImage();
 
 
-	
+
  //  // 1.S
 	// FontV1 LS;
  //    char fileName1S[] = "FontV1_S.png";
@@ -531,19 +533,19 @@ int main() {
 
 
  //  // 1.E
-	// FontV1 LE;
- //    char fileName1E[] = "FontV1_E.png";
- //    Image img1E(fileName1E, 500, 500);
- //    img1E.draw(LE.E());
-	// img1E.writeImage();
+	FontV1 LE;
+    char fileName1E[] = "FontV1_E.png";
+    Image img1E(fileName1E, 500, 500);
+    img1E.draw(LE.E());
+	img1E.writeImage();
 
 
  //  // 1.F
- //    FontV1 LF;
- //    char fileName1F[] = "FontV1_F.png";
- //    Image img1F(fileName1F, 500, 500);
- //    img1F.draw(LF.F());
- //    img1F.writeImage();
+    FontV1 LF;
+    char fileName1F[] = "FontV1_F.png";
+    Image img1F(fileName1F, 500, 500);
+    img1F.draw(LF.F());
+    img1F.writeImage();
 
 
 
