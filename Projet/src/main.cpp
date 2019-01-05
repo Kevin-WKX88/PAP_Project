@@ -533,19 +533,20 @@ int main() {
 
 
  //  // 1.E
-	FontV1 LE;
     char fileName1E[] = "FontV1_E.png";
-    Image img1E(fileName1E, 500, 500);
-    img1E.draw(LE.E());
-	img1E.writeImage();
+    FontV1 LE(fileName1E);
+    LE.E();
+    //Image img1E(fileName1E, 500, 500);
+    //img1E.draw(LE.E());
+	//img1E.writeImage();
 
 
- //  // 1.F
-    FontV1 LF;
-    char fileName1F[] = "FontV1_F.png";
-    Image img1F(fileName1F, 500, 500);
-    img1F.draw(LF.F());
-    img1F.writeImage();
+ // //  // 1.F
+ //    FontV1 LF;
+ //    char fileName1F[] = "FontV1_F.png";
+ //    Image img1F(fileName1F, 500, 500);
+ //    img1F.draw(LF.F());
+ //    img1F.writeImage();
 
 
 

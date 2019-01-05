@@ -14,23 +14,22 @@
 #include "Point.h"
 #include "Image.h"
 #include "BezierCurve.h"
+#include "FontV1.h"
 
-class FontV2{
-	private:
-		std::vector<BezierCurve> letter_;
-		int thickness_ = 20;
-
+class FontV2 : public FontV1{
 	public:
 		/**
 		 * @brief Default constructor
 		 */
-		FontV2() {};
+		//FontV2() {};
 
 		/**
-		 * @brief Valued constructor
-		 * @param points Vector of points of the Bezier curve
+		 * @brief Color the inside of a letter
+		 * @details Perform Seed fill Algorithm to transform the white pixel inside the contour into black pixel
+		 * @param x coordinate 
+		 * @param y coordinate
 		 */
-		FontV2(std::vector<BezierCurve> letter);
+		void colorInBlack(int x, int y);
 
 		/**
 		 * @brief The curves to draw the letter A

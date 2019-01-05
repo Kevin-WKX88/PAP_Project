@@ -17,87 +17,87 @@
 
 class FontV1{
 	private:
-		std::vector<BezierCurve> letter_;
+		Image img_;
 		int thickness_ = 20;
 
 	public:
 		/**
 		 * @brief Default constructor
 		 */
-		FontV1() {};
+		FontV1(char* imageName) : img_(imageName, 500, 500) {
+		};
 
 		/**
 		 * @brief Valued constructor
 		 * @param points Vector of points of the Bezier curve
 		 */
-		FontV1(std::vector<BezierCurve> letter);
 
 		/**
 		 * @brief The curves to draw the letter A
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> A();
+		void A();
 
 		/**
 		 * @brief The curves to draw the letter B
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> B();
+		void B();
 
 		/**
 		 * @brief The curves to draw the letter C
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> C();
+		void C();
 
 		/**
 		 * @brief The curves to draw the letter D
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> D();
+		void D();
 
 		/**
 		 * @brief The curves to draw the letter E
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> E();
+		void E();
 
 		/**
 		 * @brief The curves to draw the letter F
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> F();
+		void F();
 
 		/**
 		 * @brief The curves to draw the letter G
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> G();
+		void G();
 
 		/**
 		 * @brief The curves to draw the letter O
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> O();
+		void O();
 
 		/**
 		 * @brief The curves to draw the letter S
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> S();
+		void S();
 
 		/**
 		 * @brief The curves to draw the letter Z
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> Z();
+		void Z();
 
 
 		/**
 		 * @brief Get the vector of curves to draw the letter
 		 * @return The vector containing the curves of the letter
 		 */
-		// std::vector<BezierCurve> getLetterCurve();
+		// void getLetterCurve();
 		
 };
 
