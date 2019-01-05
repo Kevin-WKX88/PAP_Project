@@ -80,7 +80,7 @@ void FontV1::A(){
     curves.push_back(curve1A);
 
     img_.draw(curves);
-    img_.writeImage();
+    
 }
 
 
@@ -213,7 +213,7 @@ void FontV1::B(){
     curves.push_back(curve1B);
 
     img_.draw(curves);
-    img_.writeImage();
+    
 }
 
 void FontV1::C() {
@@ -290,7 +290,7 @@ void FontV1::C() {
     curves.push_back(curve1C);
 
     img_.draw(curves);
-    img_.writeImage();
+    
 }
 
 void FontV1::D(){
@@ -338,7 +338,7 @@ void FontV1::D(){
     curves.push_back(curve1D);
 
     img_.draw(curves);
-    img_.writeImage();
+    
 }
 
 
@@ -418,7 +418,7 @@ void FontV1::E(){
     curves.push_back(curve1E);
 
     img_.draw(curves);
-    img_.writeImage();
+    
 }
 
 
@@ -486,7 +486,7 @@ void FontV1::F(){
     curves.push_back(curve1F);
 
     img_.draw(curves);
-    img_.writeImage();
+    
 }
 
 
@@ -591,7 +591,7 @@ void FontV1::G() {
     curves.push_back(curve1G);
 
     img_.draw(curves);
-    img_.writeImage();
+    
 }
 
 
@@ -689,7 +689,7 @@ void FontV1::O() {
     
 
     img_.draw(curves);
-    img_.writeImage();
+    
 }
 
 
@@ -785,7 +785,7 @@ void FontV1::S(){
 
 
     img_.draw(curves);
-    img_.writeImage();
+    
 }
 
 
@@ -858,6 +858,10 @@ void FontV1::Z(){
     curves.push_back(curve1Z);
 
     img_.draw(curves);
+    
+}
+
+void FontV1::finishLetter() {
     img_.writeImage();
 }
 

@@ -25,18 +25,19 @@ void FontV2::colorInBlack(int x, int y) {
     }
 }
 
-
-
-std::vector<BezierCurve> FontV2::C() {
-    
+void FontV2::B() {
+    FontV1::B();
+    colorInBlack(250, 160);
 }
 
-/**
- * @brief The curves to draw the letter D
- * @return letter_
- */
-std::vector<BezierCurve> FontV2::D() {
-    
+void FontV2::C() {
+    FontV1::C();
+    colorInBlack(250, 160);
+}
+
+void FontV2::D() {
+    FontV1::D();
+    colorInBlack(250, 160);
   //   BezierCurve curve2D;
 
   //   for (int i = 0; i <= thickness_; i++) {
@@ -58,4 +59,29 @@ std::vector<BezierCurve> FontV2::D() {
   //       letter_.push_back(curve2D);
   //   }
   //   return letter_;
+}
+
+void FontV2::E() {
+    FontV1::E();
+    colorInBlack(250, 160);
+}
+
+void FontV2::F() {
+    FontV1::F();
+    colorInBlack(250, 160);
+}
+
+void FontV2::O() {
+    FontV1::O();
+    colorInBlack(250, 160);
+}
+
+void FontV2::S() {
+    FontV1::S();
+    colorInBlack(250, 160);
+}
+
+void FontV2::Z() {
+    FontV1::Z();
+    colorInBlack(250, 160);
 }

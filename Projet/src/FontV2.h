@@ -21,8 +21,7 @@ class FontV2 : public FontV1{
 		/**
 		 * @brief Default constructor
 		 */
-		//FontV2() {};
-
+		FontV2(char* imageName) : FontV1(imageName) {}
 		/**
 		 * @brief Color the inside of a letter
 		 * @details Perform Seed fill Algorithm to transform the white pixel inside the contour into black pixel
@@ -35,49 +34,61 @@ class FontV2 : public FontV1{
 		 * @brief The curves to draw the letter A
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> A();
+		void A();
 
 		/**
 		 * @brief The curves to draw the letter B
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> B();
+		void B();
 
 		/**
 		 * @brief The curves to draw the letter C
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> C();
+		void C();
 
 		/**
 		 * @brief The curves to draw the letter D
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> D();
+		void D();
+
+		/**
+		 * @brief The curves to draw the letter E
+		 * @return letter_
+		 */
+		void E();
+
+		/**
+		 * @brief The curves to draw the letter F
+		 * @return letter_
+		 */
+		void F();
 
 		/**
 		 * @brief The curves to draw the letter G
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> G();
+		void G();
 
 		/**
 		 * @brief The curves to draw the letter O
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> O();
+		void O();
 
 		/**
 		 * @brief The curves to draw the letter S
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> S();
+		void S();
 
 		/**
 		 * @brief The curves to draw the letter Z
 		 * @return letter_
 		 */
-		std::vector<BezierCurve> Z();
+		void Z();
 };
 
 

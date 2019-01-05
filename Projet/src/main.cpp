@@ -533,9 +533,11 @@ int main() {
 
 
  //  // 1.E
-    char fileName1E[] = "FontV1_E.png";
-    FontV1 LE(fileName1E);
-    LE.E();
+    //char fileName1E[] = "FontV1_E.png";
+    //FontV1 LE(fileName1E);
+    //LE.E();
+    //LE.finishLetter();
+
     //Image img1E(fileName1E, 500, 500);
     //img1E.draw(LE.E());
 	//img1E.writeImage();
@@ -551,6 +553,36 @@ int main() {
 
 
 
+
+
+
+
+
+    // FONT V2
+    // char fileName2B[] = "FontV2_B.png";
+    // FontV2 L2B(fileName2B);
+    // L2B.B();
+    // L2B.finishLetter();
+
+    // char fileName2C[] = "FontV2_C.png";
+    // FontV2 L2C(fileName2C);
+    // L2C.C();
+    // L2C.finishLetter();
+
+    // char fileName2D[] = "FontV2_D.png";
+    // FontV2 L2D(fileName2D);
+    // L2D.D();
+    // L2D.finishLetter();
+
+    // char fileName2O[] = "FontV2_O.png";
+    // FontV2 L2O(fileName2O);
+    // L2O.O();
+    // L2O.finishLetter();
+
+    // char fileName2Z[] = "FontV2_Z.png";
+    // FontV2 L2Z(fileName2Z);
+    // L2Z.Z();
+    // L2Z.finishLetter();
 
     return 0;
 }

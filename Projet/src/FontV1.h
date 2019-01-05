@@ -16,16 +16,19 @@
 #include "BezierCurve.h"
 
 class FontV1{
-	private:
+	protected:
 		Image img_;
 		int thickness_ = 20;
 
 	public:
 		/**
-		 * @brief Default constructor
+		 * @brief Valued constructor
 		 */
 		FontV1(char* imageName) : img_(imageName, 500, 500) {
 		};
+
+		void finishLetter();
+
 
 		/**
 		 * @brief Valued constructor
