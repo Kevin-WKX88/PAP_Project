@@ -447,11 +447,11 @@ int main() {
 	// img1D.writeImage();
 
 	// 2.D
-	FontV2 LD;
-    char fileName2D[] = "FontV2_D.png";
-    Image img2D(fileName2D, 500, 500);
-    img2D.draw(LD.D());
-	img2D.writeImage();
+	// FontV2 LD;
+ //    char fileName2D[] = "FontV2_D.png";
+ //    Image img2D(fileName2D, 500, 500);
+ //    img2D.draw(LD.D());
+	// img2D.writeImage();
 
 
  //    // 1.A
@@ -479,11 +479,18 @@ int main() {
 
 
 	// 1.G
-	FontV1 LG;
-    char fileName1G[] = "FontV1_G.png";
-    Image img1G(fileName1G, 500, 500);
-    img1G.draw(LG.G());
-	img1G.writeImage();
+	// FontV1 LG;
+ //    char fileName1G[] = "FontV1_G.png";
+ //    Image img1G(fileName1G, 500, 500);
+ //    img1G.draw(LG.G());
+	// img1G.writeImage();
+
+	// 1.C
+	FontV1 LC;
+    char fileName1C[] = "FontV1_C.png";
+    Image img1C(fileName1C, 500, 500);
+    img1C.draw(LC.C());
+	img1C.writeImage();
 
 
 
