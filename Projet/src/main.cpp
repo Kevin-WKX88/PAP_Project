@@ -9,6 +9,23 @@
 
 #include <vector>
 
+
+void seedFill(Image &img, int x, int y){
+	if ((x <= 100 || x >= 400) || (y <= 100 || y >= 400)) {
+		return;
+	}
+	unsigned int* color = img.getPixelColor(Point(x,y));
+	if (color[0] == 255 && color[1] == 255 && color[2] == 255) {
+		std::cout << "true" << std::endl;
+		img.draw(Point(x, y, 0, 0, 0));
+
+		seedFill(img, x+1, y);
+		seedFill(img, x-1, y);
+		seedFill(img, x, y+1);
+		seedFill(img, x, y-1);
+	}
+}
+
 int main() {
     std::cout << "!!!Hello World!!!" << std::endl;
 
@@ -486,12 +503,22 @@ int main() {
 	// img1G.writeImage();
 
 	// 1.C
-	FontV1 LC;
-    char fileName1C[] = "FontV1_C.png";
-    Image img1C(fileName1C, 500, 500);
-    img1C.draw(LC.C());
-	img1C.writeImage();
+	// FontV1 LC;
+ //    char fileName1C[] = "FontV1_C.png";
+ //    Image img1C(fileName1C, 500, 500);
+ //    img1C.draw(LC.C());
+	// img1C.writeImage();
 
+	// 2.C
+	FontV2 LC;
+    char fileName2C[] = "FontV2_C.png";
+    Image img2C(fileName2C, 500, 500);
+    img2C.draw(LC.C());
+
+
+	seedFill(img2C, 250, 160);
+	
+	img2C.writeImage();
 
 
 

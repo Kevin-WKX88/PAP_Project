@@ -9,6 +9,10 @@
 #include <cmath>
 #include "FontV2.h"
 
+std::vector<BezierCurve> FontV2::C() {
+    
+}
+
 /**
  * @brief The curves to draw the letter D
  * @return letter_

@@ -60,6 +60,13 @@ class Image {
 		png_bytep* getPixels() const;
 
 		/**
+		 * @brief Get the RGB level intensity of a pixel
+		 * @param P The pixel
+		 * @return The RGB color
+		 */
+		unsigned int* getPixelColor(Point P);
+
+		/**
 		 * @brief Setter for pixels_
 		 * @param pixels the pixels of the image
 		 */
