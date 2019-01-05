@@ -1,3 +1,11 @@
+//============================================================================
+// Name        : Projet_PAP.cpp
+// Author      : Kevin XU & Ziheng LI
+// Version     :
+// Copyright   : Your copyright notice
+// Description : PAP Project - Courbes de Bézier et police de caractères
+//============================================================================
+
 #include <iostream>
 
 #include "Point.h"
@@ -5,26 +13,8 @@
 #include "Line.h"
 #include "BezierCurve.h"
 #include "FontV1.h"
-#include "FontV2.h"
 
 #include <vector>
-
-
-void seedFill(Image &img, int x, int y){
-	if ((x <= 100 || x >= 400) || (y <= 100 || y >= 400)) {
-		return;
-	}
-	unsigned int* color = img.getPixelColor(Point(x,y));
-	if (color[0] == 255 && color[1] == 255 && color[2] == 255) {
-		std::cout << "true" << std::endl;
-		img.draw(Point(x, y, 0, 0, 0));
-
-		seedFill(img, x+1, y);
-		seedFill(img, x-1, y);
-		seedFill(img, x, y+1);
-		seedFill(img, x, y-1);
-	}
-}
 
 int main() {
     std::cout << "!!!Hello World!!!" << std::endl;
@@ -449,7 +439,7 @@ int main() {
  //    char fileName1O[] = "FontV1_O.png";
  //    Image img1O(fileName1O, 5000*size, 5000*size);
 
- //    img1O.draw(LO.O());
+ //    img1O.draw(LO.O(size, 200*size));
 
 	// img1O.writeImage();
 
@@ -457,18 +447,13 @@ int main() {
 
 	// // 1.D
 	// FontV1 LD;
-    // double size = 0.1;
-    // char fileName1D[] = "FontV1_D.png";
-    // Image img1D(fileName1D, 5000*size, 5000*size);
-    // img1D.draw(LD.D(size, 200*size));
-	// img1D.writeImage();
+ //    double size = 0.1;
+ //    char fileName1D[] = "FontV1_D.png";
+ //    Image img1D(fileName1D, 5000*size, 5000*size);
 
-	// 2.D
-	// FontV2 LD;
- //    char fileName2D[] = "FontV2_D.png";
- //    Image img2D(fileName2D, 500, 500);
- //    img2D.draw(LD.D());
-	// img2D.writeImage();
+ //    img1D.draw(LD.D(size, 200*size));
+
+	// img1D.writeImage();
 
 
  //    // 1.A
@@ -479,7 +464,7 @@ int main() {
 	// img1A.writeImage();
 
 
-  // 1.B
+ //  // 1.B
 	// FontV1 LB;
  //    char fileName1B[] = "FontV1_B.png";
  //    Image img1B(fileName1B, 500, 500);
@@ -487,41 +472,7 @@ int main() {
 	// img1B.writeImage();
 
 
-	// 1.S
-	// FontV1 LS;
- //    char fileName1S[] = "FontV1_S.png";
- //    Image img1S(fileName1S, 500, 500);
- //    img1S.draw(LS.S());
-	// img1S.writeImage();
 
-
-	// 1.G
-	// FontV1 LG;
- //    char fileName1G[] = "FontV1_G.png";
- //    Image img1G(fileName1G, 500, 500);
- //    img1G.draw(LG.G());
-	// img1G.writeImage();
-
-	// 1.C
-	// FontV1 LC;
- //    char fileName1C[] = "FontV1_C.png";
- //    Image img1C(fileName1C, 500, 500);
- //    img1C.draw(LC.C());
-	// img1C.writeImage();
-
-	// 2.C
-	FontV2 LC;
-    char fileName2C[] = "FontV2_C.png";
-    Image img2C(fileName2C, 500, 500);
-    img2C.draw(LC.C());
-
-
-	seedFill(img2C, 250, 160);
-	
-	img2C.writeImage();
-
-
-	
  //  // 1.S
 	// FontV1 LS;
  //    char fileName1S[] = "FontV1_S.png";
@@ -530,20 +481,24 @@ int main() {
 	// img1S.writeImage();
 
 
- //  // 1.E
-	// FontV1 LE;
- //    char fileName1E[] = "FontV1_E.png";
- //    Image img1E(fileName1E, 500, 500);
- //    img1E.draw(LE.E());
-	// img1E.writeImage();
+  // 1.E
+	FontV1 LE;
+    char fileName1E[] = "FontV1_E.png";
+    Image img1E(fileName1E, 500, 500);
+    img1E.draw(LE.E());
+	img1E.writeImage();
 
 
- //  // 1.F
- //    FontV1 LF;
- //    char fileName1F[] = "FontV1_F.png";
- //    Image img1F(fileName1F, 500, 500);
- //    img1F.draw(LF.F());
- //    img1F.writeImage();
+  // 1.F
+    FontV1 LF;
+    char fileName1F[] = "FontV1_F.png";
+    Image img1F(fileName1F, 500, 500);
+    img1F.draw(LF.F());
+    img1F.writeImage();
+
+
+
+
 
 
 
