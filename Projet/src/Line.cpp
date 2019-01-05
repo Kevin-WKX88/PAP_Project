@@ -1,7 +1,7 @@
 /*!
  * \file Line.cpp
  * \brief Class Line Implementation
- * \author Kevin XU
+ * \author Kevin XU & Ziheng LI
  * \date 29 December 2018
  */
 

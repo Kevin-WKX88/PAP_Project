@@ -1,7 +1,7 @@
 /*!
  * \file Image.cpp
  * \brief Class Image Implementation
- * \author Kevin XU
+ * \author Kevin XU & Ziheng LI
  * \date 30 Novembre 2018
  */
 

@@ -1,7 +1,7 @@
 /*!
  * \file BezierCurve.cpp
  * \brief Class BezierCurve Implementation
- * \author Kevin XU
+ * \author Kevin XU & Ziheng LI
  * \date 30 Décembre 2018
  */
 

@@ -25,7 +25,10 @@ $(OBJDIR)/BezierCurve.o : $(SRCDIR)/BezierCurve.cpp $(SRCDIR)/BezierCurve.h
 $(OBJDIR)/FontV1.o : $(SRCDIR)/FontV1.cpp $(SRCDIR)/FontV1.h
 	$(CC) -c $< -o $@
 
-$(BINDIR)/$(PROG) : $(OBJDIR)/main.o $(OBJDIR)/Point.o $(OBJDIR)/Image.o $(OBJDIR)/BezierCurve.o $(OBJDIR)/FontV1.o 
+$(OBJDIR)/FontV2.o : $(SRCDIR)/FontV2.cpp $(SRCDIR)/FontV2.h
+	$(CC) -c $< -o $@
+
+$(BINDIR)/$(PROG) : $(OBJDIR)/main.o $(OBJDIR)/Point.o $(OBJDIR)/Image.o $(OBJDIR)/BezierCurve.o $(OBJDIR)/FontV1.o $(OBJDIR)/FontV2.o 
 	g++ $(CC_LIBPNG) $^ -o $@ 
 
 #TEST UNITAIRE

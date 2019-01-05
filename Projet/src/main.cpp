@@ -1,11 +1,3 @@
-//============================================================================
-// Name        : Projet_PAP.cpp
-// Author      : Kevin XU & Ziheng LI
-// Version     :
-// Copyright   : Your copyright notice
-// Description : PAP Project - Courbes de Bézier et police de caractères
-//============================================================================
-
 #include <iostream>
 
 #include "Point.h"
@@ -13,6 +5,7 @@
 #include "Line.h"
 #include "BezierCurve.h"
 #include "FontV1.h"
+#include "FontV2.h"
 
 #include <vector>
 
@@ -447,13 +440,18 @@ int main() {
 
 	// // 1.D
 	// FontV1 LD;
- //    double size = 0.1;
- //    char fileName1D[] = "FontV1_D.png";
- //    Image img1D(fileName1D, 5000*size, 5000*size);
-
- //    img1D.draw(LD.D(size, 200*size));
-
+    // double size = 0.1;
+    // char fileName1D[] = "FontV1_D.png";
+    // Image img1D(fileName1D, 5000*size, 5000*size);
+    // img1D.draw(LD.D(size, 200*size));
 	// img1D.writeImage();
+
+	// 2.D
+	FontV2 LD;
+    char fileName2D[] = "FontV2_D.png";
+    Image img2D(fileName2D, 500, 500);
+    img2D.draw(LD.D());
+	img2D.writeImage();
 
 
  //    // 1.A
@@ -480,7 +478,7 @@ int main() {
 	// img1S.writeImage();
 
 
-	// 1.S
+	// 1.G
 	FontV1 LG;
     char fileName1G[] = "FontV1_G.png";
     Image img1G(fileName1G, 500, 500);

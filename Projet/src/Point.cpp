@@ -1,7 +1,7 @@
 /*!
  * \file Point.cpp
  * \brief Class Point Implementation
- * \author Kevin XU
+ * \author Kevin XU & Ziheng LI
  * \date 30 Novembre 2018
  */
 

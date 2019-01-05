@@ -1,7 +1,7 @@
 /*!
  * \file Image.h
  * \brief Class Image
- * \author Kevin XU
+ * \author Kevin XU & Ziheng LI
  * \date 30 Novembre 2018
  */
 

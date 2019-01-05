@@ -1,7 +1,7 @@
 /*!
  * \file Line.h
  * \brief Class Line
- * \author Kevin XU
+ * \author Kevin XU & Ziheng LI
  * \date 29 Decembre 2018
  */
 

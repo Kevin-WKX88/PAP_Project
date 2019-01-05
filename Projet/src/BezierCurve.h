@@ -1,6 +1,7 @@
 /*!
  * \file BezierCurve.h
  * \brief Class BezierCurve
+ * \author Kevin XU & Ziheng LI
  * \date 30 Décembre
  */
 
