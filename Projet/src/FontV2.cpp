@@ -63,12 +63,12 @@ void FontV2::D() {
 
 void FontV2::E() {
     FontV1::E();
-    colorInBlack(250, 160);
+    colorInBlack(250, 250);
 }
 
 void FontV2::F() {
     FontV1::F();
-    colorInBlack(250, 160);
+    colorInBlack(250, 250);
 }
 
 void FontV2::O() {
