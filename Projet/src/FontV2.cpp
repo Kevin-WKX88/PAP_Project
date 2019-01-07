@@ -71,6 +71,16 @@ void FontV2::F() {
     colorInBlack(250, 250);
 }
 
+void FontV2::M() {
+    FontV1::M();
+    colorInBlack(250, 235);
+}
+
+void FontV2::N() {
+    FontV1::N();
+    colorInBlack(250, 250);
+}
+
 void FontV2::O() {
     FontV1::O();
     colorInBlack(250, 160);

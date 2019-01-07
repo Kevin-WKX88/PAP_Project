@@ -584,10 +584,15 @@ int main() {
     // L1F.F();
     // L1F.finishLetter();
 
-    // char fileName1G[] = "FontV1_G.png";
-    // FontV1 L1G(fileName1G);
-    // L1G.G();
-    // L1G.finishLetter();
+    // char fileName1M[] = "FontV1_M.png";
+    // FontV1 L1M(fileName1M);
+    // L1M.M();
+    // L1M.finishLetter();
+
+    // char fileName1N[] = "FontV1_N.png";
+    // FontV1 L1N(fileName1N);
+    // L1N.N();
+    // L1N.finishLetter();
 
     // char fileName1O[] = "FontV1_O.png";
     // FontV1 L1O(fileName1O);
@@ -626,6 +631,16 @@ int main() {
     // FontV2 L2E(fileName2E);
     // L2E.E();
     // L2E.finishLetter();
+
+    char fileName2M[] = "FontV2_M.png";
+    FontV2 L2M(fileName2M);
+    L2M.M();
+    L2M.finishLetter();
+
+    // char fileName2N[] = "FontV2_N.png";
+    // FontV2 L2N(fileName2N);
+    // L2N.N();
+    // L2N.finishLetter();
 
     // char fileName2O[] = "FontV2_O.png";
     // FontV2 L2O(fileName2O);

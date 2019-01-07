@@ -78,6 +78,18 @@ class FontV1{
 		void G();
 
 		/**
+		 * @brief The curves to draw the letter M
+		 * @return letter_
+		 */
+		void M();
+
+		/**
+		 * @brief The curves to draw the letter N
+		 * @return letter_
+		 */
+		void N();
+
+		/**
 		 * @brief The curves to draw the letter O
 		 * @return letter_
 		 */

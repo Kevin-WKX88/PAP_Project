@@ -15,7 +15,6 @@ BezierCurve::BezierCurve(std::vector<Point> points) {
 	points_ = points;
 }
 
-
 void BezierCurve::addPoint(Point P) {
 	points_.push_back(P);
 }
@@ -23,7 +22,6 @@ void BezierCurve::addPoint(Point P) {
 void BezierCurve::clearPoints() {
 	points_.clear();
 }
-
 
 Point BezierCurve::getCasteljauPoint(int c, int index, double t) {
 	if (c == 0) {
