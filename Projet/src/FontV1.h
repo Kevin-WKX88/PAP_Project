@@ -90,6 +90,12 @@ class FontV1{
 		void S();
 
 		/**
+		 * @brief The curves to draw the letter Y
+		 * @return letter_
+		 */
+		void Y();
+
+		/**
 		 * @brief The curves to draw the letter Z
 		 * @return letter_
 		 */
