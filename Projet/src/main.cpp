@@ -803,135 +803,135 @@ int main() {
 
 
     // FONTV3
-	char fileName3A[] = "./FontV3/FontV3_A.png";
-    FontV3 L3A(fileName3A);
-    L3A.A();
-    L3A.finishLetter();
+	// char fileName3A[] = "./FontV3/FontV3_A.png";
+ //    FontV3 L3A(fileName3A);
+ //    L3A.A();
+ //    L3A.finishLetter();
 
-    char fileName3B[] = "./FontV3/FontV3_B.png";
-    FontV3 L3B(fileName3B);
-    L3B.B();
-    L3B.finishLetter();
+ //    char fileName3B[] = "./FontV3/FontV3_B.png";
+ //    FontV3 L3B(fileName3B);
+ //    L3B.B();
+ //    L3B.finishLetter();
 
-    char fileName3C[] = "./FontV3/FontV3_C.png";
-    FontV3 L3C(fileName3C);
-    L3C.C();
-    L3C.finishLetter();
+ //    char fileName3C[] = "./FontV3/FontV3_C.png";
+ //    FontV3 L3C(fileName3C);
+ //    L3C.C();
+ //    L3C.finishLetter();
 
-    char fileName3D[] = "./FontV3/FontV3_D.png";
-    FontV3 L3D(fileName3D);
-    L3D.D();
-    L3D.finishLetter();
+ //    char fileName3D[] = "./FontV3/FontV3_D.png";
+ //    FontV3 L3D(fileName3D);
+ //    L3D.D();
+ //    L3D.finishLetter();
 
-    char fileName3E[] = "./FontV3/FontV3_E.png";
-    FontV3 L3E(fileName3E);
-    L3E.E();
-    L3E.finishLetter();
+ //    char fileName3E[] = "./FontV3/FontV3_E.png";
+ //    FontV3 L3E(fileName3E);
+ //    L3E.E();
+ //    L3E.finishLetter();
 
-    char fileName3F[] = "./FontV3/FontV3_F.png";
-    FontV3 L3F(fileName3F);
-    L3F.F();
-    L3F.finishLetter();
+ //    char fileName3F[] = "./FontV3/FontV3_F.png";
+ //    FontV3 L3F(fileName3F);
+ //    L3F.F();
+ //    L3F.finishLetter();
 
-    char fileName3G[] = "./FontV3/FontV3_G.png";
-    FontV3 L3G(fileName3G);
-    L3G.G();
-    L3G.finishLetter();
+ //    char fileName3G[] = "./FontV3/FontV3_G.png";
+ //    FontV3 L3G(fileName3G);
+ //    L3G.G();
+ //    L3G.finishLetter();
 
-    char fileName3H[] = "./FontV3/FontV3_H.png";
-    FontV3 L3H(fileName3H);
-    L3H.H();
-    L3H.finishLetter();
+ //    char fileName3H[] = "./FontV3/FontV3_H.png";
+ //    FontV3 L3H(fileName3H);
+ //    L3H.H();
+ //    L3H.finishLetter();
 
-    char fileName3I[] = "./FontV3/FontV3_I.png";
-    FontV3 L3I(fileName3I);
-    L3I.I();
-    L3I.finishLetter();
+ //    char fileName3I[] = "./FontV3/FontV3_I.png";
+ //    FontV3 L3I(fileName3I);
+ //    L3I.I();
+ //    L3I.finishLetter();
 
-    char fileName3J[] = "./FontV3/FontV3_J.png";
-    FontV3 L3J(fileName3J);
-    L3J.J();
-    L3J.finishLetter();
+ //    char fileName3J[] = "./FontV3/FontV3_J.png";
+ //    FontV3 L3J(fileName3J);
+ //    L3J.J();
+ //    L3J.finishLetter();
 
-    char fileName3K[] = "./FontV3/FontV3_K.png";
-    FontV3 L3K(fileName3K);
-    L3K.K();
-    L3K.finishLetter();
+ //    char fileName3K[] = "./FontV3/FontV3_K.png";
+ //    FontV3 L3K(fileName3K);
+ //    L3K.K();
+ //    L3K.finishLetter();
 
-    char fileName3L[] = "./FontV3/FontV3_L.png";
-    FontV3 L3L(fileName3L);
-    L3L.L();
-    L3L.finishLetter();
+ //    char fileName3L[] = "./FontV3/FontV3_L.png";
+ //    FontV3 L3L(fileName3L);
+ //    L3L.L();
+ //    L3L.finishLetter();
 
-    char fileName3M[] = "./FontV3/FontV3_M.png";
-    FontV3 L3M(fileName3M);
-    L3M.M();
-    L3M.finishLetter();
+ //    char fileName3M[] = "./FontV3/FontV3_M.png";
+ //    FontV3 L3M(fileName3M);
+ //    L3M.M();
+ //    L3M.finishLetter();
 
-    char fileName3N[] = "./FontV3/FontV3_N.png";
-    FontV3 L3N(fileName3N);
-    L3N.N();
-    L3N.finishLetter();
+ //    char fileName3N[] = "./FontV3/FontV3_N.png";
+ //    FontV3 L3N(fileName3N);
+ //    L3N.N();
+ //    L3N.finishLetter();
 
-    char fileName3O[] = "./FontV3/FontV3_O.png";
-    FontV3 L3O(fileName3O);
-    L3O.O();
-    L3O.finishLetter();
+ //    char fileName3O[] = "./FontV3/FontV3_O.png";
+ //    FontV3 L3O(fileName3O);
+ //    L3O.O();
+ //    L3O.finishLetter();
 
-    char fileName3P[] = "./FontV3/FontV3_P.png";
-    FontV3 L3P(fileName3P);
-    L3P.P();
-    L3P.finishLetter();
+ //    char fileName3P[] = "./FontV3/FontV3_P.png";
+ //    FontV3 L3P(fileName3P);
+ //    L3P.P();
+ //    L3P.finishLetter();
 
-    char fileName3Q[] = "./FontV3/FontV3_Q.png";
-    FontV3 L3Q(fileName3Q);
-    L3Q.Q();
-    L3Q.finishLetter();
+ //    char fileName3Q[] = "./FontV3/FontV3_Q.png";
+ //    FontV3 L3Q(fileName3Q);
+ //    L3Q.Q();
+ //    L3Q.finishLetter();
 
-    char fileName3R[] = "./FontV3/FontV3_R.png";
-    FontV3 L3R(fileName3R);
-    L3R.R();
-    L3R.finishLetter();
+ //    char fileName3R[] = "./FontV3/FontV3_R.png";
+ //    FontV3 L3R(fileName3R);
+ //    L3R.R();
+ //    L3R.finishLetter();
 
     char fileName3S[] = "./FontV3/FontV3_S.png";
     FontV3 L3S(fileName3S);
     L3S.S();
     L3S.finishLetter();
 
-    char fileName3T[] = "./FontV3/FontV3_T.png";
-    FontV3 L3T(fileName3T);
-    L3T.T();
-    L3T.finishLetter();
+ //    char fileName3T[] = "./FontV3/FontV3_T.png";
+ //    FontV3 L3T(fileName3T);
+ //    L3T.T();
+ //    L3T.finishLetter();
 
-    char fileName3U[] = "./FontV3/FontV3_U.png";
-    FontV3 L3U(fileName3U);
-    L3U.U();
-    L3U.finishLetter();
+ //    char fileName3U[] = "./FontV3/FontV3_U.png";
+ //    FontV3 L3U(fileName3U);
+ //    L3U.U();
+ //    L3U.finishLetter();
 
-    char fileName3V[] = "./FontV3/FontV3_V.png";
-    FontV3 L3V(fileName3V);
-    L3V.V();
-    L3V.finishLetter();
+ //    char fileName3V[] = "./FontV3/FontV3_V.png";
+ //    FontV3 L3V(fileName3V);
+ //    L3V.V();
+ //    L3V.finishLetter();
 
-    char fileName3W[] = "./FontV3/FontV3_W.png";
-    FontV3 L3W(fileName3W);
-    L3W.W();
-    L3W.finishLetter();
+ //    char fileName3W[] = "./FontV3/FontV3_W.png";
+ //    FontV3 L3W(fileName3W);
+ //    L3W.W();
+ //    L3W.finishLetter();
 
-    char fileName3X[] = "./FontV3/FontV3_X.png";
-    FontV3 L3X(fileName3X);
-    L3X.X();
-    L3X.finishLetter();
+ //    char fileName3X[] = "./FontV3/FontV3_X.png";
+ //    FontV3 L3X(fileName3X);
+ //    L3X.X();
+ //    L3X.finishLetter();
 
-    char fileName3Y[] = "./FontV3/FontV3_Y.png";
-    FontV3 L3Y(fileName3Y);
-    L3Y.Y();
-    L3Y.finishLetter();
+ //    char fileName3Y[] = "./FontV3/FontV3_Y.png";
+ //    FontV3 L3Y(fileName3Y);
+ //    L3Y.Y();
+ //    L3Y.finishLetter();
 
-    char fileName3Z[] = "./FontV3/FontV3_Z.png";
-    FontV3 L3Z(fileName3Z);
-    L3Z.Z();
-    L3Z.finishLetter();
+ //    char fileName3Z[] = "./FontV3/FontV3_Z.png";
+ //    FontV3 L3Z(fileName3Z);
+ //    L3Z.Z();
+ //    L3Z.finishLetter();
 
     return 0;
 }
