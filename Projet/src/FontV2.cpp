@@ -5,15 +5,13 @@
  * \date 5 Janvier 2018
  */
  
-#include <iostream>
-#include <cmath>
 #include "FontV2.h"
 
 void FontV2::colorInBlack(int x, int y) {
     if ((x <= 100 || x >= 400) || (y <= 100 || y >= 400)) {
         return;
     }
-    unsigned int* color = img_.getPixelColor(Point(x,y));
+    unsigned int* color = img_.getPixelColor(Point(x, y));
     if (color[0] == 255 && color[1] == 255 && color[2] == 255) {
         img_.draw(Point(x, y, 0, 0, 0));
         colorInBlack(x+1, y);

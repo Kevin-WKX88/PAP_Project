@@ -5,6 +5,7 @@
 #include "BezierCurve.h"
 #include "FontV1.h"
 #include "FontV2.h"
+#include "FontV3.h"
 
 #include <vector>
 
@@ -627,10 +628,10 @@ int main() {
     // L1R.R();
     // L1R.finishLetter();
 
-    char fileName1S[] = "./FontV1/FontV1_S.png";
-    FontV1 L1S(fileName1S);
-    L1S.S();
-    L1S.finishLetter();
+    // char fileName1S[] = "./FontV1/FontV1_S.png";
+    // FontV1 L1S(fileName1S);
+    // L1S.S();
+    // L1S.finishLetter();
 
     // char fileName1T[] = "./FontV1/FontV1_T.png";
     // FontV1 L1T(fileName1T);
@@ -799,6 +800,12 @@ int main() {
     // FontV2 L2Z(fileName2Z);
     // L2Z.Z();
     // L2Z.finishLetter();
+
+    // FONTV3
+	char fileName3C[] = "FontV3_C.png";
+    FontV3 L3C(fileName3C);
+    L3C.C();
+    L3C.finishLetter();
 
     return 0;
 }

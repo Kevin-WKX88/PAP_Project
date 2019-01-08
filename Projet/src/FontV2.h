@@ -19,9 +19,11 @@
 class FontV2 : public FontV1{
 	public:
 		/**
-		 * @brief Default constructor
+		 * @brief Valued constructor
+		 * @param imageName The name of the image
 		 */
 		FontV2(char* imageName) : FontV1(imageName) {}
+		
 		/**
 		 * @brief Color the inside of a letter
 		 * @details Perform Seed fill Algorithm to transform the white pixel inside the contour into black pixel

@@ -5,8 +5,6 @@
  * \date 31 Décembre 2018
  */
  
-#include <iostream>
-#include <cmath>
 #include "FontV1.h"
 
 void FontV1::A(){
