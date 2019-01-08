@@ -22,10 +22,14 @@ class FontV1{
 	public:
 		/**
 		 * @brief Valued constructor
+		 * @param imageName The name of the image
 		 */
 		FontV1(char* imageName) : img_(imageName, 500, 500) {
 		};
 
+		/**
+		 * @brief Write the letter on the image
+		 */
 		void finishLetter();
 
 		/**

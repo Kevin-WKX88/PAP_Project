@@ -42,8 +42,6 @@ Image::Image(char* fileName, int width, int height) {
 
 	png_init_io(pngPtr_, fp_);
 
-	// Output is 8bit depth, RGBA format.
-
 	// Image Info
 	width_ = width;
 	height_ = height;
@@ -79,8 +77,6 @@ Image::Image(char* fileName, int width, int height) {
   	}
 }
 
-//Image::Image(const Image &P);
-
 Image::~Image() {
 	// Freeing memory and closing
   	for (int y = 0; y < height_; y++) {
@@ -110,7 +106,6 @@ unsigned int* Image::getPixelColor(Point P) {
 	color[2] = px[2];
 	return color;
 }
-
 
 void Image::draw(Point P) {
 	png_bytep px = &(pixels_[height_-P.getY()][P.getX() * 3]);

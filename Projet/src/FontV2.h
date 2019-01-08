@@ -32,157 +32,131 @@ class FontV2 : public FontV1{
 
 		/**
 		 * @brief Draw the letter A in black on the Image
-		 * @return letter_
 		 */
 		void A();
 
 		/**
 		 * @brief Draw the letter B in black on the Image
-		 * @return letter_
 		 */
 		void B();
 
 		/**
 		 * @brief Draw the letter C in black on the Image
-		 * @return letter_
 		 */
 		void C();
 
 		/**
 		 * @brief Draw the letter D in black on the Image
-		 * @return letter_
 		 */
 		void D();
 
 		/**
 		 * @brief Draw the letter E in black on the Image
-		 * @return letter_
 		 */
 		void E();
 
 		/**
 		 * @brief Draw the letter F in black on the Image
-		 * @return letter_
 		 */
 		void F();
 
 		/**
 		 * @brief Draw the letter G in black on the Image
-		 * @return letter_
 		 */
 		void G();
 
 		/**
 		 * @brief Draw the letter H in black on the Image
-		 * @return letter_
 		 */
 		void H();
 
 		/**
 		 * @brief Draw the letter I in black on the Image
-		 * @return letter_
 		 */
 		void I();
 
 		/**
 		 * @brief Draw the letter J in black on the Image
-		 * @return letter_
 		 */
 		void J();
 
 		/**
 		 * @brief Draw the letter K in black on the Image
-		 * @return letter_
 		 */
 		void K();
 
 		/**
 		 * @brief Draw the letter L in black on the Image
-		 * @return letter_
 		 */
 		void L();
 
 		/**
 		 * @brief Draw the letter M in black on the Image
-		 * @return letter_
 		 */
 		void M();
 
 		/**
 		 * @brief Draw the letter N in black on the Image
-		 * @return letter_
 		 */
 		void N();
 
 		/**
 		 * @brief Draw the letter O in black on the Image
-		 * @return letter_
 		 */
 		void O();
 
 		/**
 		 * @brief Draw the letter P in black on the Image
-		 * @return letter_
 		 */
 		void P();
 
 		/**
 		 * @brief Draw the letter Q in black on the Image
-		 * @return letter_
 		 */
 		void Q();
 
 		/**
 		 * @brief Draw the letter R in black on the Image
-		 * @return letter_
 		 */
 		void R();
 
 		/**
 		 * @brief Draw the letter S in black on the Image
-		 * @return letter_
 		 */
 		void S();
 
 		/**
 		 * @brief Draw the letter T in black on the Image
-		 * @return letter_
 		 */
 		void T();
 
 		/**
 		 * @brief Draw the letter U in black on the Image
-		 * @return letter_
 		 */
 		void U();
 
 		/**
 		 * @brief Draw the letter V in black on the Image
-		 * @return letter_
 		 */
 		void V();
 
 		/**
 		 * @brief Draw the letter W in black on the Image
-		 * @return letter_
 		 */
 		void W();
 
 		/**
 		 * @brief Draw the letter X in black on the Image
-		 * @return letter_
 		 */
 		void X();
 
 		/**
 		 * @brief Draw the letter Y in black on the Image
-		 * @return letter_
 		 */
 		void Y();
 
 		/**
 		 * @brief Draw the letter Z in black on the Image
-		 * @return letter_
 		 */
 		void Z();
 };
