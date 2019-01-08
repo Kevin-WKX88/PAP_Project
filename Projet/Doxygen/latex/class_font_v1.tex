@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Font\+V1\+:
-\nopagebreak
+Inheritance diagram for Font\+V1\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for Font\+V1\+:
 \end{figure}
 
 
-Collaboration diagram for Font\+V1\+:
-\nopagebreak
+Collaboration diagram for Font\+V1\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,7 +28,7 @@ Collaboration diagram for Font\+V1\+:
 \mbox{\hyperlink{class_font_v1_ada1ed699d42679f81146af4bc20db006}{Font\+V1}} (char $\ast$image\+Name)
 \begin{DoxyCompactList}\small\item\em Valued constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_font_v1_a29e1b96b06056aad8542c3d2ac79ebf2}{finish\+Letter}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Write the letter on the image. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_font_v1_a29afd2079bc41cdec9d3de6bb4e1be52}{A}} ()
 \begin{DoxyCompactList}\small\item\em Draw the contour of the letter A on the \mbox{\hyperlink{class_image}{Image}} img\+\_\+. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_font_v1_a620ee7876d479807f73481f27be48f2a}{B}} ()
@@ -104,9 +102,14 @@ int \mbox{\hyperlink{class_font_v1_aed8040e76be9a52833627b92f0fb4e5f}{thickness\
 Valued constructor. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em image\+Name} & The name of the image \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}
-26                                 : \mbox{\hyperlink{class_font_v1_a00569e3e3c4b70f437b63f396f735fb0}{img\_}}(imageName, 500, 500) \{
-27         \};
+27                                 : \mbox{\hyperlink{class_font_v1_a00569e3e3c4b70f437b63f396f735fb0}{img\_}}(imageName, 500, 500) \{
+28         \};
 \end{DoxyCode}
 
 
@@ -666,6 +669,10 @@ Draw the contour of the letter F on the \mbox{\hyperlink{class_image}{Image}} im
 \index{finish\+Letter@{finish\+Letter}!Font\+V1@{Font\+V1}}
 \subsubsection{\texorpdfstring{finish\+Letter()}{finishLetter()}}
 {\footnotesize\ttfamily void Font\+V1\+::finish\+Letter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Write the letter on the image. 
 
 
 \begin{DoxyCode}

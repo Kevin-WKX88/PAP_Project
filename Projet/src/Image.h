@@ -17,16 +17,13 @@
 
 class Image {
 	private:
-		FILE *fp_;
-		char *fileName_;
-		png_structp pngPtr_;
-		png_infop infoPtr_;
-		int width_;
-		int height_;
-		static const png_byte colorType_ = PNG_COLOR_TYPE_RGB;
-		static const png_byte bitDepth_ = 8;
-		png_bytep *pixels_;
-		//int backgroundRGB_[3];
+		FILE *fp_; /*!< The file corresponding to the image */
+		char *fileName_; /*!< The file name */
+		png_structp pngPtr_; /*!< Pointer on the image */
+		png_infop infoPtr_; /*!< Information on the image */
+		int width_; /*!< The width of the image */
+		int height_; /*!< The height of the image */
+		png_bytep *pixels_; /*!< The pixels of the image */
 
 	public:
 		//Image();

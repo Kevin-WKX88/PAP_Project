@@ -51,8 +51,8 @@ Image::Image(char* fileName, int width, int height) {
 		infoPtr_, 
 		width_, 
 		height_, 
-		bitDepth_, 
-		colorType_, 
+		8, 
+		PNG_COLOR_TYPE_RGB, 
 		PNG_INTERLACE_NONE, 
 		PNG_COMPRESSION_TYPE_DEFAULT, 
 		PNG_FILTER_TYPE_DEFAULT
@@ -81,7 +81,7 @@ Image::~Image() {
 	// Freeing memory and closing
   	for (int y = 0; y < height_; y++) {
 	    free(pixels_[y]);
-	  }
+	}
   	free(pixels_);
   	fclose(fp_);
   	if (pngPtr_ && infoPtr_) {

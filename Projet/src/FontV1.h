@@ -17,8 +17,8 @@
 
 class FontV1{
 	protected:
-		Image img_;
-		int thickness_ = 20;
+		Image img_; /*!< The image on which the letter will be drawn */
+		int thickness_ = 20; /*!< The thickness of the letter */
 	public:
 		/**
 		 * @brief Valued constructor

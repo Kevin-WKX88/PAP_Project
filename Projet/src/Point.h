@@ -12,20 +12,20 @@
 
 class Point {
 	private:
-		int x_;
-		int y_;
-		unsigned int *color_;
+		int x_; /*!< x coordinate */
+		int y_; /*!< y coordinate */
+		unsigned int *color_; /*!< Color of the point */
 
 	public:
 		Point();
 
 		/**
 		 * @brief Valued constructor
-		 * @param x [description]
-		 * @param y [description]
- 		 * @param R Red level
-		 * @param G Green level
-		 * @param B Blue level
+		 * @param x coordinate
+		 * @param y coordinate
+ 		 * @param R Red level intensity
+		 * @param G Green level intensity
+		 * @param B Blue level intensity
 		 */
 		Point(int x, int y, unsigned int R = 0, unsigned int G = 0, unsigned int B = 0);
 
@@ -69,14 +69,6 @@ class Point {
 		 * @return color_
 		 */
 		inline unsigned int* getColor() {return color_;};
-
-
-		/**
-		 * @brief Euclidian distance between two points
-		 * @param P The other point
-		 * @return The euclidian distance
-		 */
-		double dist(Point P);
 };
 
 /**

@@ -94,6 +94,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ada1ed699d42679f81146af4bc20db006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valued constructor.  <a href="#ada1ed699d42679f81146af4bc20db006">More...</a><br /></td></tr>
 <tr class="separator:ada1ed699d42679f81146af4bc20db006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29e1b96b06056aad8542c3d2ac79ebf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_font_v1.html#a29e1b96b06056aad8542c3d2ac79ebf2">finishLetter</a> ()</td></tr>
+<tr class="memdesc:a29e1b96b06056aad8542c3d2ac79ebf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the letter on the image.  <a href="#a29e1b96b06056aad8542c3d2ac79ebf2">More...</a><br /></td></tr>
 <tr class="separator:a29e1b96b06056aad8542c3d2ac79ebf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29afd2079bc41cdec9d3de6bb4e1be52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_font_v1.html#a29afd2079bc41cdec9d3de6bb4e1be52">A</a> ()</td></tr>
 <tr class="memdesc:a29afd2079bc41cdec9d3de6bb4e1be52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the contour of the letter A on the <a class="el" href="class_image.html">Image</a> img_.  <a href="#a29afd2079bc41cdec9d3de6bb4e1be52">More...</a><br /></td></tr>
@@ -207,7 +208,13 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Valued constructor. </p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                : <a class="code" href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">img_</a>(imageName, 500, 500) {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        };</div><div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageName</td><td>The name of the image </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                : <a class="code" href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">img_</a>(imageName, 500, 500) {</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        };</div><div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -234,7 +241,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -260,7 +267,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -286,7 +293,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -312,7 +319,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -338,7 +345,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -364,7 +371,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -382,8 +389,10 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Write the letter on the image. </p>
 <div class="fragment"><div class="line"><a name="l01943"></a><span class="lineno"> 1943</span>&#160;                          {</div><div class="line"><a name="l01944"></a><span class="lineno"> 1944</span>&#160;    <a class="code" href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">img_</a>.<a class="code" href="class_image.html#ac34bdffd357a50025e6a72deb02596b5">writeImage</a>();</div><div class="line"><a name="l01945"></a><span class="lineno"> 1945</span>&#160;}</div><div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
-<div class="ttc" id="class_image_html_ac34bdffd357a50025e6a72deb02596b5"><div class="ttname"><a href="class_image.html#ac34bdffd357a50025e6a72deb02596b5">Image::writeImage</a></div><div class="ttdeci">void writeImage()</div><div class="ttdoc">Produce the image. </div><div class="ttdef"><b>Definition:</b> Image.cpp:96</div></div>
+<div class="ttc" id="class_image_html_ac34bdffd357a50025e6a72deb02596b5"><div class="ttname"><a href="class_image.html#ac34bdffd357a50025e6a72deb02596b5">Image::writeImage</a></div><div class="ttdeci">void writeImage()</div><div class="ttdoc">Produce the image. </div><div class="ttdef"><b>Definition:</b> Image.cpp:92</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -409,7 +418,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -435,7 +444,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -461,7 +470,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -487,7 +496,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -513,7 +522,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -539,7 +548,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -565,7 +574,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -591,7 +600,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -617,7 +626,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -643,7 +652,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -669,7 +678,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -695,7 +704,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -720,7 +729,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_bezier_curve_html_a0ba8ce66d5af5971ae6a1b506029728e"><div class="ttname"><a href="class_bezier_curve.html#a0ba8ce66d5af5971ae6a1b506029728e">BezierCurve::clearPoints</a></div><div class="ttdeci">void clearPoints()</div><div class="ttdoc">Empty the vector points. </div><div class="ttdef"><b>Definition:</b> BezierCurve.cpp:22</div></div>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -746,7 +755,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -772,7 +781,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -798,7 +807,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -824,7 +833,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -850,7 +859,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -876,7 +885,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -902,7 +911,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="class_font_v1_html_a00569e3e3c4b70f437b63f396f735fb0"><div class="ttname"><a href="class_font_v1.html#a00569e3e3c4b70f437b63f396f735fb0">FontV1::img_</a></div><div class="ttdeci">Image img_</div><div class="ttdef"><b>Definition:</b> FontV1.h:20</div></div>
 <div class="ttc" id="class_font_v1_html_aed8040e76be9a52833627b92f0fb4e5f"><div class="ttname"><a href="class_font_v1.html#aed8040e76be9a52833627b92f0fb4e5f">FontV1::thickness_</a></div><div class="ttdeci">int thickness_</div><div class="ttdef"><b>Definition:</b> FontV1.h:21</div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:13</div></div>
-<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:115</div></div>
+<div class="ttc" id="class_image_html_a8d162f3cab956131d58708c09aa560b0"><div class="ttname"><a href="class_image.html#a8d162f3cab956131d58708c09aa560b0">Image::draw</a></div><div class="ttdeci">void draw(Point P)</div><div class="ttdoc">Setter for pixels_. </div><div class="ttdef"><b>Definition:</b> Image.cpp:110</div></div>
 </div><!-- fragment -->
 </div>
 </div>

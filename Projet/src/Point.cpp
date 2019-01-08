@@ -30,20 +30,11 @@ Point::Point(const Point &P) : x_(P.x_), y_(P.y_) {
 	color_[2] = P.color_[2];
 }
 
-/// Define the default destructor for a matrix
 Point::~Point() {
 	if (color_) {
 		delete[] color_;
 	}
 }
-
-// int Point::getX() const {
-// 	return x_;
-// }
-
-// int Point::getY() const {
-// 	return y_;
-// }
 
 void Point::setX(int x) {
 	x_ = x;
@@ -53,16 +44,7 @@ void Point::setY(int y) {
 	y_ = y;
 }
 
-// unsigned int* Point::getColor() {
-// 	return color_;
-// }
-
-
 std::ostream & operator <<(std::ostream & out, const Point & P) {
 	out << "(" << P.getX() << ", " << P.getY() << ")";
 	return out;
-}
-
-double Point::dist(Point P) {
-	return sqrt(pow(x_ - P.getX(), 2) + pow(y_ - P.getY(), 2));
 }

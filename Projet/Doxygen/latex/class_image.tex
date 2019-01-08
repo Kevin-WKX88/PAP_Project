@@ -6,8 +6,7 @@
 
 
 
-Collaboration diagram for Image\+:
-\nopagebreak
+Collaboration diagram for Image\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -115,42 +114,40 @@ Valued constructor.
 42 
 43     png\_init\_io(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\_}});
 44 
-45     \textcolor{comment}{// Output is 8bit depth, RGBA format.}
-46 
-47     \textcolor{comment}{// Image Info}
-48     \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}} = width;
-49     \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}} = height;
-50 
-51     png\_set\_IHDR(
-52         \mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, 
-53         \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}}, 
-54         \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}}, 
-55         \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}, 
-56         \mbox{\hyperlink{class_image_ae472f0390f64eb5d49f858ce95e09ce8}{bitDepth\_}}, 
-57         \mbox{\hyperlink{class_image_a94b0dece808a9f06ebb6f4394e8e3048}{colorType\_}}, 
-58         PNG\_INTERLACE\_NONE, 
-59         PNG\_COMPRESSION\_TYPE\_DEFAULT, 
-60         PNG\_FILTER\_TYPE\_DEFAULT
-61     );
-62     png\_write\_info(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}});
-63 
-64     \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}} = (png\_bytep*) malloc(\mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}} * \textcolor{keyword}{sizeof}(png\_bytep));
-65     \textcolor{comment}{// Allocate memory for one row (3 bytes per pixel - RGB)}
-66     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}; y++) \{
-67         \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[y] = (png\_byte*) malloc(3 * \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}} * \textcolor{keyword}{sizeof}(png\_byte));
-68     \}
-69 
-70     \textcolor{comment}{// Set white background}
-71     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}; y++) \{
-72         png\_bytep row = \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[y];
-73         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}}; x++) \{
-74             png\_bytep px = \&(row[x * 3]);
-75             px[0] = 255;
-76             px[1] = 255;
-77             px[2] = 255;
-78         \}
-79     \}
-80 \}
+45     \textcolor{comment}{// Image Info}
+46     \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}} = width;
+47     \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}} = height;
+48 
+49     png\_set\_IHDR(
+50         \mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, 
+51         \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}}, 
+52         \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}}, 
+53         \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}, 
+54         \mbox{\hyperlink{class_image_ae472f0390f64eb5d49f858ce95e09ce8}{bitDepth\_}}, 
+55         \mbox{\hyperlink{class_image_a94b0dece808a9f06ebb6f4394e8e3048}{colorType\_}}, 
+56         PNG\_INTERLACE\_NONE, 
+57         PNG\_COMPRESSION\_TYPE\_DEFAULT, 
+58         PNG\_FILTER\_TYPE\_DEFAULT
+59     );
+60     png\_write\_info(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}});
+61 
+62     \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}} = (png\_bytep*) malloc(\mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}} * \textcolor{keyword}{sizeof}(png\_bytep));
+63     \textcolor{comment}{// Allocate memory for one row (3 bytes per pixel - RGB)}
+64     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}; y++) \{
+65         \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[y] = (png\_byte*) malloc(3 * \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}} * \textcolor{keyword}{sizeof}(png\_byte));
+66     \}
+67 
+68     \textcolor{comment}{// Set white background}
+69     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}; y++) \{
+70         png\_bytep row = \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[y];
+71         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}}; x++) \{
+72             png\_bytep px = \&(row[x * 3]);
+73             px[0] = 255;
+74             px[1] = 255;
+75             px[2] = 255;
+76         \}
+77     \}
+78 \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_image_a7d0a9bb68362e0ec28d5d2c600cc9b59}\label{class_image_a7d0a9bb68362e0ec28d5d2c600cc9b59}} 
 \index{Image@{Image}!Image@{Image}}
@@ -179,17 +176,17 @@ Destructor.
 
 
 \begin{DoxyCode}
-84               \{
-85     \textcolor{comment}{// Freeing memory and closing}
-86     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}; y++) \{
-87         free(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[y]);
-88       \}
-89     free(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}});
-90     fclose(\mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\_}});
-91     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}} \&\& \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}}) \{
-92         png\_destroy\_write\_struct(\&\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \&\mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}});
-93     \}
-94 \}
+80               \{
+81     \textcolor{comment}{// Freeing memory and closing}
+82     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}; y++) \{
+83         free(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[y]);
+84       \}
+85     free(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}});
+86     fclose(\mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\_}});
+87     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}} \&\& \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}}) \{
+88         png\_destroy\_write\_struct(\&\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \&\mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}});
+89     \}
+90 \}
 \end{DoxyCode}
 
 
@@ -216,13 +213,13 @@ Modify the pixels on the image to draw a point
 \end{DoxyParams}
 
 \begin{DoxyCode}
-115                         \{
-116     png\_bytep px = \&(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[\mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}-P.\mbox{\hyperlink{class_point_a86d10ff46e08462c45b15a8c7ef62d61}{getY}}()][P.\mbox{\hyperlink{class_point_ac9d5859db121c7d1b89ca89266dca0a3}{getX}}() * 3]);
-117     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *color = P.\mbox{\hyperlink{class_point_a1aa902dd929328baec8c8f6970284ac2}{getColor}}();
-118     px[0] = color[0];
-119     px[1] = color[1];
-120     px[2] = color[2];
-121 \}
+110                         \{
+111     png\_bytep px = \&(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[\mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}-P.\mbox{\hyperlink{class_point_a86d10ff46e08462c45b15a8c7ef62d61}{getY}}()][P.\mbox{\hyperlink{class_point_ac9d5859db121c7d1b89ca89266dca0a3}{getX}}() * 3]);
+112     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *color = P.\mbox{\hyperlink{class_point_a1aa902dd929328baec8c8f6970284ac2}{getColor}}();
+113     px[0] = color[0];
+114     px[1] = color[1];
+115     px[2] = color[2];
+116 \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_image_aecc7a0365eb204dba714a71bcb86361d}\label{class_image_aecc7a0365eb204dba714a71bcb86361d}} 
 \index{Image@{Image}!draw@{draw}}
@@ -241,11 +238,11 @@ Draw the points in the vector.
 \end{DoxyParams}
 
 \begin{DoxyCode}
-123                                         \{
-124     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = points.begin(); it != points.end(); it++) \{
-125         \mbox{\hyperlink{class_image_a8d162f3cab956131d58708c09aa560b0}{draw}}(*it);
-126     \}
-127 \}
+118                                         \{
+119     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = points.begin(); it != points.end(); it++) \{
+120         \mbox{\hyperlink{class_image_a8d162f3cab956131d58708c09aa560b0}{draw}}(*it);
+121     \}
+122 \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_image_a6349aee8ec05bbecb9b6e6430de07d7c}\label{class_image_a6349aee8ec05bbecb9b6e6430de07d7c}} 
 \index{Image@{Image}!draw@{draw}}
@@ -264,12 +261,12 @@ Draw the Bezier curves.
 \end{DoxyParams}
 
 \begin{DoxyCode}
-129                                               \{
-130     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = curves.begin(); it != curves.end(); it++) \{
-131         \mbox{\hyperlink{class_image_a8d162f3cab956131d58708c09aa560b0}{draw}}(it->getCurvePoints());
-132         std::cout << 6 << std::endl;
-133     \} 
-134 \}
+124                                               \{
+125     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = curves.begin(); it != curves.end(); it++) \{
+126         \mbox{\hyperlink{class_image_a8d162f3cab956131d58708c09aa560b0}{draw}}(it->getCurvePoints());
+127         std::cout << 6 << std::endl;
+128     \} 
+129 \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_image_adb23176701dae47479d4919f55f3aec5}\label{class_image_adb23176701dae47479d4919f55f3aec5}} 
 \index{Image@{Image}!get\+Pixel\+Color@{get\+Pixel\+Color}}
@@ -291,14 +288,14 @@ The R\+GB color
 \end{DoxyReturn}
 
 \begin{DoxyCode}
-105                                           \{
-106     png\_bytep px = \&(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[\mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}-P.\mbox{\hyperlink{class_point_a86d10ff46e08462c45b15a8c7ef62d61}{getY}}()][P.\mbox{\hyperlink{class_point_ac9d5859db121c7d1b89ca89266dca0a3}{getX}}() * 3]);
-107     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *color = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}[3];
-108     color[0] = px[0];
-109     color[1] = px[1];
-110     color[2] = px[2];
-111     \textcolor{keywordflow}{return} color;
-112 \}
+101                                           \{
+102     png\_bytep px = \&(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[\mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}-P.\mbox{\hyperlink{class_point_a86d10ff46e08462c45b15a8c7ef62d61}{getY}}()][P.\mbox{\hyperlink{class_point_ac9d5859db121c7d1b89ca89266dca0a3}{getX}}() * 3]);
+103     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *color = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}[3];
+104     color[0] = px[0];
+105     color[1] = px[1];
+106     color[2] = px[2];
+107     \textcolor{keywordflow}{return} color;
+108 \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_image_a434149170df3e6fad24cc123c8ff029d}\label{class_image_a434149170df3e6fad24cc123c8ff029d}} 
 \index{Image@{Image}!get\+Pixels@{get\+Pixels}}
@@ -315,9 +312,9 @@ the pixels\+\_\+ ponter
 \end{DoxyReturn}
 
 \begin{DoxyCode}
-101                                   \{
-102     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}};
-103 \}
+97                                   \{
+98     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}};
+99 \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_image_ac34bdffd357a50025e6a72deb02596b5}\label{class_image_ac34bdffd357a50025e6a72deb02596b5}} 
 \index{Image@{Image}!write\+Image@{write\+Image}}
@@ -331,10 +328,10 @@ Produce the image.
 
 
 \begin{DoxyCode}
-96                        \{
-97     png\_write\_image(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}});
-98     png\_write\_end(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, NULL);
-99 \}
+92                        \{
+93     png\_write\_image(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}});
+94     png\_write\_end(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, NULL);
+95 \}
 \end{DoxyCode}
 
 
