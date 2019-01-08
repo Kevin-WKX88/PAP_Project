@@ -19,7 +19,6 @@ class FontV1{
 	protected:
 		Image img_;
 		int thickness_ = 20;
-
 	public:
 		/**
 		 * @brief Valued constructor
@@ -29,103 +28,90 @@ class FontV1{
 
 		void finishLetter();
 
-
 		/**
-		 * @brief Valued constructor
-		 * @param points Vector of points of the Bezier curve
-		 */
-
-		/**
-		 * @brief The curves to draw the letter A
-		 * @return letter_
+		 * @brief Draw the contour of the letter A on the Image img_
 		 */
 		void A();
 
 		/**
-		 * @brief The curves to draw the letter B
-		 * @return letter_
+		 * @brief Draw the contour of the letter B on the Image img_
 		 */
 		void B();
 
 		/**
-		 * @brief The curves to draw the letter C
-		 * @return letter_
+		 * @brief Draw the contour of the letter C on the Image img_
 		 */
 		void C();
 
 		/**
-		 * @brief The curves to draw the letter D
-		 * @return letter_
+		 * @brief Draw the contour of the letter D on the Image img_
 		 */
 		void D();
 
 		/**
-		 * @brief The curves to draw the letter E
-		 * @return letter_
+		 * @brief Draw the contour of the letter E on the Image img_
 		 */
 		void E();
 
 		/**
-		 * @brief The curves to draw the letter F
-		 * @return letter_
+		 * @brief Draw the contour of the letter F on the Image img_
 		 */
 		void F();
 
 		/**
-		 * @brief The curves to draw the letter G
-		 * @return letter_
+		 * @brief Draw the contour of the letter G on the Image img_
 		 */
 		void G();
 
 		/**
-		 * @brief The curves to draw the letter M
-		 * @return letter_
+		 * @brief Draw the contour of the letter M on the Image img_
 		 */
 		void M();
 
 		/**
-		 * @brief The curves to draw the letter N
-		 * @return letter_
+		 * @brief Draw the contour of the letter N on the Image img_
 		 */
 		void N();
 
 		/**
-		 * @brief The curves to draw the letter O
-		 * @return letter_
+		 * @brief Draw the contour of the letter O on the Image img_
 		 */
 		void O();
 
 		/**
-		 * @brief The curves to draw the letter Q
-		 * @return letter_
+		 * @brief Draw the contour of the letter Q on the Image img_
 		 */
 		void Q();
 
 		/**
-		 * @brief The curves to draw the letter S
-		 * @return letter_
+		 * @brief Draw the contour of the letter S on the Image img_
 		 */
 		void S();
 
 		/**
-		 * @brief The curves to draw the letter Y
-		 * @return letter_
+		 * @brief Draw the contour of the letter U on the Image img_
+		 */
+		void U();
+
+		/**
+		 * @brief Draw the contour of the letter V on the Image img_
+		 */
+		void V();
+
+		/**
+		 * @brief Draw the contour of the letter W on the Image img_
+		 */
+		void W();
+
+		/**
+		 * @brief Draw the contour of the letter Y on the Image img_
 		 */
 		void Y();
 
 		/**
-		 * @brief The curves to draw the letter Z
-		 * @return letter_
+		 * @brief Draw the contour of the letter Z on the Image img_
 		 */
 		void Z();
-
-
-		/**
-		 * @brief Get the vector of curves to draw the letter
-		 * @return The vector containing the curves of the letter
-		 */
-		// void getLetterCurve();
-		
 };
 
 

@@ -31,85 +31,103 @@ class FontV2 : public FontV1{
 		void colorInBlack(int x, int y);
 
 		/**
-		 * @brief The curves to draw the letter A
+		 * @brief Draw the letter A in black on the Image
 		 * @return letter_
 		 */
 		void A();
 
 		/**
-		 * @brief The curves to draw the letter B
+		 * @brief Draw the letter B in black on the Image
 		 * @return letter_
 		 */
 		void B();
 
 		/**
-		 * @brief The curves to draw the letter C
+		 * @brief Draw the letter C in black on the Image
 		 * @return letter_
 		 */
 		void C();
 
 		/**
-		 * @brief The curves to draw the letter D
+		 * @brief Draw the letter D in black on the Image
 		 * @return letter_
 		 */
 		void D();
 
 		/**
-		 * @brief The curves to draw the letter E
+		 * @brief Draw the letter E in black on the Image
 		 * @return letter_
 		 */
 		void E();
 
 		/**
-		 * @brief The curves to draw the letter F
+		 * @brief Draw the letter F in black on the Image
 		 * @return letter_
 		 */
 		void F();
 
 		/**
-		 * @brief The curves to draw the letter G
+		 * @brief Draw the letter G in black on the Image
 		 * @return letter_
 		 */
 		void G();
 
 		/**
-		 * @brief The curves to draw the letter M
+		 * @brief Draw the letter M in black on the Image
 		 * @return letter_
 		 */
 		void M();
 
 		/**
-		 * @brief The curves to draw the letter N
+		 * @brief Draw the letter N in black on the Image
 		 * @return letter_
 		 */
 		void N();
 
 		/**
-		 * @brief The curves to draw the letter O
+		 * @brief Draw the letter O in black on the Image
 		 * @return letter_
 		 */
 		void O();
 
 		/**
-		 * @brief The curves to draw the letter Q
+		 * @brief Draw the letter Q in black on the Image
 		 * @return letter_
 		 */
 		void Q();
 
 		/**
-		 * @brief The curves to draw the letter S
+		 * @brief Draw the letter S in black on the Image
 		 * @return letter_
 		 */
 		void S();
 
 		/**
-		 * @brief The curves to draw the letter Y
+		 * @brief Draw the letter U in black on the Image
+		 * @return letter_
+		 */
+		void U();
+
+		/**
+		 * @brief Draw the letter V in black on the Image
+		 * @return letter_
+		 */
+		void V();
+
+		/**
+		 * @brief Draw the letter W in black on the Image
+		 * @return letter_
+		 */
+		void W();
+
+		/**
+		 * @brief Draw the letter Y in black on the Image
 		 * @return letter_
 		 */
 		void Y();
 
 		/**
-		 * @brief The curves to draw the letter Z
+		 * @brief Draw the letter Z in black on the Image
 		 * @return letter_
 		 */
 		void Z();

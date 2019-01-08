@@ -15,9 +15,7 @@ void FontV2::colorInBlack(int x, int y) {
     }
     unsigned int* color = img_.getPixelColor(Point(x,y));
     if (color[0] == 255 && color[1] == 255 && color[2] == 255) {
-        std::cout << "true" << std::endl;
         img_.draw(Point(x, y, 0, 0, 0));
-
         colorInBlack(x+1, y);
         colorInBlack(x-1, y);
         colorInBlack(x, y+1);
@@ -94,6 +92,21 @@ void FontV2::Q() {
 void FontV2::S() {
     FontV1::S();
     colorInBlack(250, 250);
+}
+
+void FontV2::U() {
+    FontV1::U();
+    colorInBlack(250, 160);
+}
+
+void FontV2::V() {
+    FontV1::V();
+    colorInBlack(250, 160);
+}
+
+void FontV2::W() {
+    FontV1::W();
+    colorInBlack(250, 340);
 }
 
 void FontV2::Y() {
