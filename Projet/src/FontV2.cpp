@@ -23,6 +23,11 @@ void FontV2::colorInBlack(int x, int y) {
     }
 }
 
+void FontV2::A() {
+    FontV1::A();
+    colorInBlack(250, 240);
+}
+
 void FontV2::B() {
     FontV1::B();
     colorInBlack(250, 160);
@@ -36,27 +41,6 @@ void FontV2::C() {
 void FontV2::D() {
     FontV1::D();
     colorInBlack(250, 160);
-  //   BezierCurve curve2D;
-
-  //   for (int i = 0; i <= thickness_; i++) {
-		// curve2D.clearPoints();
-	 //    curve2D.addPoint(Point(200+i, 150+i));
-	 //    curve2D.addPoint(Point(200+i, 350-i));
-  //       letter_.push_back(curve2D);
-
-	 //    curve2D.clearPoints();
-	 //    curve2D.addPoint(Point(200 +i, 150 +i));
-	 //    curve2D.addPoint(Point(350 -i, 150 +i));
-	 //    curve2D.addPoint(Point(350 -i, 250));
-  //       letter_.push_back(curve2D);
-
-	 //    curve2D.clearPoints();
-	 //    curve2D.addPoint(Point(350-i, 250));
-	 //    curve2D.addPoint(Point(350-i, 350-i));
-	 //    curve2D.addPoint(Point(200+i, 350-i));
-  //       letter_.push_back(curve2D);
-  //   }
-  //   return letter_;
 }
 
 void FontV2::E() {
@@ -67,6 +51,36 @@ void FontV2::E() {
 void FontV2::F() {
     FontV1::F();
     colorInBlack(250, 250);
+}
+
+void FontV2::G() {
+    FontV1::G();
+    colorInBlack(250, 160);
+}
+
+void FontV2::H() {
+    FontV1::H();
+    colorInBlack(250, 230);
+}
+
+void FontV2::I() {
+    FontV1::I();
+    colorInBlack(250, 250);
+}
+
+void FontV2::J() {
+    FontV1::J();
+    colorInBlack(290, 250);
+}
+
+void FontV2::K() {
+    FontV1::K();
+    colorInBlack(210, 250);
+}
+
+void FontV2::L() {
+    FontV1::L();
+    colorInBlack(210, 250);
 }
 
 void FontV2::M() {
@@ -84,13 +98,28 @@ void FontV2::O() {
     colorInBlack(250, 160);
 }
 
+void FontV2::P() {
+    FontV1::P();
+    colorInBlack(210, 250);
+}
+
 void FontV2::Q() {
     FontV1::Q();
     colorInBlack(250, 160);
 }
 
+void FontV2::R() {
+    FontV1::R();
+    colorInBlack(210, 250);
+}
+
 void FontV2::S() {
     FontV1::S();
+    colorInBlack(250, 250);
+}
+
+void FontV2::T() {
+    FontV1::T();
     colorInBlack(250, 250);
 }
 
@@ -107,6 +136,11 @@ void FontV2::V() {
 void FontV2::W() {
     FontV1::W();
     colorInBlack(250, 340);
+}
+
+void FontV2::X() {
+    FontV1::X();
+    colorInBlack(250, 250);
 }
 
 void FontV2::Y() {

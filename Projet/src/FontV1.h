@@ -64,6 +64,31 @@ class FontV1{
 		void G();
 
 		/**
+		 * @brief Draw the contour of the letter H on the Image img_
+		 */
+		void H();
+
+		/**
+		 * @brief Draw the contour of the letter I on the Image img_
+		 */
+		void I();
+
+		/**
+		 * @brief Draw the contour of the letter J on the Image img_
+		 */
+		void J();
+
+		/**
+		 * @brief Draw the contour of the letter K on the Image img_
+		 */
+		void K();
+
+		/**
+		 * @brief Draw the contour of the letter L on the Image img_
+		 */
+		void L();
+
+		/**
 		 * @brief Draw the contour of the letter M on the Image img_
 		 */
 		void M();
@@ -79,14 +104,29 @@ class FontV1{
 		void O();
 
 		/**
+		 * @brief Draw the contour of the letter P on the Image img_
+		 */
+		void P();
+
+		/**
 		 * @brief Draw the contour of the letter Q on the Image img_
 		 */
 		void Q();
 
 		/**
+		 * @brief Draw the contour of the letter R on the Image img_
+		 */
+		void R();
+
+		/**
 		 * @brief Draw the contour of the letter S on the Image img_
 		 */
 		void S();
+
+		/**
+		 * @brief Draw the contour of the letter T on the Image img_
+		 */
+		void T();
 
 		/**
 		 * @brief Draw the contour of the letter U on the Image img_
@@ -102,6 +142,11 @@ class FontV1{
 		 * @brief Draw the contour of the letter W on the Image img_
 		 */
 		void W();
+
+		/**
+		 * @brief Draw the contour of the letter X on the Image img_
+		 */
+		void X();
 
 		/**
 		 * @brief Draw the contour of the letter Y on the Image img_

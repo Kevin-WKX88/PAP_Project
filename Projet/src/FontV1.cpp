@@ -9,8 +9,6 @@
 #include <cmath>
 #include "FontV1.h"
 
-
-
 void FontV1::A(){
     BezierCurve curve1A;
     std::vector<BezierCurve> curves;
@@ -23,64 +21,63 @@ void FontV1::A(){
     // gauche
     curve1A.clearPoints();
     curve1A.addPoint(Point(240, 350));
-    curve1A.addPoint(Point(150, 150));
+    curve1A.addPoint(Point(150+10, 150));
     curves.push_back(curve1A);
 
     // droite
     curve1A.clearPoints();
     curve1A.addPoint(Point(260, 350));
-    curve1A.addPoint(Point(350, 150));
+    curve1A.addPoint(Point(350-10, 150));
     curves.push_back(curve1A);
 
     //bas gauche
     curve1A.clearPoints();
-    curve1A.addPoint(Point(150, 150));
-    curve1A.addPoint(Point(150+thickness_, 150));
+    curve1A.addPoint(Point(150+10, 150));
+    curve1A.addPoint(Point(150+thickness_+10, 150));
     curves.push_back(curve1A);
 
     //bas droite
     curve1A.clearPoints();
-    curve1A.addPoint(Point(350-thickness_, 150));
-    curve1A.addPoint(Point(350, 150));
+    curve1A.addPoint(Point(350-thickness_-10, 150));
+    curve1A.addPoint(Point(350-10, 150));
     curves.push_back(curve1A);
 
     //bas
     curve1A.clearPoints();
-    curve1A.addPoint(Point(150+thickness_, 150));
-    curve1A.addPoint(Point(200, 225));
+    curve1A.addPoint(Point(150+thickness_+10, 150));
+    curve1A.addPoint(Point(200+10, 225));
     curves.push_back(curve1A);
 
     curve1A.clearPoints();
-    curve1A.addPoint(Point(350-thickness_, 150));
-    curve1A.addPoint(Point(300, 225));
+    curve1A.addPoint(Point(350-thickness_-10, 150));
+    curve1A.addPoint(Point(300-10, 225));
     curves.push_back(curve1A);
 
     curve1A.clearPoints();
-    curve1A.addPoint(Point(200, 225));
-    curve1A.addPoint(Point(300, 225));
+    curve1A.addPoint(Point(200+10, 225));
+    curve1A.addPoint(Point(300-10, 225));
     curves.push_back(curve1A);
 
     // small
     // gauche
     curve1A.clearPoints();
     curve1A.addPoint(Point(250, 350-thickness_));
-    curve1A.addPoint(Point(200+0.5*thickness_, 225+thickness_));
+    curve1A.addPoint(Point(200+0.5*thickness_+10, 225+thickness_));
     curves.push_back(curve1A);
 
     // droite
     curve1A.clearPoints();
     curve1A.addPoint(Point(250, 350-thickness_));
-    curve1A.addPoint(Point(300-0.5*thickness_, 225+thickness_));
+    curve1A.addPoint(Point(300-0.5*thickness_-10, 225+thickness_));
     curves.push_back(curve1A);
 
     // bas
     curve1A.clearPoints();
-    curve1A.addPoint(Point(200+0.5*thickness_, 225+thickness_));
-    curve1A.addPoint(Point(300-0.5*thickness_, 225+thickness_));
+    curve1A.addPoint(Point(200+0.5*thickness_+10, 225+thickness_));
+    curve1A.addPoint(Point(300-0.5*thickness_-10, 225+thickness_));
     curves.push_back(curve1A);
 
     img_.draw(curves);
-    
 }
 
 void FontV1::B(){
@@ -201,7 +198,6 @@ void FontV1::B(){
     curves.push_back(curve1B);
 
     img_.draw(curves);
-    
 }
 
 void FontV1::C() {
@@ -332,74 +328,74 @@ void FontV1::E(){
     std::vector<BezierCurve> curves;
 
     // haut
-    curve1E.addPoint(Point(200, 340));
-    curve1E.addPoint(Point(280, 340));
+    curve1E.addPoint(Point(200, 350));
+    curve1E.addPoint(Point(340, 350));
     curves.push_back(curve1E);
 
     // gauche
     curve1E.clearPoints();
-    curve1E.addPoint(Point(200, 340));
-    curve1E.addPoint(Point(200, 200));
+    curve1E.addPoint(Point(200, 350));
+    curve1E.addPoint(Point(200, 150));
     curves.push_back(curve1E);
 
     // bas
     curve1E.clearPoints();
-    curve1E.addPoint(Point(200, 200));
-    curve1E.addPoint(Point(280, 200));
+    curve1E.addPoint(Point(200, 150));
+    curve1E.addPoint(Point(340, 150));
     curves.push_back(curve1E);
 
     //dc1
     curve1E.clearPoints();
-    curve1E.addPoint(Point(280, 340));
-    curve1E.addPoint(Point(280, 340-thickness_));
+    curve1E.addPoint(Point(340, 350));
+    curve1E.addPoint(Point(340, 350-thickness_));
     curves.push_back(curve1E);
 
     //dc2
     curve1E.clearPoints();
-    curve1E.addPoint(Point(200+thickness_, 340-thickness_));
-    curve1E.addPoint(Point(200+thickness_, 340-3*thickness_));
+    curve1E.addPoint(Point(200+thickness_, 350-thickness_));
+    curve1E.addPoint(Point(200+thickness_, 280-thickness_));
     curves.push_back(curve1E);
 
     //dc3
     curve1E.clearPoints();
-    curve1E.addPoint(Point(280, 340-3*thickness_));
-    curve1E.addPoint(Point(280, 340-4*thickness_));
+    curve1E.addPoint(Point(340, 280-thickness_));
+    curve1E.addPoint(Point(340, 280-2*thickness_));
     curves.push_back(curve1E);
 
     //dc4
     curve1E.clearPoints();
-    curve1E.addPoint(Point(200+thickness_, 340-4*thickness_));
-    curve1E.addPoint(Point(200+thickness_, 340-6*thickness_));
+    curve1E.addPoint(Point(200+thickness_, 280-2*thickness_));
+    curve1E.addPoint(Point(200+thickness_, 210-2*thickness_));
     curves.push_back(curve1E);
 
     //dc5
     curve1E.clearPoints();
-    curve1E.addPoint(Point(280, 340-6*thickness_));
-    curve1E.addPoint(Point(280, 340-7*thickness_));
+    curve1E.addPoint(Point(340, 210-2*thickness_));
+    curve1E.addPoint(Point(340, 150));
     curves.push_back(curve1E);
 
     //dl1
     curve1E.clearPoints();
-    curve1E.addPoint(Point(200+thickness_, 340-thickness_));
-    curve1E.addPoint(Point(280, 340-thickness_));
+    curve1E.addPoint(Point(200+thickness_, 350-thickness_));
+    curve1E.addPoint(Point(340, 350-thickness_));
     curves.push_back(curve1E);
 
     //dl2
     curve1E.clearPoints();
-    curve1E.addPoint(Point(200+thickness_, 340-3*thickness_));
-    curve1E.addPoint(Point(280, 340-3*thickness_));
+    curve1E.addPoint(Point(200+thickness_, 280-thickness_));
+    curve1E.addPoint(Point(340, 280-thickness_));
     curves.push_back(curve1E);
 
     //dl3
     curve1E.clearPoints();
-    curve1E.addPoint(Point(200+thickness_, 340-4*thickness_));
-    curve1E.addPoint(Point(280, 340-4*thickness_));
+    curve1E.addPoint(Point(200+thickness_, 280-2*thickness_));
+    curve1E.addPoint(Point(340, 280-2*thickness_));
     curves.push_back(curve1E);
 
     //dl4
     curve1E.clearPoints();
-    curve1E.addPoint(Point(200+thickness_, 340-6*thickness_));
-    curve1E.addPoint(Point(280, 340-6*thickness_));
+    curve1E.addPoint(Point(200+thickness_, 210-2*thickness_));
+    curve1E.addPoint(Point(340, 210-2*thickness_));
     curves.push_back(curve1E);
 
     img_.draw(curves);
@@ -410,62 +406,62 @@ void FontV1::F(){
     std::vector<BezierCurve> curves;
 
     // haut
-    curve1F.addPoint(Point(200, 340));
-    curve1F.addPoint(Point(280, 340));
+    curve1F.addPoint(Point(200, 350));
+    curve1F.addPoint(Point(340, 350));
     curves.push_back(curve1F);
 
     // gauche
     curve1F.clearPoints();
-    curve1F.addPoint(Point(200, 340));
-    curve1F.addPoint(Point(200, 200));
+    curve1F.addPoint(Point(200, 350));
+    curve1F.addPoint(Point(200, 150));
     curves.push_back(curve1F);
 
     // bas
     curve1F.clearPoints();
-    curve1F.addPoint(Point(200, 200));
-    curve1F.addPoint(Point(200+thickness_, 200));
+    curve1F.addPoint(Point(200, 150));
+    curve1F.addPoint(Point(200+thickness_, 150));
     curves.push_back(curve1F);
 
     //dc1
     curve1F.clearPoints();
-    curve1F.addPoint(Point(280, 340));
-    curve1F.addPoint(Point(280, 340-thickness_));
+    curve1F.addPoint(Point(340, 350));
+    curve1F.addPoint(Point(340, 350-thickness_));
     curves.push_back(curve1F);
 
     //dc2
     curve1F.clearPoints();
-    curve1F.addPoint(Point(200+thickness_, 340-thickness_));
-    curve1F.addPoint(Point(200+thickness_, 340-3*thickness_));
+    curve1F.addPoint(Point(200+thickness_, 350-thickness_));
+    curve1F.addPoint(Point(200+thickness_, 280-thickness_));
     curves.push_back(curve1F);
 
     //dc3
     curve1F.clearPoints();
-    curve1F.addPoint(Point(280, 340-3*thickness_));
-    curve1F.addPoint(Point(280, 340-4*thickness_));
+    curve1F.addPoint(Point(340, 280-thickness_));
+    curve1F.addPoint(Point(340, 280-2*thickness_));
     curves.push_back(curve1F);
 
     //dc4
     curve1F.clearPoints();
-    curve1F.addPoint(Point(200+thickness_, 340-4*thickness_));
-    curve1F.addPoint(Point(200+thickness_, 340-7*thickness_));
+    curve1F.addPoint(Point(200+thickness_, 280-2*thickness_));
+    curve1F.addPoint(Point(200+thickness_, 150));
     curves.push_back(curve1F);
 
     //dl1
     curve1F.clearPoints();
-    curve1F.addPoint(Point(200+thickness_, 340-thickness_));
-    curve1F.addPoint(Point(280, 340-thickness_));
+    curve1F.addPoint(Point(200+thickness_, 350-thickness_));
+    curve1F.addPoint(Point(340, 350-thickness_));
     curves.push_back(curve1F);
 
     //dl2
     curve1F.clearPoints();
-    curve1F.addPoint(Point(200+thickness_, 340-3*thickness_));
-    curve1F.addPoint(Point(280, 340-3*thickness_));
+    curve1F.addPoint(Point(200+thickness_, 280-thickness_));
+    curve1F.addPoint(Point(340, 280-thickness_));
     curves.push_back(curve1F);
 
     //dl3
     curve1F.clearPoints();
-    curve1F.addPoint(Point(200+thickness_, 340-4*thickness_));
-    curve1F.addPoint(Point(280, 340-4*thickness_));
+    curve1F.addPoint(Point(200+thickness_, 280-2*thickness_));
+    curve1F.addPoint(Point(340, 280-2*thickness_));
     curves.push_back(curve1F);
 
     img_.draw(curves);
@@ -561,6 +557,328 @@ void FontV1::G() {
     curve1G.addPoint(Point(330-thickness_, 150+thickness_));
     curve1G.addPoint(Point(250, 150+thickness_));
     curves.push_back(curve1G);
+
+    img_.draw(curves);
+}
+
+void FontV1::H(){
+    BezierCurve curve1H;
+    std::vector<BezierCurve> curves;
+
+    // haut
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(200, 310));
+    curve1H.addPoint(Point(200+thickness_, 310));
+    curves.push_back(curve1H);
+
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(310, 310));
+    curve1H.addPoint(Point(310-thickness_, 310));
+    curves.push_back(curve1H);
+
+    //bas
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(200, 150));
+    curve1H.addPoint(Point(200+thickness_, 150));
+    curves.push_back(curve1H);
+
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(310, 150));
+    curve1H.addPoint(Point(310-thickness_, 150));
+    curves.push_back(curve1H);
+
+    // gauche
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(200, 150));
+    curve1H.addPoint(Point(200, 310));
+    curves.push_back(curve1H);
+
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(200+thickness_, 150));
+    curve1H.addPoint(Point(200+thickness_, 220));
+    curves.push_back(curve1H);
+
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(200+thickness_, 220+thickness_));
+    curve1H.addPoint(Point(200+thickness_, 310));
+    curves.push_back(curve1H);
+
+    // droite
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(310, 150));
+    curve1H.addPoint(Point(310, 310));
+    curves.push_back(curve1H);
+
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(310-thickness_, 150));
+    curve1H.addPoint(Point(310-thickness_, 220));
+    curves.push_back(curve1H);
+
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(310-thickness_, 220+thickness_));
+    curve1H.addPoint(Point(310-thickness_, 310));
+    curves.push_back(curve1H);
+
+    // milieu
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(310-thickness_, 220));
+    curve1H.addPoint(Point(200+thickness_, 220));
+    curves.push_back(curve1H);
+
+    curve1H.clearPoints();
+    curve1H.addPoint(Point(310-thickness_, 220+thickness_));
+    curve1H.addPoint(Point(200+thickness_, 220+thickness_));
+    curves.push_back(curve1H);
+
+    img_.draw(curves);
+}
+
+void FontV1::I(){
+    BezierCurve curve1I;
+    std::vector<BezierCurve> curves;
+
+    // haut
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(220, 350));
+    curve1I.addPoint(Point(280, 350));
+    curves.push_back(curve1I);
+
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(220, 350-thickness_));
+    curve1I.addPoint(Point(240, 350-thickness_));
+    curves.push_back(curve1I);
+
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(280, 350-thickness_));
+    curve1I.addPoint(Point(240+thickness_, 350-thickness_));
+    curves.push_back(curve1I);
+
+    //bas
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(220, 150));
+    curve1I.addPoint(Point(280, 150));
+    curves.push_back(curve1I);
+
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(220, 150+thickness_));
+    curve1I.addPoint(Point(240, 150+thickness_));
+    curves.push_back(curve1I);
+
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(280, 150+thickness_));
+    curve1I.addPoint(Point(240+thickness_, 150+thickness_));
+    curves.push_back(curve1I);
+
+    // gauche
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(220, 350));
+    curve1I.addPoint(Point(220, 350-thickness_));
+    curves.push_back(curve1I);
+
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(220, 150));
+    curve1I.addPoint(Point(220, 150+thickness_));
+    curves.push_back(curve1I);
+
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(240, 350-thickness_));
+    curve1I.addPoint(Point(240, 150+thickness_));
+    curves.push_back(curve1I);
+
+    // droite
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(280, 350));
+    curve1I.addPoint(Point(280, 350-thickness_));
+    curves.push_back(curve1I);
+
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(280, 150));
+    curve1I.addPoint(Point(280, 150+thickness_));
+    curves.push_back(curve1I);
+
+    curve1I.clearPoints();
+    curve1I.addPoint(Point(240+thickness_, 350-thickness_));
+    curve1I.addPoint(Point(240+thickness_, 150+thickness_));
+    curves.push_back(curve1I);
+
+    img_.draw(curves);
+}
+
+void FontV1::J(){
+    BezierCurve curve1J;
+    std::vector<BezierCurve> curves;
+
+    // bas gauche
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(200, 200));
+    curve1J.addPoint(Point(200+thickness_, 200));
+    curves.push_back(curve1J);
+
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(200, 200));
+    curve1J.addPoint(Point(200, 150));
+    curve1J.addPoint(Point(250, 150));
+    curves.push_back(curve1J);
+
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(200+thickness_, 200));
+    curve1J.addPoint(Point(200+thickness_, 150+thickness_));
+    curve1J.addPoint(Point(250, 150+thickness_));
+    curves.push_back(curve1J);
+
+    // bas droite
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(250, 150));
+    curve1J.addPoint(Point(300, 150));
+    curve1J.addPoint(Point(300, 200));
+    curves.push_back(curve1J);
+
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(250, 150+thickness_));
+    curve1J.addPoint(Point(300-thickness_, 150+thickness_));
+    curve1J.addPoint(Point(300-thickness_, 200));
+    curves.push_back(curve1J);
+
+    // droite
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(300-thickness_, 350));
+    curve1J.addPoint(Point(300-thickness_, 200));
+    curves.push_back(curve1J);
+
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(300, 350));
+    curve1J.addPoint(Point(300, 200));
+    curves.push_back(curve1J);
+
+    // haut
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(300, 350));
+    curve1J.addPoint(Point(330, 350));
+    curves.push_back(curve1J);
+
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(300-thickness_, 350));
+    curve1J.addPoint(Point(270-thickness_, 350));
+    curves.push_back(curve1J);
+
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(330, 350+thickness_));
+    curve1J.addPoint(Point(270-thickness_, 350+thickness_));
+    curves.push_back(curve1J);
+
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(270-thickness_, 350));
+    curve1J.addPoint(Point(270-thickness_, 350+thickness_));
+    curves.push_back(curve1J);
+
+    curve1J.clearPoints();
+    curve1J.addPoint(Point(330, 350));
+    curve1J.addPoint(Point(330, 350+thickness_));
+    curves.push_back(curve1J);
+
+    img_.draw(curves);
+}
+
+void FontV1::K(){
+    BezierCurve curve1K;
+    std::vector<BezierCurve> curves;
+
+    // gauche
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(200, 150));
+    curve1K.addPoint(Point(200, 350));
+    curves.push_back(curve1K);
+
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(200, 350));
+    curve1K.addPoint(Point(200+thickness_, 350));
+    curves.push_back(curve1K);
+
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(200, 150));
+    curve1K.addPoint(Point(200+thickness_, 150));
+    curves.push_back(curve1K);
+
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(200+thickness_, 150));
+    curve1K.addPoint(Point(200+thickness_, 240));
+    curves.push_back(curve1K);
+
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(200+thickness_, 260));
+    curve1K.addPoint(Point(200+thickness_, 350));
+    curves.push_back(curve1K);
+
+    // haut droite
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(200+thickness_, 260));
+    curve1K.addPoint(Point(320, 350));
+    curves.push_back(curve1K);
+
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(190+2*thickness_, 250));
+    curve1K.addPoint(Point(320+thickness_, 350));
+    curves.push_back(curve1K);
+
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(320, 350));
+    curve1K.addPoint(Point(320+thickness_, 350));
+    curves.push_back(curve1K);
+
+    // bas droite
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(200+thickness_, 240));
+    curve1K.addPoint(Point(320, 150));
+    curves.push_back(curve1K);
+
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(190+2*thickness_, 250));
+    curve1K.addPoint(Point(320+thickness_, 150));
+    curves.push_back(curve1K);
+
+    curve1K.clearPoints();
+    curve1K.addPoint(Point(320, 150));
+    curve1K.addPoint(Point(320+thickness_, 150));
+    curves.push_back(curve1K);
+
+    img_.draw(curves);
+}
+
+void FontV1::L(){
+    BezierCurve curve1L;
+    std::vector<BezierCurve> curves;
+
+    // gauche
+    curve1L.clearPoints();
+    curve1L.addPoint(Point(200, 150));
+    curve1L.addPoint(Point(200, 350));
+    curves.push_back(curve1L);
+
+    curve1L.clearPoints();
+    curve1L.addPoint(Point(200, 350));
+    curve1L.addPoint(Point(200+thickness_, 350));
+    curves.push_back(curve1L);
+
+    curve1L.clearPoints();
+    curve1L.addPoint(Point(200+thickness_, 350));
+    curve1L.addPoint(Point(200+thickness_, 150+thickness_));
+    curves.push_back(curve1L);
+
+    // bas
+    curve1L.clearPoints();
+    curve1L.addPoint(Point(350, 150+thickness_));
+    curve1L.addPoint(Point(200+thickness_, 150+thickness_));
+    curves.push_back(curve1L);
+
+    curve1L.clearPoints();
+    curve1L.addPoint(Point(350, 150));
+    curve1L.addPoint(Point(200, 150));
+    curves.push_back(curve1L);
+
+    curve1L.clearPoints();
+    curve1L.addPoint(Point(350, 150));
+    curve1L.addPoint(Point(350, 150+thickness_));
+    curves.push_back(curve1L);
 
     img_.draw(curves);
 }
@@ -774,6 +1092,86 @@ void FontV1::O() {
     img_.draw(curves);
 }
 
+void FontV1::P(){
+    BezierCurve curve1P;
+    std::vector<BezierCurve> curves;
+
+    // gauche
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(200, 150));
+    curve1P.addPoint(Point(200, 350));
+    curves.push_back(curve1P);
+
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(200+thickness_, 150));
+    curve1P.addPoint(Point(200+thickness_, 250));
+    curves.push_back(curve1P);
+
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(200+thickness_, 250+thickness_));
+    curve1P.addPoint(Point(200+thickness_, 350-thickness_));
+    curves.push_back(curve1P);
+
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(200, 150));
+    curve1P.addPoint(Point(200+thickness_, 150));
+    curves.push_back(curve1P);
+
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(200, 350));
+    curve1P.addPoint(Point(200+thickness_, 350));
+    curves.push_back(curve1P);
+
+    // haut
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(200+thickness_, 350));
+    curve1P.addPoint(Point(230+thickness_, 350));
+    curves.push_back(curve1P);
+
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(200+thickness_, 350-thickness_));
+    curve1P.addPoint(Point(230+thickness_, 350-thickness_));
+    curves.push_back(curve1P);
+
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(200+thickness_, 250));
+    curve1P.addPoint(Point(230+thickness_, 250));
+    curves.push_back(curve1P);
+
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(200+thickness_, 250+thickness_));
+    curve1P.addPoint(Point(230+thickness_, 250+thickness_));
+    curves.push_back(curve1P);
+
+    // haut droite
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(230+thickness_, 350));
+    curve1P.addPoint(Point(280+thickness_, 350));
+    curve1P.addPoint(Point(280+thickness_, 300));
+    curves.push_back(curve1P);
+
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(230+thickness_, 350-thickness_));
+    curve1P.addPoint(Point(260+thickness_, 350-thickness_));
+    curve1P.addPoint(Point(260+thickness_, 320-thickness_));
+    curves.push_back(curve1P);
+
+    //bas droite
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(280+thickness_, 300));
+    curve1P.addPoint(Point(280+thickness_, 250));
+    curve1P.addPoint(Point(230+thickness_, 250));
+    curves.push_back(curve1P);
+
+    curve1P.clearPoints();
+    curve1P.addPoint(Point(260+thickness_, 320-thickness_));
+    curve1P.addPoint(Point(260+thickness_, 290-thickness_));
+    curve1P.addPoint(Point(230+thickness_, 290-thickness_));
+    curves.push_back(curve1P);
+
+    img_.draw(curves);
+}
+
 void FontV1::Q() {
     BezierCurve curve1Q;
     std::vector<BezierCurve> curves;
@@ -882,93 +1280,204 @@ void FontV1::Q() {
     img_.draw(curves);
 }
 
+void FontV1::R(){
+    BezierCurve curve1R;
+    std::vector<BezierCurve> curves;
+
+    // gauche
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200, 150));
+    curve1R.addPoint(Point(200, 350));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200+thickness_, 150));
+    curve1R.addPoint(Point(200+thickness_, 250));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200+thickness_, 250+thickness_));
+    curve1R.addPoint(Point(200+thickness_, 350-thickness_));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200, 150));
+    curve1R.addPoint(Point(200+thickness_, 150));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200, 350));
+    curve1R.addPoint(Point(200+thickness_, 350));
+    curves.push_back(curve1R);
+
+    // haut
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200+thickness_, 350));
+    curve1R.addPoint(Point(230+thickness_, 350));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200+thickness_, 350-thickness_));
+    curve1R.addPoint(Point(230+thickness_, 350-thickness_));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200+2*thickness_, 250));
+    curve1R.addPoint(Point(230+thickness_, 250));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200+thickness_, 250+thickness_));
+    curve1R.addPoint(Point(230+thickness_, 250+thickness_));
+    curves.push_back(curve1R);
+
+    // haut droite
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(230+thickness_, 350));
+    curve1R.addPoint(Point(280+thickness_, 350));
+    curve1R.addPoint(Point(280+thickness_, 300));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(230+thickness_, 350-thickness_));
+    curve1R.addPoint(Point(260+thickness_, 350-thickness_));
+    curve1R.addPoint(Point(260+thickness_, 320-thickness_));
+    curves.push_back(curve1R);
+
+    //bas droite
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(280+thickness_, 300));
+    curve1R.addPoint(Point(280+thickness_, 250));
+    curve1R.addPoint(Point(230+thickness_, 250));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(260+thickness_, 320-thickness_));
+    curve1R.addPoint(Point(260+thickness_, 290-thickness_));
+    curve1R.addPoint(Point(230+thickness_, 290-thickness_));
+    curves.push_back(curve1R);
+
+    // droite
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200+thickness_, 250));
+    curve1R.addPoint(Point(300, 150));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(200+2*thickness_, 250));
+    curve1R.addPoint(Point(300+thickness_, 150));
+    curves.push_back(curve1R);
+
+    curve1R.clearPoints();
+    curve1R.addPoint(Point(300, 150));
+    curve1R.addPoint(Point(300+thickness_, 150));
+    curves.push_back(curve1R);
+
+    img_.draw(curves);
+}
+
 void FontV1::S(){
     BezierCurve curve1S;
     std::vector<BezierCurve> curves;
 
-    // haut
-    curve1S.clearPoints();
-    curve1S.addPoint(Point(380, 420));
-    curve1S.addPoint(Point(260, 520));
-    curve1S.addPoint(Point(170, 420));
-    curves.push_back(curve1S);
-
-    // gauche 
-    curve1S.clearPoints();
-    curve1S.addPoint(Point(170, 420));
-    curve1S.addPoint(Point(120, 360));
-    curve1S.addPoint(Point(180, 300));
-    curves.push_back(curve1S);
-
-    // milieu
-    curve1S.clearPoints();
-    curve1S.addPoint(Point(180, 300));
-    curve1S.addPoint(Point(310, 180));
-    curves.push_back(curve1S);
-
     // droite
     curve1S.clearPoints();
-    curve1S.addPoint(Point(310, 180));
-    curve1S.addPoint(Point(320, 165));
-    curve1S.addPoint(Point(310, 150));
+    curve1S.addPoint(Point(320, 350-thickness_));
+    curve1S.addPoint(Point(220+thickness_, 380-thickness_));
+    curve1S.addPoint(Point(200+thickness_, 300));
     curves.push_back(curve1S);
 
-    // bas
     curve1S.clearPoints();
-    curve1S.addPoint(Point(310, 150));
-    curve1S.addPoint(Point(250, 70));
-    curve1S.addPoint(Point(150, 150));
+    curve1S.addPoint(Point(200+thickness_, 300));
+    curve1S.addPoint(Point(185+thickness_, 280+thickness_));
+    curve1S.addPoint(Point(300, 200+thickness_));
     curves.push_back(curve1S);
 
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(300, 200+thickness_));
+    curve1S.addPoint(Point(390, 130));
+    curve1S.addPoint(Point(200, 170-thickness_));
+    curves.push_back(curve1S);
 
+    // gauche
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(320, 350));
+    curve1S.addPoint(Point(220, 380));
+    curve1S.addPoint(Point(200, 300));
+    curves.push_back(curve1S);
 
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(200, 300));
+    curve1S.addPoint(Point(185, 280));
+    curve1S.addPoint(Point(300, 190));
+    curves.push_back(curve1S);
 
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(300, 190));
+    curve1S.addPoint(Point(320, 150));
+    curve1S.addPoint(Point(200, 170));
+    curves.push_back(curve1S);
 
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(320, 350-thickness_));
+    curve1S.addPoint(Point(320, 350));
+    curves.push_back(curve1S);
+
+    curve1S.clearPoints();
+    curve1S.addPoint(Point(200, 170-thickness_));
+    curve1S.addPoint(Point(200, 170));
+    curves.push_back(curve1S);
+
+    img_.draw(curves);
+}
+
+void FontV1::T(){
+    BezierCurve curve1T;
+    std::vector<BezierCurve> curves;
 
     // haut
-    curve1S.clearPoints();
-    curve1S.addPoint(Point(360, 380));
-    curve1S.addPoint(Point(260, 460));
-    curve1S.addPoint(Point(200, 380));
-    curves.push_back(curve1S);
+    curve1T.clearPoints();
+    curve1T.addPoint(Point(190, 350));
+    curve1T.addPoint(Point(310, 350));
+    curves.push_back(curve1T);
 
-    // gauche 
-    curve1S.clearPoints();
-    curve1S.addPoint(Point(200, 380));
-    curve1S.addPoint(Point(190, 365));
-    curve1S.addPoint(Point(200, 350));
-    curves.push_back(curve1S);
+    curve1T.clearPoints();
+    curve1T.addPoint(Point(190, 350-thickness_));
+    curve1T.addPoint(Point(240, 350-thickness_));
+    curves.push_back(curve1T);
 
-    // milieu
-    curve1S.clearPoints();
-    curve1S.addPoint(Point(200, 350));
-    curve1S.addPoint(Point(340, 220));
-    curves.push_back(curve1S);
+    curve1T.clearPoints();
+    curve1T.addPoint(Point(310, 350-thickness_));
+    curve1T.addPoint(Point(240+thickness_, 350-thickness_));
+    curves.push_back(curve1T);
+
+    //bas
+    curve1T.clearPoints();
+    curve1T.addPoint(Point(240, 150));
+    curve1T.addPoint(Point(240+thickness_, 150));
+    curves.push_back(curve1T);
+
+    // gauche
+    curve1T.clearPoints();
+    curve1T.addPoint(Point(190, 350));
+    curve1T.addPoint(Point(190, 350-thickness_));
+    curves.push_back(curve1T);
+
+    curve1T.clearPoints();
+    curve1T.addPoint(Point(240, 350-thickness_));
+    curve1T.addPoint(Point(240, 150));
+    curves.push_back(curve1T);
 
     // droite
-    curve1S.clearPoints();
-    curve1S.addPoint(Point(340, 220));
-    curve1S.addPoint(Point(390, 160));
-    curve1S.addPoint(Point(340, 110));
-    curves.push_back(curve1S);
+    curve1T.clearPoints();
+    curve1T.addPoint(Point(310, 350));
+    curve1T.addPoint(Point(310, 350-thickness_));
+    curves.push_back(curve1T);
 
-    // bas
-    curve1S.clearPoints();
-    curve1S.addPoint(Point(340, 110));
-    curve1S.addPoint(Point(250, 10));
-    curve1S.addPoint(Point(130, 110));
-    curves.push_back(curve1S);
-
-    // lier
-    curve1S.clearPoints();
-    curve1S.addPoint(Point(130, 110));
-    curve1S.addPoint(Point(150, 150));
-    curves.push_back(curve1S);
-
-    curve1S.clearPoints();
-    curve1S.addPoint(Point(360, 380));
-    curve1S.addPoint(Point(380, 420));
-    curves.push_back(curve1S);
+    curve1T.clearPoints();
+    curve1T.addPoint(Point(240+thickness_, 350-thickness_));
+    curve1T.addPoint(Point(240+thickness_, 150));
+    curves.push_back(curve1T);
 
     img_.draw(curves);
 }
@@ -1173,6 +1682,81 @@ void FontV1::W() {
     img_.draw(curves);
 }
 
+void FontV1::X(){
+    BezierCurve curve1X;
+    std::vector<BezierCurve> curves;
+
+    // Upper gauche
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(190, 350));
+    curve1X.addPoint(Point(190+thickness_, 350));
+    curves.push_back(curve1X);
+
+    // Upper droite
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(310, 350));
+    curve1X.addPoint(Point(310-thickness_, 350));
+    curves.push_back(curve1X);
+
+    // Middle Right
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(310, 350));
+    curve1X.addPoint(Point(250+thickness_/2, 250));
+    curves.push_back(curve1X);
+
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(310-thickness_, 350));
+    curve1X.addPoint(Point(250, 250+thickness_));
+    curves.push_back(curve1X);
+
+    // Middle Left
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(250-thickness_/2, 250));
+    curve1X.addPoint(Point(190, 350));
+    curves.push_back(curve1X);
+
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(190+thickness_, 350));
+    curve1X.addPoint(Point(250, 250+thickness_));
+    curves.push_back(curve1X);
+
+    // lower gauche
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(190, 150));
+    curve1X.addPoint(Point(190+thickness_, 150));
+    curves.push_back(curve1X);
+
+    // lower droite
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(310, 150));
+    curve1X.addPoint(Point(310-thickness_, 150));
+    curves.push_back(curve1X);
+
+    // Middle Right
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(310, 150));
+    curve1X.addPoint(Point(250+thickness_/2, 250));
+    curves.push_back(curve1X);
+
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(310-thickness_, 150));
+    curve1X.addPoint(Point(250, 250-thickness_));
+    curves.push_back(curve1X);
+
+    // Middle Left
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(250-thickness_/2, 250));
+    curve1X.addPoint(Point(190, 150));
+    curves.push_back(curve1X);
+
+    curve1X.clearPoints();
+    curve1X.addPoint(Point(190+thickness_, 150));
+    curve1X.addPoint(Point(250, 250-thickness_));
+    curves.push_back(curve1X);
+
+    img_.draw(curves);
+}
+
 void FontV1::Y(){
     BezierCurve curve1Y;
     std::vector<BezierCurve> curves;
@@ -1197,7 +1781,7 @@ void FontV1::Y(){
 
     curve1Y.clearPoints();
     curve1Y.addPoint(Point(310-thickness_, 350));
-    curve1Y.addPoint(Point(250, 250+thickness_+5));
+    curve1Y.addPoint(Point(250, 250+thickness_));
     curves.push_back(curve1Y);
 
     // Middle Left
@@ -1208,7 +1792,7 @@ void FontV1::Y(){
 
     curve1Y.clearPoints();
     curve1Y.addPoint(Point(190+thickness_, 350));
-    curve1Y.addPoint(Point(250, 250+thickness_+5));
+    curve1Y.addPoint(Point(250, 250+thickness_));
     curves.push_back(curve1Y);
 
     // Bottom left

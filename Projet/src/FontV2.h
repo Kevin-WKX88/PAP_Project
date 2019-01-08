@@ -73,6 +73,36 @@ class FontV2 : public FontV1{
 		void G();
 
 		/**
+		 * @brief Draw the letter H in black on the Image
+		 * @return letter_
+		 */
+		void H();
+
+		/**
+		 * @brief Draw the letter I in black on the Image
+		 * @return letter_
+		 */
+		void I();
+
+		/**
+		 * @brief Draw the letter J in black on the Image
+		 * @return letter_
+		 */
+		void J();
+
+		/**
+		 * @brief Draw the letter K in black on the Image
+		 * @return letter_
+		 */
+		void K();
+
+		/**
+		 * @brief Draw the letter L in black on the Image
+		 * @return letter_
+		 */
+		void L();
+
+		/**
 		 * @brief Draw the letter M in black on the Image
 		 * @return letter_
 		 */
@@ -91,16 +121,34 @@ class FontV2 : public FontV1{
 		void O();
 
 		/**
+		 * @brief Draw the letter P in black on the Image
+		 * @return letter_
+		 */
+		void P();
+
+		/**
 		 * @brief Draw the letter Q in black on the Image
 		 * @return letter_
 		 */
 		void Q();
 
 		/**
+		 * @brief Draw the letter R in black on the Image
+		 * @return letter_
+		 */
+		void R();
+
+		/**
 		 * @brief Draw the letter S in black on the Image
 		 * @return letter_
 		 */
 		void S();
+
+		/**
+		 * @brief Draw the letter T in black on the Image
+		 * @return letter_
+		 */
+		void T();
 
 		/**
 		 * @brief Draw the letter U in black on the Image
@@ -119,6 +167,12 @@ class FontV2 : public FontV1{
 		 * @return letter_
 		 */
 		void W();
+
+		/**
+		 * @brief Draw the letter X in black on the Image
+		 * @return letter_
+		 */
+		void X();
 
 		/**
 		 * @brief Draw the letter Y in black on the Image
