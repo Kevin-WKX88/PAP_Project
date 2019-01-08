@@ -1,0 +1,170 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8]{inputenc} % POUR MODIFIER : ALLER DANS PREFERENCE TEXSHOP
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{algorithm, algpseudocode}%MEILLeur que listing???
+
+\usepackage{listings}%Pour ecrire algo
+
+\usepackage{listingsutf8}
+
+%Paramètrage avec : 
+\renewcommand{\lstlistingname}{Interface}
+%\lstset{
+%basicstyle=\footnotesize,    % taille de la police du code
+%numbers=left,   % placer le numéro de chaque ligne à gauche (left) 
+%numberstyle=\normalsize,    % taille de la police des numéros
+%numbersep=8pt,  % distance entre le code et sa numérotation
+%}
+\lstset{
+language=c++,        % choix du langage de programmation 
+  frame=single,
+  basicstyle=\small\normalfont\sffamily,    % the size of the fonts that are used for the code
+  stepnumber=1,                           % the step between two line-numbers. If it is 1 each line will be numbered
+ % numbersep=10pt,                         % how far the line-numbers are from the code
+  tabsize=1,                              % tab size in blank spaces
+  breaklines=true,                        % sets automatic line breaking
+  captionpos=t,                           % sets the caption-position to top
+  mathescape=true,
+  %stringstyle=\color{white}\ttfamily, % Farbe der String
+  showspaces=false,           % Leerzeichen anzeigen ?
+  showtabs=false,             % Tabs anzeigen ?
+  xleftmargin=17pt,
+  framexleftmargin=17pt,
+  framexrightmargin=17pt,
+  framexbottommargin=5pt,
+  framextopmargin=5pt,
+  showstringspaces=false,
+  inputencoding=utf8,
+  extendedchars=true,
+  literate=%
+            {é}{{\'{e}}}1
+            {è}{{\`{e}}}1
+            {ê}{{\^{e}}}1
+            {ë}{{\¨{e}}}1
+            {û}{{\^{u}}}1
+            {ù}{{\`{u}}}1
+            {â}{{\^{a}}}1
+            {à}{{\`{a}}}1
+            {î}{{\^{i}}}1
+            {ô}{{\^{o}}}1
+            {ç}{{\c{c}}}1
+            {Ç}{{\c{C}}}1
+            {É}{{\'{E}}}1
+            {Ê}{{\^{E}}}1
+            {À}{{\`{A}}}1
+            {Â}{{\^{A}}}1
+            {Î}{{\^{I}}}1  
+ }
+
+\usepackage{graphicx}%pour les images 
+\usepackage{appendix}%Pour annexes
+
+\usepackage{lmodern}
+\usepackage{fancyhdr}
+
+\usepackage[hidelinks]{hyperref} %Pour les adresses cliquables
+\usepackage{url} % Pour écrire des adresses cliquables.
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Les marges.
+\renewcommand{\thesection}{\arabic{section}}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+
+%Titre et nom
+%\title{Projet Individuel d'algorithmique-programmation IPF : groupe 1 \\ \textbf{Les Phrases Réflexives}}
+%\author{\textsc{XU} \textsc{Kevin}}
+%\date{3 avril 2018} 
+%\includegraphics[scale=0.2]{Logo_transparent.png} 
+
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0pt} % POUR enlever la ligne horizontale en haut
+\renewcommand{\footrulewidth}{1pt}
+\fancyhead[L,R]{}
+\fancyfoot[R]{\textbf{page \thepage}} 
+\fancyfoot[L]{Rapport : Courbes de Bézier et polices de caractères}
+\fancyfoot[C]{}  
+
+\begin{document}
+
+\begin{titlepage}
+			\includegraphics[scale=0.25]{Images/Logo_transparent.png} 
+			\begin{center}
+				\vspace*{6cm}
+				{ \huge Rapport Projet PAP \\
+				Courbes de Bézier et polices de caractères \\
+				}
+			\vspace*{2cm}
+				\begin{center} \large
+					\textsc{XU} \textsc{Kevin}\\
+					\textsc{LI} \textsc{Ziheng}
+				\end{center}
+				\begin{minipage}{0.4\textwidth}
+				\end{minipage}
+				{\large 13 janvier 2019}
+			\end{center}
+	\end{titlepage}
+
+
+	%\newpage
+	%Sommaire
+	\renewcommand{\contentsname}{Sommaire} 
+	{\setlength{\baselineskip}{1.2\baselineskip}
+\tableofcontents\par}%RAJOUTER ESPACE ENTRE LIGNE
+		
+	\addcontentsline{toc}{part}{Préambule} %Ajouter un lien
+	\newpage
+	\vspace*{3cm} %Pour ajouter l'espace !!!
+	\paragraph{\Huge{Introduction}}
+
+	\paragraph{}
+	L'objectif de ce projet est réalisé des polices de caractères en utilisant des courbes de Bézier.\\
+\begin{itemize}
+\item un actif sans risque : $S_t^0$ à l'instant $t$  
+\item un actif risqué (une action) : $S_t$ une variable aléatoire 
+\end{itemize}
+	
+	On va utiliser une fonction $f:  \mathbb{R}_+ \rightarrow \mathbb{R}_+$ tout au long du problème. Cette fonction renvoie le montant d'argent gagné pour un certain montant de l'actif risqué en paramètre.\\
+		
+	\newpage
+
+\section{Les classes (Diagramme UML)}			
+\subsubsection{Diagramme UML}
+
+% PAS OKKKKKK		
+\subsubsection{Question 1}
+On a $q_N=\mathbb{Q}(T_1^{(N)}=1+h_N)$ donc $1-q_N=\mathbb{Q}(T_1^{(N)}=1+b_N)$ car $T_1^{(N)}$ ne 
+
+\section{Point}	
+% Objectifs		
+\subsubsection{Réalisation}
+\subsubsection{Solution}
+
+\section{Courbes de Bézier}	
+% Objectifs		
+\subsubsection{Réalisation}
+\subsubsection{Solution}
+
+
+\section{Police 1}	
+% Objectifs		
+\subsubsection{Réalisation}
+\subsubsection{Solution}
+
+\section{Police 2}	
+% Objectifs	
+\subsubsection{Solution}
+	
+
+\section{Police 3}			
+% Objectifs	
+\subsubsection{Solution}
+	
+
+\end{document}
+ 

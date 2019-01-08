@@ -1,0 +1,6 @@
+\select@language {french}
+\contentsline {part}{Pr\IeC {\'e}ambule}{1}{section*.1}
+\contentsline {paragraph}{\relax \fontsize {24.88}{30}\selectfont {Pr\IeC {\'e}ambule}}{2}{section*.2}
+\contentsline {paragraph}{}{2}{section*.3}
+\contentsline {section}{\numberline {1}Mod\IeC {\`e}le de Cox-Ross-Rubinstein}{3}{section.1}
+\contentsline {subsubsection}{\numberline {1.0.1}Question 1}{3}{subsubsection.1.0.1}
