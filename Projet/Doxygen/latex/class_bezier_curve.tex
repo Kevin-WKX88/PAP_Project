@@ -1,0 +1,208 @@
+\hypertarget{class_bezier_curve}{}\section{Bezier\+Curve Class Reference}
+\label{class_bezier_curve}\index{Bezier\+Curve@{Bezier\+Curve}}
+
+
+{\ttfamily \#include $<$Bezier\+Curve.\+h$>$}
+
+
+
+Collaboration diagram for Bezier\+Curve\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_bezier_curve__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bezier_curve_af30b8df568e50499b596aff578198425}{Bezier\+Curve}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bezier_curve_abf9565fc1a6be43b0f1503e2db52ffd1}{Bezier\+Curve}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\begin{DoxyCompactList}\small\item\em Valued constructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_bezier_curve_a0ebb942d8285628bead89d154f39e616}{get\+Points}} () const
+\begin{DoxyCompactList}\small\item\em Getter for points\+\_\+. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bezier_curve_a38d16c18b36ae45619b05e26e226cf34}{add\+Point}} (\mbox{\hyperlink{class_point}{Point}} P)
+\begin{DoxyCompactList}\small\item\em Add a new point in the Bezier Curve. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bezier_curve_a0ba8ce66d5af5971ae6a1b506029728e}{clear\+Points}} ()
+\begin{DoxyCompactList}\small\item\em Empty the vector points. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_bezier_curve_a7e0c40cb373da6aa1aa1acd5fce9d503}{get\+Casteljau\+Point}} (int c, int index, double t)
+\begin{DoxyCompactList}\small\item\em Get the point computed by De Casteljau\textquotesingle{}s algorithm. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_bezier_curve_a2b4482d322a84df3fa22f4e491cb2bc3}{get\+Curve\+Points}} ()
+\begin{DoxyCompactList}\small\item\em Get the vector of points to draw the Bezier curve. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}{points\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_bezier_curve_a9a6d08efdae6b77334cb731f6c593142}{ratio\+\_\+}} = 0.\+000001
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bezier_curve_af30b8df568e50499b596aff578198425}\label{class_bezier_curve_af30b8df568e50499b596aff578198425}} 
+\index{Bezier\+Curve@{Bezier\+Curve}!Bezier\+Curve@{Bezier\+Curve}}
+\index{Bezier\+Curve@{Bezier\+Curve}!Bezier\+Curve@{Bezier\+Curve}}
+\subsubsection{\texorpdfstring{Bezier\+Curve()}{BezierCurve()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Bezier\+Curve\+::\+Bezier\+Curve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyCode}
+26 \{\};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bezier_curve_abf9565fc1a6be43b0f1503e2db52ffd1}\label{class_bezier_curve_abf9565fc1a6be43b0f1503e2db52ffd1}} 
+\index{Bezier\+Curve@{Bezier\+Curve}!Bezier\+Curve@{Bezier\+Curve}}
+\index{Bezier\+Curve@{Bezier\+Curve}!Bezier\+Curve@{Bezier\+Curve}}
+\subsubsection{\texorpdfstring{Bezier\+Curve()}{BezierCurve()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bezier\+Curve\+::\+Bezier\+Curve (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})}
+
+
+
+Valued constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & Vector of points of the Bezier curve \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+14                                                 \{
+15     \mbox{\hyperlink{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}{points\_}} = points;
+16 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bezier_curve_a38d16c18b36ae45619b05e26e226cf34}\label{class_bezier_curve_a38d16c18b36ae45619b05e26e226cf34}} 
+\index{Bezier\+Curve@{Bezier\+Curve}!add\+Point@{add\+Point}}
+\index{add\+Point@{add\+Point}!Bezier\+Curve@{Bezier\+Curve}}
+\subsubsection{\texorpdfstring{add\+Point()}{addPoint()}}
+{\footnotesize\ttfamily void Bezier\+Curve\+::add\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Add a new point in the Bezier Curve. 
+
+\begin{DoxyReturn}{Returns}
+The computed \mbox{\hyperlink{class_point}{Point}} 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+18                                   \{
+19     \mbox{\hyperlink{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}{points\_}}.push\_back(P);
+20 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bezier_curve_a0ba8ce66d5af5971ae6a1b506029728e}\label{class_bezier_curve_a0ba8ce66d5af5971ae6a1b506029728e}} 
+\index{Bezier\+Curve@{Bezier\+Curve}!clear\+Points@{clear\+Points}}
+\index{clear\+Points@{clear\+Points}!Bezier\+Curve@{Bezier\+Curve}}
+\subsubsection{\texorpdfstring{clear\+Points()}{clearPoints()}}
+{\footnotesize\ttfamily void Bezier\+Curve\+::clear\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Empty the vector points. 
+
+
+\begin{DoxyCode}
+22                               \{
+23     \mbox{\hyperlink{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}{points\_}}.clear();
+24 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bezier_curve_a7e0c40cb373da6aa1aa1acd5fce9d503}\label{class_bezier_curve_a7e0c40cb373da6aa1aa1acd5fce9d503}} 
+\index{Bezier\+Curve@{Bezier\+Curve}!get\+Casteljau\+Point@{get\+Casteljau\+Point}}
+\index{get\+Casteljau\+Point@{get\+Casteljau\+Point}!Bezier\+Curve@{Bezier\+Curve}}
+\subsubsection{\texorpdfstring{get\+Casteljau\+Point()}{getCasteljauPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Bezier\+Curve\+::get\+Casteljau\+Point (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{int}]{index,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Get the point computed by De Casteljau\textquotesingle{}s algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The size of the current points vector \\
+\hline
+{\em index} & \\
+\hline
+{\em t} & Parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The computed \mbox{\hyperlink{class_point}{Point}} 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+26                                                                \{
+27     \textcolor{keywordflow}{if} (c == 0) \{
+28         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}{points\_}}[index];
+29     \}
+30     \mbox{\hyperlink{class_point}{Point}} P1 = \mbox{\hyperlink{class_bezier_curve_a7e0c40cb373da6aa1aa1acd5fce9d503}{getCasteljauPoint}}(c-1, index, t);
+31     \mbox{\hyperlink{class_point}{Point}} P2 = \mbox{\hyperlink{class_bezier_curve_a7e0c40cb373da6aa1aa1acd5fce9d503}{getCasteljauPoint}}(c-1, index+1, t);
+32     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_point}{Point}}(round((1-t) * P1.\mbox{\hyperlink{class_point_ac9d5859db121c7d1b89ca89266dca0a3}{getX}}() + t * P2.\mbox{\hyperlink{class_point_ac9d5859db121c7d1b89ca89266dca0a3}{getX}}()), round((1-t) * P1.
+      \mbox{\hyperlink{class_point_a86d10ff46e08462c45b15a8c7ef62d61}{getY}}() + t * P2.\mbox{\hyperlink{class_point_a86d10ff46e08462c45b15a8c7ef62d61}{getY}}()), \mbox{\hyperlink{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}{points\_}}.begin()->getColor()[0], \mbox{\hyperlink{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}{points\_}}.begin()->getColor()[
+      1], \mbox{\hyperlink{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}{points\_}}.begin()->getColor()[2]);
+33 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bezier_curve_a2b4482d322a84df3fa22f4e491cb2bc3}\label{class_bezier_curve_a2b4482d322a84df3fa22f4e491cb2bc3}} 
+\index{Bezier\+Curve@{Bezier\+Curve}!get\+Curve\+Points@{get\+Curve\+Points}}
+\index{get\+Curve\+Points@{get\+Curve\+Points}!Bezier\+Curve@{Bezier\+Curve}}
+\subsubsection{\texorpdfstring{get\+Curve\+Points()}{getCurvePoints()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ Bezier\+Curve\+::get\+Curve\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the vector of points to draw the Bezier curve. 
+
+Compute the points for a given precision \begin{DoxyReturn}{Returns}
+The vector containing the points of the curve 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+35                                              \{
+36     std::vector<Point> res;
+37     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{double} t = 0.0; t <= 1; t += \mbox{\hyperlink{class_bezier_curve_a9a6d08efdae6b77334cb731f6c593142}{ratio\_}}) \{
+38         res.push\_back(\mbox{\hyperlink{class_bezier_curve_a7e0c40cb373da6aa1aa1acd5fce9d503}{getCasteljauPoint}}(\mbox{\hyperlink{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}{points\_}}.size()-1, 0, t));
+39     \}
+40     \textcolor{keywordflow}{return} res;
+41 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bezier_curve_a0ebb942d8285628bead89d154f39e616}\label{class_bezier_curve_a0ebb942d8285628bead89d154f39e616}} 
+\index{Bezier\+Curve@{Bezier\+Curve}!get\+Points@{get\+Points}}
+\index{get\+Points@{get\+Points}!Bezier\+Curve@{Bezier\+Curve}}
+\subsubsection{\texorpdfstring{get\+Points()}{getPoints()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_point}{Point}}$>$ Bezier\+Curve\+::get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for points\+\_\+. 
+
+\begin{DoxyReturn}{Returns}
+points\+\_\+ 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}\label{class_bezier_curve_a73c8f89d9002be75295e6a0546547189}} 
+\index{Bezier\+Curve@{Bezier\+Curve}!points\+\_\+@{points\+\_\+}}
+\index{points\+\_\+@{points\+\_\+}!Bezier\+Curve@{Bezier\+Curve}}
+\subsubsection{\texorpdfstring{points\+\_\+}{points\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_point}{Point}}$>$ Bezier\+Curve\+::points\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_bezier_curve_a9a6d08efdae6b77334cb731f6c593142}\label{class_bezier_curve_a9a6d08efdae6b77334cb731f6c593142}} 
+\index{Bezier\+Curve@{Bezier\+Curve}!ratio\+\_\+@{ratio\+\_\+}}
+\index{ratio\+\_\+@{ratio\+\_\+}!Bezier\+Curve@{Bezier\+Curve}}
+\subsubsection{\texorpdfstring{ratio\+\_\+}{ratio\_}}
+{\footnotesize\ttfamily double Bezier\+Curve\+::ratio\+\_\+ = 0.\+000001\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Kevin\+Xu/\+Documents/\+Ecole\+\_\+\+Ingé/2\+A/\+S3/\+P\+A\+P/\+P\+A\+P\+\_\+\+Project/\+Projet/src/\mbox{\hyperlink{_bezier_curve_8h}{Bezier\+Curve.\+h}}\item 
+/\+Users/\+Kevin\+Xu/\+Documents/\+Ecole\+\_\+\+Ingé/2\+A/\+S3/\+P\+A\+P/\+P\+A\+P\+\_\+\+Project/\+Projet/src/\mbox{\hyperlink{_bezier_curve_8cpp}{Bezier\+Curve.\+cpp}}\end{DoxyCompactItemize}

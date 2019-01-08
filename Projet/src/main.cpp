@@ -2,7 +2,6 @@
 
 #include "Point.h"
 #include "Image.h"
-#include "Line.h"
 #include "BezierCurve.h"
 #include "FontV1.h"
 #include "FontV2.h"

@@ -1,0 +1,146 @@
+\hypertarget{main_b_e_z_i_e_rplusieurs_points_8cpp}{}\section{/\+Users/\+Kevin\+Xu/\+Documents/\+Ecole\+\_\+\+Ingé/2\+A/\+S3/\+P\+A\+P/\+P\+A\+P\+\_\+\+Project/\+Projet/src/main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.cpp File Reference}
+\label{main_b_e_z_i_e_rplusieurs_points_8cpp}\index{/\+Users/\+Kevin\+Xu/\+Documents/\+Ecole\+\_\+\+Ingé/2\+A/\+S3/\+P\+A\+P/\+P\+A\+P\+\_\+\+Project/\+Projet/src/main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp@{/\+Users/\+Kevin\+Xu/\+Documents/\+Ecole\+\_\+\+Ingé/2\+A/\+S3/\+P\+A\+P/\+P\+A\+P\+\_\+\+Project/\+Projet/src/main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Point.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Line.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_b_e_z_i_e_rplusieurs_points_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{main_b_e_z_i_e_rplusieurs_points_8cpp_af9d5a929caa85aecb7951dcb95dda799}{get\+C\+J\+Point}} (int r, int i, double t, std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{main_b_e_z_i_e_rplusieurs_points_8cpp_aecbd307881401b6d8aaa05a4331769f2}{draw\+CJ}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\item 
+int \mbox{\hyperlink{main_b_e_z_i_e_rplusieurs_points_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_b_e_z_i_e_rplusieurs_points_8cpp_aecbd307881401b6d8aaa05a4331769f2}\label{main_b_e_z_i_e_rplusieurs_points_8cpp_aecbd307881401b6d8aaa05a4331769f2}} 
+\index{main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp@{main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp}!draw\+CJ@{draw\+CJ}}
+\index{draw\+CJ@{draw\+CJ}!main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp@{main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp}}
+\subsubsection{\texorpdfstring{draw\+C\+J()}{drawCJ()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_point}{Point}}$>$ draw\+CJ (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+24                                                  \{
+25     std::vector<Point> res;
+26     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{double} t = 0.0; t <= 1; t+=0.00001) \{
+27         \mbox{\hyperlink{class_point}{Point}} P = \mbox{\hyperlink{main_b_e_z_i_e_rplusieurs_points_8cpp_af9d5a929caa85aecb7951dcb95dda799}{getCJPoint}}(points.size() - 1, 0, t, points);
+28         res.push\_back(P);
+29     \}
+30     \textcolor{keywordflow}{return} res;
+31 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{main_b_e_z_i_e_rplusieurs_points_8cpp_af9d5a929caa85aecb7951dcb95dda799}\label{main_b_e_z_i_e_rplusieurs_points_8cpp_af9d5a929caa85aecb7951dcb95dda799}} 
+\index{main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp@{main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp}!get\+C\+J\+Point@{get\+C\+J\+Point}}
+\index{get\+C\+J\+Point@{get\+C\+J\+Point}!main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp@{main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp}}
+\subsubsection{\texorpdfstring{get\+C\+J\+Point()}{getCJPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} get\+C\+J\+Point (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{i,  }\item[{double}]{t,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+17                                                                   \{
+18     \textcolor{keywordflow}{if} (r == 0) \textcolor{keywordflow}{return} points[i];
+19     \mbox{\hyperlink{class_point}{Point}} P1 = \mbox{\hyperlink{main_b_e_z_i_e_rplusieurs_points_8cpp_af9d5a929caa85aecb7951dcb95dda799}{getCJPoint}}(r-1, i, t, points);
+20     \mbox{\hyperlink{class_point}{Point}} P2 = \mbox{\hyperlink{main_b_e_z_i_e_rplusieurs_points_8cpp_af9d5a929caa85aecb7951dcb95dda799}{getCJPoint}}(r-1, i+1, t, points);
+21     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_point}{Point}}(\textcolor{keywordtype}{int}((1-t) * P1.\mbox{\hyperlink{class_point_ac9d5859db121c7d1b89ca89266dca0a3}{getX}}() + t * P2.\mbox{\hyperlink{class_point_ac9d5859db121c7d1b89ca89266dca0a3}{getX}}()), \textcolor{keywordtype}{int}((1 - t) * P1.
+      \mbox{\hyperlink{class_point_a86d10ff46e08462c45b15a8c7ef62d61}{getY}}() + t * P2.\mbox{\hyperlink{class_point_a86d10ff46e08462c45b15a8c7ef62d61}{getY}}()));
+22 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{main_b_e_z_i_e_rplusieurs_points_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_b_e_z_i_e_rplusieurs_points_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp@{main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp}!main@{main}}
+\index{main@{main}!main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp@{main\+B\+E\+Z\+I\+E\+Rplusieurs\+Points.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+34            \{
+35     std::cout << \textcolor{stringliteral}{"!!!Hello World!!!"} << std::endl;
+36 
+37     \mbox{\hyperlink{class_point}{Point}} P(1, 2);
+38     std::cout << P << std::endl;
+39 
+40     \textcolor{keywordtype}{char} fileName[] = \textcolor{stringliteral}{"img.png"};
+41     \mbox{\hyperlink{class_image}{Image}} img(fileName, 5000, 5000);
+42 
+43     \textcolor{comment}{// Modif pixels}
+44     \textcolor{comment}{// png\_bytep* pixels = img.getPixels();}
+45     \textcolor{comment}{// for(int y = 0; y < 10000; y++) \{}
+46     \textcolor{comment}{//     png\_bytep row = pixels[y];}
+47     \textcolor{comment}{//     for(int x = 0; x < 1000; x++) \{}
+48     \textcolor{comment}{//      png\_bytep px = \&(row[x * 3]);}
+49     \textcolor{comment}{//      px[0] = 0;}
+50     \textcolor{comment}{//      px[1] = 255;}
+51     \textcolor{comment}{//      px[2] = 0;}
+52     \textcolor{comment}{//     \}}
+53  \textcolor{comment}{//     \}}
+54 
+55 
+56     \textcolor{comment}{// Test horizontal line }
+57     \mbox{\hyperlink{class_point}{Point}} P1(2500, 10);
+58     \mbox{\hyperlink{class_point}{Point}} P2(2500, 4500);
+59     \textcolor{comment}{// Line L1(P1, P2);}
+60    \textcolor{comment}{//  std::cout << L1 << std::endl;}
+61    \textcolor{comment}{//  img.drawStraightLine(L1);}
+62 
+63     \textcolor{comment}{// Test horizontal line }
+64     \mbox{\hyperlink{class_point}{Point}} P3(5, 4500);
+65     \mbox{\hyperlink{class_point}{Point}} P4(5000, 4500);
+66     Line L2(P3, P4);
+67     std::cout << L2 << std::endl;
+68     img.drawStraightLine(L2);
+69 
+70     \mbox{\hyperlink{class_point}{Point}} P5(5, 3000);
+71     \mbox{\hyperlink{class_point}{Point}} P6(5000, 4500);
+72     Line L3(P5, P6);
+73     std::cout << L3 << std::endl;
+74     img.draw(L3);
+75 
+76 
+77     \textcolor{comment}{// draw Point}
+78     \mbox{\hyperlink{class_point}{Point}} P7(1, 1);
+79     img.draw(P7); 
+80 
+81     \textcolor{comment}{// draw curve}
+82     \mbox{\hyperlink{class_point}{Point}} P10(1, 2500);
+83     \mbox{\hyperlink{class_point}{Point}} P11(1400, 1000);
+84     \mbox{\hyperlink{class_point}{Point}} P12(2500, 2600);
+85     \mbox{\hyperlink{class_point}{Point}} P13(4888, 500);
+86 
+87     std::vector<Point> points;
+88     points.push\_back(P10);
+89     points.push\_back(P11);
+90     points.push\_back(P12);
+91 
+92     std::vector<Point> result = \mbox{\hyperlink{main_b_e_z_i_e_rplusieurs_points_8cpp_aecbd307881401b6d8aaa05a4331769f2}{drawCJ}}(points);
+93     \textcolor{keywordflow}{for} (std::vector<Point>::iterator it = result.begin(); it != result.end(); it++) \{
+94         img.draw(*it);
+95     \}
+96 
+97 
+98     std::vector<Point> points2;
+99     points2.push\_back(P1);
+100     points2.push\_back(P2);
+101 
+102     std::vector<Point> result2 = \mbox{\hyperlink{main_b_e_z_i_e_rplusieurs_points_8cpp_aecbd307881401b6d8aaa05a4331769f2}{drawCJ}}(points2);
+103     \textcolor{keywordflow}{for} (std::vector<Point>::iterator it = result2.begin(); it != result2.end(); it++) \{
+104         img.draw(*it);
+105     \}
+106 
+107     \textcolor{comment}{//img.setPixels(pixels);}
+108     img.writeImage();
+109     \textcolor{keywordflow}{return} 0;
+110 \}
+\end{DoxyCode}
