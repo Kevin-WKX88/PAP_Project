@@ -1,4 +1,4 @@
- CC = g++ -Wall -Wextra -std=c++11
+CC = g++ -Wall -Wextra -std=c++11
 
 CC_LIBPNG =  `libpng-config --cflags --ldflags`
 SRCDIR = src

@@ -26,7 +26,6 @@ class Image {
 		png_bytep *pixels_; /*!< The pixels of the image */
 
 	public:
-		//Image();
 		/**
 		 * @brief Valued constructor
 		 * @param x coordinate
