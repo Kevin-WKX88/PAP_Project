@@ -113,7 +113,7 @@ void FontV2::R() {
 
 void FontV2::S() {
     FontV1::S();
-    colorInBlack(250, 250);
+    colorInBlack(280, 310);
 }
 
 void FontV2::T() {
