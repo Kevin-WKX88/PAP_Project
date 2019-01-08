@@ -502,13 +502,6 @@ void FontV1::G() {
     curve1G.addPoint(Point(250, 150));
     curves.push_back(curve1G);
 
-    // // bas droite // POUR COLORIER
-    // curve1G.clearPoints();
-    // curve1G.addPoint(Point(330, 250, 255));
-    // curve1G.addPoint(Point(330, 150, 255));
-    // curve1G.addPoint(Point(250, 150, 255));
-    // curves.push_back(curve1G);
-
     // bas droite
     curve1G.clearPoints();
     curve1G.addPoint(Point(330-thickness_, 175));
@@ -721,94 +714,170 @@ void FontV1::O() {
     BezierCurve curve1O;
     std::vector<BezierCurve> curves;
 
-    // haut droite
+    // upper right
     curve1O.clearPoints();
     curve1O.addPoint(Point(330, 250));
     curve1O.addPoint(Point(330, 350));
     curve1O.addPoint(Point(250, 350));
     curves.push_back(curve1O);
 
-    // haut gauche
+    // upper left
     curve1O.clearPoints();
     curve1O.addPoint(Point(170, 250));
     curve1O.addPoint(Point(170, 350));
     curve1O.addPoint(Point(250, 350));
     curves.push_back(curve1O);
 
-    // bas gauche
+    // upper left
     curve1O.clearPoints();
     curve1O.addPoint(Point(170, 250));
     curve1O.addPoint(Point(170, 150));
     curve1O.addPoint(Point(250, 150));
     curves.push_back(curve1O);
 
-    // bas droite
+    // bottom right
     curve1O.clearPoints();
     curve1O.addPoint(Point(330, 250));
     curve1O.addPoint(Point(330, 150));
     curve1O.addPoint(Point(250, 150));
     curves.push_back(curve1O);
 
-
     // Small
-    // haut droite
+    // upper right
     curve1O.clearPoints();
     curve1O.addPoint(Point(330-thickness_, 250));
     curve1O.addPoint(Point(330-thickness_, 350-thickness_));
     curve1O.addPoint(Point(250, 350-thickness_));
     curves.push_back(curve1O);
 
-    // haut gauche
+    // upper left
     curve1O.clearPoints();
     curve1O.addPoint(Point(170+thickness_, 250));
     curve1O.addPoint(Point(170+thickness_, 350-thickness_));
     curve1O.addPoint(Point(250, 350-thickness_));
     curves.push_back(curve1O);
 
-    // bas gauche
+    // bottom left
     curve1O.clearPoints();
     curve1O.addPoint(Point(170+thickness_, 250));
     curve1O.addPoint(Point(170+thickness_, 150+thickness_));
     curve1O.addPoint(Point(250, 150+thickness_));
     curves.push_back(curve1O);
 
-    // bas droite
+    // bottom right
     curve1O.clearPoints();
     curve1O.addPoint(Point(330-thickness_, 250));
     curve1O.addPoint(Point(330-thickness_, 150+thickness_));
     curve1O.addPoint(Point(250, 150+thickness_));
     curves.push_back(curve1O);
 
-    // for (int i = thickness_; i > 0; i--) {
-    //     // haut droite
-    //     curve1O.clearPoints();
-    //     curve1O.addPoint(Point(330-i, 250));
-    //     curve1O.addPoint(Point(330-i, 350-i));
-    //     curve1O.addPoint(Point(250, 350-i));
-    //     curves.push_back(curve1O);
+    img_.draw(curves);
+}
 
-    //     // haut gauche
-    //     curve1O.clearPoints();
-    //     curve1O.addPoint(Point(170+i, 250));
-    //     curve1O.addPoint(Point(170+i, 350-i));
-    //     curve1O.addPoint(Point(250, 350-i));
-    //     curves.push_back(curve1O);
+void FontV1::Q() {
+    BezierCurve curve1Q;
+    std::vector<BezierCurve> curves;
 
-    //     // bas gauche
-    //     curve1O.clearPoints();
-    //     curve1O.addPoint(Point(170+i, 250));
-    //     curve1O.addPoint(Point(170+i, 150+i));
-    //     curve1O.addPoint(Point(250, 150+i));
-    //     curves.push_back(curve1O);
+    // Upper right
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(330, 250));
+    curve1Q.addPoint(Point(330, 350));
+    curve1Q.addPoint(Point(250, 350));
+    curves.push_back(curve1Q);
 
-    //     // bas droite
-    //     curve1O.clearPoints();
-    //     curve1O.addPoint(Point(330-i, 250));
-    //     curve1O.addPoint(Point(330-i, 150+i));
-    //     curve1O.addPoint(Point(250, 150+i));
-    //     curves.push_back(curve1O);
-    // }
+    // Upper left
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(170, 250));
+    curve1Q.addPoint(Point(170, 350));
+    curve1Q.addPoint(Point(250, 350));
+    curves.push_back(curve1Q);
+
+    // bottom left
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(170, 250));
+    curve1Q.addPoint(Point(170, 150));
+    curve1Q.addPoint(Point(250, 150));
+    curves.push_back(curve1Q);
+
+    // Bottom right
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(330, 250));
+    curve1Q.addPoint(Point(332, 200));
+    curve1Q.addPoint(Point(305, 168));
+    curves.push_back(curve1Q);
+
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(287, 157));
+    curve1Q.addPoint(Point(270, 150));
+    curve1Q.addPoint(Point(250, 150));
+    curves.push_back(curve1Q);
+
+    // Right 
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(287, 157));
+    curve1Q.addPoint(Point(310, 130));
+    curves.push_back(curve1Q);
+
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(305, 168));
+    curve1Q.addPoint(Point(325, 145));
+    curves.push_back(curve1Q);
     
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(310, 130));
+    curve1Q.addPoint(Point(325, 145));
+    curves.push_back(curve1Q);
+
+    // Small
+    // upper right
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(330-thickness_, 250));
+    curve1Q.addPoint(Point(330-thickness_, 350-thickness_));
+    curve1Q.addPoint(Point(250, 350-thickness_));
+    curves.push_back(curve1Q);
+
+    // bottom left
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(170+thickness_, 250));
+    curve1Q.addPoint(Point(170+thickness_, 350-thickness_));
+    curve1Q.addPoint(Point(250, 350-thickness_));
+    curves.push_back(curve1Q);
+
+    // bottom left
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(170+thickness_, 250));
+    curve1Q.addPoint(Point(170+thickness_, 150+thickness_));
+    curve1Q.addPoint(Point(250, 150+thickness_));
+    curves.push_back(curve1Q);
+
+    // bottom right
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(270, 153+thickness_));
+    curve1Q.addPoint(Point(258, 150+thickness_));
+    curve1Q.addPoint(Point(250, 150+thickness_));
+    curves.push_back(curve1Q);
+
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(330-thickness_, 250));
+    curve1Q.addPoint(Point(332-thickness_, 205));
+    curve1Q.addPoint(Point(288, 183));
+    curves.push_back(curve1Q);
+
+    // Left
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(270, 153+thickness_));
+    curve1Q.addPoint(Point(250, 190+5));
+    curves.push_back(curve1Q);
+
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(288, 183));
+    curve1Q.addPoint(Point(264, 204+5));
+    curves.push_back(curve1Q);
+
+    curve1Q.clearPoints();
+    curve1Q.addPoint(Point(250, 190+5));
+    curve1Q.addPoint(Point(264, 204+5));
+    curves.push_back(curve1Q);
 
     img_.draw(curves);
 }

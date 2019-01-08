@@ -91,6 +91,12 @@ class FontV2 : public FontV1{
 		void O();
 
 		/**
+		 * @brief The curves to draw the letter Q
+		 * @return letter_
+		 */
+		void Q();
+
+		/**
 		 * @brief The curves to draw the letter S
 		 * @return letter_
 		 */

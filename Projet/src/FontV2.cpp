@@ -86,6 +86,11 @@ void FontV2::O() {
     colorInBlack(250, 160);
 }
 
+void FontV2::Q() {
+    FontV1::Q();
+    colorInBlack(250, 160);
+}
+
 void FontV2::S() {
     FontV1::S();
     colorInBlack(250, 250);
