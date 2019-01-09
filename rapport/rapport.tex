@@ -142,6 +142,43 @@ On a $q_N=\mathbb{Q}(T_1^{(N)}=1+h_N)$ donc $1-q_N=\mathbb{Q}(T_1^{(N)}=1+b_N)$ 
 \section{Courbes de Bézier}	
 % Objectifs		
 \subsection{Algorithme de de Casteljau}
+
+\texttt{points\_} contient les points de contrôle de la courbe de Bézier et $ratio\_ = 0.00001$ correspond à la valeur du paramètre lors du calcul du barycentre entre deux points.
+
+\begin{algorithm}
+	\caption{\texttt{getCasteljauPoint}}
+		\begin{algorithmic}[1]
+		\Require $c \in \mathbb{N}$, $index \in \mathbb{N}, t \in \mathbb{R}^{*}$
+		\Ensure Point
+		\Function{getCasteljauPoint}{$c$, $index$, $t$}
+		\If{ c = 0 }
+			\State \Return points\_[index] 
+		\EndIf
+		\State Set a Point in P1 to \texttt{getCasteljauPoint(c-1, index, t)} 
+		\State Set a Point in P2 to \texttt{getCasteljauPoint(c-1, index+1, t)} 
+		\State Set a Point in P with $x = (1-t) \times (x \; of \; P1) + t \times (x \; of \; P2)$ and $y = (1-t) \times (y \; of \; P1) + t \times (y \; of \; P2)$
+		\State \Return $P$
+		\EndFunction
+		\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{\texttt{getCurvePoints}}
+		\begin{algorithmic}[2]
+		\Require 
+		\Ensure A vector $Res$ of Points
+		\Function{getCurvePoints}{}
+		\State Set an empty vector $Res$ of Points
+		\State Set S to the size of the vector points\_
+		\For{$t = 0$ to $1$ with a step of $ratio\_$}
+			\State Add to the vector $Res$ the Point : \texttt{getCasteljauPoint(size-1, 0, t)} 
+		\EndFor
+		\State \Return $Res$
+		\EndFunction
+		\end{algorithmic}
+\end{algorithm}
+	
+	
 \subsection{Solution}
 
 \section{Police 1}	

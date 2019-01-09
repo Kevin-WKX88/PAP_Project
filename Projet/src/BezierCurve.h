@@ -17,7 +17,7 @@
 class BezierCurve {
 	private:
 		std::vector<Point> points_; /*!< Control points of a Bezier curve */
-		double ratio_ = 0.000001; /*!< Approximation error */
+		double step_ = 0.000001; /*!< Approximation error */
 
 	public:
 		/**

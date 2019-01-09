@@ -34,7 +34,7 @@ Point BezierCurve::getCasteljauPoint(int c, int index, double t) {
 
 std::vector<Point> BezierCurve::getCurvePoints() {
 	std::vector<Point> res;
-	for (double t = 0.0; t <= 1; t += ratio_) {
+	for (double t = 0.0; t <= 1; t += step_) {
 		res.push_back(getCasteljauPoint(points_.size()-1, 0, t));
 	}
 	return res;
