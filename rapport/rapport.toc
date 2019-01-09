@@ -10,13 +10,13 @@
 \contentsline {subsection}{\numberline {2.2}Solution}{3}{subsection.2.2}
 \contentsline {section}{\numberline {3}Point}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}Solution}{3}{subsection.3.1}
-\contentsline {section}{\numberline {4}Courbes de B\IeC {\'e}zier}{3}{section.4}
-\contentsline {subsection}{\numberline {4.1}Algorithme de de Casteljau}{3}{subsection.4.1}
+\contentsline {section}{\numberline {4}Courbes de B\IeC {\'e}zier}{4}{section.4}
+\contentsline {subsection}{\numberline {4.1}Algorithme de de Casteljau}{4}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Solution}{4}{subsection.4.2}
 \contentsline {section}{\numberline {5}Police 1}{4}{section.5}
 \contentsline {subsection}{\numberline {5.1}R\IeC {\'e}alisation}{4}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Solution}{4}{subsection.5.2}
-\contentsline {section}{\numberline {6}Police 2}{4}{section.6}
-\contentsline {subsection}{\numberline {6.1}Solution}{4}{subsection.6.1}
-\contentsline {section}{\numberline {7}Police 3}{4}{section.7}
-\contentsline {subsection}{\numberline {7.1}Solution}{4}{subsection.7.1}
+\contentsline {section}{\numberline {6}Police 2}{5}{section.6}
+\contentsline {subsection}{\numberline {6.1}Solution}{5}{subsection.6.1}
+\contentsline {section}{\numberline {7}Police 3}{5}{section.7}
+\contentsline {subsection}{\numberline {7.1}Solution}{5}{subsection.7.1}

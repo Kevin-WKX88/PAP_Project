@@ -139,24 +139,25 @@ On a $q_N=\mathbb{Q}(T_1^{(N)}=1+h_N)$ donc $1-q_N=\mathbb{Q}(T_1^{(N)}=1+b_N)$ 
 % Objectifs		
 \subsection{Solution}
 
+\newpage
 \section{Courbes de Bézier}	
 % Objectifs		
 \subsection{Algorithme de de Casteljau}
 
-\texttt{points\_} contient les points de contrôle de la courbe de Bézier et $ratio\_ = 0.00001$ correspond à la valeur du paramètre lors du calcul du barycentre entre deux points.
+\texttt{points\_} contient les points de contrôle de la courbe de Bézier et $step\_ = 0.00001$ correspond à la valeur du paramètre lors du calcul du barycentre entre deux points.
 
 \begin{algorithm}
 	\caption{\texttt{getCasteljauPoint}}
 		\begin{algorithmic}[1]
-		\Require $c \in \mathbb{N}$, $index \in \mathbb{N}, t \in \mathbb{R}^{*}$
+		\Require $c \in \mathbb{N}$, $index \in \mathbb{N}, t \in \mathbb{R}^{*}$, $points$ A vector which contains the control points of the Bezier Curve
 		\Ensure Point
-		\Function{getCasteljauPoint}{$c$, $index$, $t$}
+		\Function{getCasteljauPoint}{$c$, $index$, $t$, $points$}
 		\If{ c = 0 }
-			\State \Return points\_[index] 
+			\State \Return points[index] 
 		\EndIf
-		\State Set a Point in P1 to \texttt{getCasteljauPoint(c-1, index, t)} 
-		\State Set a Point in P2 to \texttt{getCasteljauPoint(c-1, index+1, t)} 
-		\State Set a Point in P with $x = (1-t) \times (x \; of \; P1) + t \times (x \; of \; P2)$ and $y = (1-t) \times (y \; of \; P1) + t \times (y \; of \; P2)$
+		\State Set a Point in $P1$ to \texttt{getCasteljauPoint(c-1, index, t, points)} 
+		\State Set a Point in $P2$ to \texttt{getCasteljauPoint(c-1, index+1, t, points)} 
+		\State Set a Point in $P$ with $x = (1-t) \times (x \; of \; P1) + t \times (x \; of \; P2)$ and $y = (1-t) \times (y \; of \; P1) + t \times (y \; of \; P2)$
 		\State \Return $P$
 		\EndFunction
 		\end{algorithmic}
@@ -164,13 +165,13 @@ On a $q_N=\mathbb{Q}(T_1^{(N)}=1+h_N)$ donc $1-q_N=\mathbb{Q}(T_1^{(N)}=1+b_N)$ 
 
 \begin{algorithm}
 	\caption{\texttt{getCurvePoints}}
-		\begin{algorithmic}[2]
-		\Require 
-		\Ensure A vector $Res$ of Points
-		\Function{getCurvePoints}{}
+		\begin{algorithmic}[1]
+		\Require $points$ The control points of the Bezier Curve, $step$ The parameter of the barycenter
+		\Ensure A vector $Res$ of Points which picture the Bezier Curve
+		\Function{getCurvePoints}{$points$, $step$}
 		\State Set an empty vector $Res$ of Points
-		\State Set S to the size of the vector points\_
-		\For{$t = 0$ to $1$ with a step of $ratio\_$}
+		\State Set $size$ to the size of the vector points\_
+		\For{$t = 0$ to $1$ with a step of $step$}
 			\State Add to the vector $Res$ the Point : \texttt{getCasteljauPoint(size-1, 0, t)} 
 		\EndFor
 		\State \Return $Res$
@@ -186,12 +187,66 @@ On a $q_N=\mathbb{Q}(T_1^{(N)}=1+h_N)$ donc $1-q_N=\mathbb{Q}(T_1^{(N)}=1+b_N)$ 
 \subsection{Réalisation}
 \subsection{Solution}
 
+\newpage
 \section{Police 2}	
 % Objectifs	
 \subsection{Solution}
 
+$img$ est l'image sur laquelle on a déjà dessiné les contours d'une lettre.
+ 
+\begin{algorithm}
+	\caption{\texttt{colorInBlack}}
+		\begin{algorithmic}[1]
+		\Require $x \in \mathbb{N}$, $y \in \mathbb{N}$
+		\Ensure Color the inside of a letter in black
+		\Function{colorInBlack}{}
+		\If{The coordinates $(x, y)$ are out of bounds}
+			\State \Return
+		\EndIf
+		\If{The pixel of coordinates $(x, y)$ is white}
+			\State Color the pixel of coordinates $(x, y)$ in black on the Image $img$
+			\State \texttt{colorInBlack(x+1, y)} 
+			\State \texttt{colorInBlack(x-1, y)} 
+			\State \texttt{colorInBlack(x, y+1)} 
+			\State \texttt{colorInBlack(x, y-1)} 
+		\EndIf	
+		\EndFunction
+		\end{algorithmic}
+\end{algorithm}
+
 \section{Police 3}			
 % Objectifs	
 \subsection{Solution}
-	
+
+\begin{algorithm}
+	\caption{\texttt{addRedContour}}
+		\begin{algorithmic}[1]
+		\Require 
+		\Ensure Add a contour of two pixels around the letter
+		\Function{addRedContour}{}
+		\For{$x \in $}
+			\For{$y \in $}
+				\If{The pixel of coordinates $(x-1, y)$ is white or red}
+					\State Color the pixel of coordinates $(x-1, y)$ in red on the Image $img$
+					\State Color the pixel of coordinates $(x-2, y)$ in red on the Image $img$
+				\EndIf
+				\If{The pixel of coordinates $(x+1, y)$ is white or red}
+					\State Color the pixel of coordinates $(x+1, y)$ in red on the Image $img$
+					\State Color the pixel of coordinates $(x+2, y)$ in red on the Image $img$
+				\EndIf
+				\If{The pixel of coordinates $(x, y-1)$ is white or red}
+					\State Color the pixel of coordinates $(x, y-1)$ in red on the Image $img$
+					\State Color the pixel of coordinates $(x, y-2)$ in red on the Image $img$
+				\EndIf
+				\If{The pixel of coordinates $(x, y+1)$ is white or red}
+					\State Color the pixel of coordinates $(x, y+1)$ in red on the Image $img$
+					\State Color the pixel of coordinates $(x, y+2)$ in red on the Image $img$ 
+				\EndIf	
+			\EndFor
+		\EndFor
+		\EndFunction
+		\end{algorithmic}
+\end{algorithm}
+ 
+
 \end{document}
