@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  9 JAN 2019 18:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  10 JAN 2019 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -967,22 +967,22 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 150.
  [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 252.
 
 [5] [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 252.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 252.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 252.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: CD666185B14CDE840CC0BFD9225FAD7A;1120.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 252.
  ) 
 Here is how much of TeX's memory you used:
- 10703 strings out of 492995
- 153396 string characters out of 6132705
+ 10707 strings out of 492995
+ 153457 string characters out of 6132705
  257664 words of memory out of 5000000
- 14020 multiletter control sequences out of 15000+600000
+ 14024 multiletter control sequences out of 15000+600000
  56354 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  33i,10n,58p,279b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1001,7 +1001,7 @@ ic/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy
 8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on rapport.pdf (7 pages, 218909 bytes).
+Output written on rapport.pdf (7 pages, 218974 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  179 compressed objects within 2 object streams

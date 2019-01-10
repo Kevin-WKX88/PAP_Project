@@ -2,35 +2,22 @@ PROJECT PAP
 
 # Courbes de Bézier et police de caractères
 
-# Info 
-Le code devra être commenté en utilisant la syntaxe de **Doxygen**.
-Le rapport sera écrit en LATEX et inclura les choix, les problèmes techniques qui se posent et les solutions trouvées (la conception (dont un diagramme UML complet) et réalisation).
+# Information
+Ce projet a été réalisé dans le cadre de la formation à l'ENSIIE pour le cours de Programmation Avancée
 
-# Instalation 
-brew install libpng
+# Prérequis
++ libpng doit être installer
 
-OR
+# Pour compiler le programmme
+make
 
-cp ./scripts/makefile.darwin makefile
-make 
-sudo make install
-make clean
+# Pour générer les fichiers PNG pour chaque lettre et chaque type de police  
++ ./bin/exe
+Temps d'éxécution : environ 10 min
 
-## Pas sûr
-cd /usr/local/lib
-sudo ln -s libpng15.dylib ./libpng15.15.dylib
-
-# To compile 
-g++ `libpng-config --cflags --ldflags` file.cpp
-
-# Makefile
-Depuis Eclipse : Problème ...
-https://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.cdt.doc.user%2Fgetting_started%2Fcdt_w_import.htm
-make DEPUIS terminal
-
-# Language 
+# Langage de programmation
 + C++
 
-# Authors
+# Auteurs
 + Kevin XU - ENSIIE Student
 + Ziheng LI - ENSIIE Student

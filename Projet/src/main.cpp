@@ -7,8 +7,6 @@
 #include "FontV2.h"
 #include "FontV3.h"
 
-#include <vector> 
-
 int main() {
     // FONTV1
     // char fileName1A[] = "./FontV1/FontV1_A.png";
@@ -101,10 +99,10 @@ int main() {
     // L1R.R();
     // L1R.finishLetter();
 
-    char fileName1S[] = "./FontV1/FontV1_S.png";
-    FontV1 L1S(fileName1S);
-    L1S.S();
-    L1S.finishLetter();
+    // char fileName1S[] = "./FontV1/FontV1_S.png";
+    // FontV1 L1S(fileName1S);
+    // L1S.S();
+    // L1S.finishLetter();
 
     // char fileName1T[] = "./FontV1/FontV1_T.png";
     // FontV1 L1T(fileName1T);
@@ -366,10 +364,10 @@ int main() {
  //    L3R.R();
  //    L3R.finishLetter();
 
-    // char fileName3S[] = "./FontV3/FontV3_S.png";
-    // FontV3 L3S(fileName3S);
-    // L3S.S();
-    // L3S.finishLetter();
+    char fileName3S[] = "./FontV3/FontV3_S.png";
+    FontV3 L3S(fileName3S);
+    L3S.S();
+    L3S.finishLetter();
 
  //    char fileName3T[] = "./FontV3/FontV3_T.png";
  //    FontV3 L3T(fileName3T);

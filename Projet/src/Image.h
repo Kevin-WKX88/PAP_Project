@@ -24,20 +24,15 @@ class Image {
 		int width_; /*!< The width of the image */
 		int height_; /*!< The height of the image */
 		png_bytep *pixels_; /*!< The pixels of the image */
-
 	public:
 		/**
-		 * @brief Valued constructor
-		 * @param x coordinate
-		 * @param y coordinate
+		 * @brief Valued Constructor
+		 * @details Initialize the image
+		 * @param fileName The name of the image
+		 * @param width The width of the image
+		 * @param height The height of the image
 		 */
 		Image(char* fileName, int width, int height);
-
-		/**
-		 * @brief Copy-constructor
-		 * @param P Point
-		 */
-		Image(const Image &P);
 
 		/**
 		 * @brief Destructor
@@ -51,7 +46,7 @@ class Image {
 
 		/**
 		 * @brief Getter for pixels_
-		 * @return the pixels_ ponter
+		 * @return the pixels_ pointer
 		 */
 		png_bytep* getPixels() const;
 
@@ -63,13 +58,6 @@ class Image {
 		unsigned int* getPixelColor(Point P);
 
 		/**
-		 * @brief Setter for pixels_
-		 * @param pixels the pixels of the image
-		 */
-		//void setPixels(png_bytep *pixels); // PAS BESOIN car pointeur
-
-		// Draw methods
-		/**
 		 * @brief Draw a point P
 		 * @details Modify the pixels on the image to draw a point
 		 * @param P the point to draw
@@ -78,7 +66,7 @@ class Image {
 		
 		/**
 		 * @brief Draw the points in the vector
-		 * @param points The list of points
+		 * @param points The list of points to draw
 		 */
 		void draw(std::vector<Point> points);
 
@@ -88,6 +76,5 @@ class Image {
 		 */
 		void draw(std::vector<BezierCurve> curves);
 };
-
 
 #endif /* IMAGE_H_ */

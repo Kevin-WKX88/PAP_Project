@@ -17,6 +17,10 @@ class Point {
 		unsigned int *color_; /*!< Color of the point */
 
 	public:
+		/**
+		 * @brief Default Constructor
+		 * @details Initialize the members to zero
+		 */
 		Point();
 
 		/**

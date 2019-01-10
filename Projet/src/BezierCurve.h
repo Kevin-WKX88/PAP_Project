@@ -44,7 +44,7 @@ class BezierCurve {
 		void addPoint(Point P);
 
 		/**
-		 * @brief Empty the vector points
+		 * @brief Empty the vector points_
 		 */
 		void clearPoints();
 

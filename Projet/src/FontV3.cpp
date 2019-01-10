@@ -10,8 +10,8 @@
 #include <iostream>
 
 void FontV3::addRedContour() {
-	for (int x = 100; x < 400; x++) {
-		for (int y = 100; y < 400; y++) {
+	for (int x = 1; x < 499; x++) {
+		for (int y = 1; y < 499; y++) {
 			unsigned int* color = img_.getPixelColor(Point(x, y));
 		    if (color[0] == 0 && color[1] == 0 && color[2] == 0) {
 				unsigned int* color1 = img_.getPixelColor(Point(x-1, y));

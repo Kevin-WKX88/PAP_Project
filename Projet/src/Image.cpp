@@ -16,7 +16,6 @@ Image::Image(char* fileName, int width, int height) {
 		std::cout << "Erreur de creation du fichier" << std::endl;
 		abort();
 	}
-
 	// png_structp creation
 	pngPtr_ = png_create_write_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
 	if (!pngPtr_) {
@@ -32,20 +31,16 @@ Image::Image(char* fileName, int width, int height) {
 		std::cout << "Erreur de creation png_infop" << std::endl;
 		abort(); //return 1; 
 	}
-
 	if (setjmp(png_jmpbuf(pngPtr_))) {
 		png_destroy_write_struct(&pngPtr_, &infoPtr_); 
 		fclose(fp_);
 		std::cout << "Erreur sepjmp" << std::endl;
 		abort(); //return 1; 
 	}
-
 	png_init_io(pngPtr_, fp_);
-
 	// Image Info
 	width_ = width;
 	height_ = height;
-
 	png_set_IHDR(
 		pngPtr_, 
 		infoPtr_, 
@@ -58,13 +53,12 @@ Image::Image(char* fileName, int width, int height) {
 		PNG_FILTER_TYPE_DEFAULT
 	);
 	png_write_info(pngPtr_, infoPtr_);
-
+	
 	pixels_ = (png_bytep*) malloc(height_ * sizeof(png_bytep));
 	// Allocate memory for one row (3 bytes per pixel - RGB)
 	for (int y = 0; y < height_; y++) {
     	pixels_[y] = (png_byte*) malloc(3 * width_ * sizeof(png_byte));
   	}
-
   	// Set white background
   	for (int y = 0; y < height_; y++) {
 	    png_bytep row = pixels_[y];

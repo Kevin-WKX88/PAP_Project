@@ -8,9 +8,6 @@
 #ifndef FONTV3_H_
 #define FONTV3_H_
 
-#include <vector>
-#include <cmath>
-
 #include "Point.h"
 #include "Image.h"
 #include "BezierCurve.h"

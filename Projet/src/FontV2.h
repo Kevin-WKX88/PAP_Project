@@ -4,11 +4,10 @@
  * \author Kevin XU & Ziheng LI
  * \date 31 Décembre 2018
  */
- 
+
 #ifndef FONTV2_H_
 #define FONTV2_H_
 
-#include <vector>
 #include <cmath>
 
 #include "Point.h"
@@ -165,4 +164,3 @@ class FontV2 : public FontV1{
 
 
 #endif /* FONTV2_H_ */
-
