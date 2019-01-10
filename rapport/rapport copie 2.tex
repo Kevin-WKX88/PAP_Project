@@ -354,23 +354,24 @@ La classe \texttt{FontV3} hérite de la classe \texttt{FontV2}. En utilisant cet
 		\end{algorithmic}
 \end{algorithm}
 
-Les images générées ont tous une taille de 500x500 pixels. Donc l'algorithme parcourt tous les pixels de l'image pour ensuite ajouter le contour de pixels rouges selon les différents cas. \\
-
-Cependant, il subsiste encore quelques imperfections au niveau de l'ajout de contour rouge.
+Les images générées ont tous une taille de 500x500 pixels. Donc l'algorithme parcourt tous les pixels de l'image pour ensuite ajouter le contour de pixels rouges selon les différents cas.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{Images/FRANCE_FontV3.jpeg}
+\includegraphics[scale=0.5]{Images/FRANCE_FontV3.png}
 \caption{Le mot FRANCE avec la police 3}
 \label{fig6}
 \end{figure}
  
 \newpage
-\addcontentsline{toc}{part}{Conclusion} %Ajout d'un lien dans le sommaire
-	\vspace*{3cm}
+\addcontentsline{toc}{part}{Conclusion} %Ajouter un lien
+	\vspace*{3cm} %Pour ajouter l'espace !!!
 	\paragraph{\Huge{Conclusion}}
 
 	\paragraph{}
+	Par conséquent, on a en partie atteint l'objectif du problème. Le programme est bien capable de produire des phrases réflexives. Les erreurs ne subsistent quasiment pas pour des phrases courtes avec un nombre de lettres à compter pas très élevé.
+	
+	Cependant, l'existence de point fixe ne peut pas être vérifier avant d'avoir effectuer la recherche de phrase réflexive. En outre, le programme ne marche pas si l'occurrence d'une lettre dépasse 100. Et on a aussi limité le nombre d'itération de la fonction \texttt{modif} à 100.
 	
 
 \end{document}

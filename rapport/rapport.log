@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  10 JAN 2019 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  10 JAN 2019 19:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -886,9 +886,201 @@ LaTeX Info: Redefining \nameref on input line 87.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Images/Logo_transparent.png, id=80, 569.12625pt x 223.83624pt>
-File: Images/Logo_transparent.png Graphic file (type png)
+<Images/logo_ENSIIE.png, id=100, 569.12625pt x 223.83624pt>
+File: Images/logo_ENSIIE.png Graphic file (type png)
 
-<use Images/Logo_transparent.png>
-Package pdftex.def Info: Images/Logo_transparent.png used on input line 90.
-(pdftex.def)             Requested siz
+<use Images/logo_ENSIIE.png>
+Package pdftex.def Info: Images/logo_ENSIIE.png used on input line 90.
+(pdftex.def)             Requested size: 142.2812pt x 55.95892pt.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 102.
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 102.
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 102
+.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 102
+.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 102.
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 102.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [1
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Image
+s/logo_ENSIIE.png>] (./rapport.toc
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 7.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 7.
+)
+\tf@toc=\write4
+\openout4 = `rapport.toc'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.113 	\newpage
+                [1]
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
+
+ []
+
+[2]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 139.
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
+
+ []
+
+[3]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 190.
+ [4] <Images/BezierCurbe_problem.png, id=167, 365.365pt x 389.455pt>
+File: Images/BezierCurbe_problem.png Graphic file (type png)
+
+<use Images/BezierCurbe_problem.png>
+Package pdftex.def Info: Images/BezierCurbe_problem.png used on input line 229.
+
+(pdftex.def)             Requested size: 109.61034pt x 116.83739pt.
+ [5 <./Images/BezierCurbe_problem.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+<Images/FRANCE_FontV1.jpeg, id=174, 1039.885pt x 244.915pt>
+File: Images/FRANCE_FontV1.jpeg Graphic file (type jpg)
+
+<use Images/FRANCE_FontV1.jpeg>
+Package pdftex.def Info: Images/FRANCE_FontV1.jpeg used on input line 257.
+(pdftex.def)             Requested size: 519.94122pt x 122.45718pt.
+
+Overfull \hbox (36.24435pt too wide) in paragraph at lines 257--258
+ [][] 
+ []
+
+[6 <./Images/FRANCE_FontV1.jpeg>]
+<Images/FontV2_O_Old.png, id=181, 180.675pt x 212.795pt>
+File: Images/FontV2_O_Old.png Graphic file (type png)
+
+<use Images/FontV2_O_Old.png>
+Package pdftex.def Info: Images/FontV2_O_Old.png used on input line 272.
+(pdftex.def)             Requested size: 162.60599pt x 191.51372pt.
+ [7 <./Images/FontV2_O_Old.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
+
+ []
+
+<Images/FontV2_O.png, id=189, 173.64874pt x 214.8025pt>
+File: Images/FontV2_O.png Graphic file (type png)
+
+<use Images/FontV2_O.png>
+Package pdftex.def Info: Images/FontV2_O.png used on input line 305.
+(pdftex.def)             Requested size: 156.28241pt x 193.32045pt.
+
+<Images/FRANCE_FontV2.jpeg, id=190, 1025.8325pt x 234.8775pt>
+File: Images/FRANCE_FontV2.jpeg Graphic file (type jpg)
+
+<use Images/FRANCE_FontV2.jpeg>
+Package pdftex.def Info: Images/FRANCE_FontV2.jpeg used on input line 312.
+(pdftex.def)             Requested size: 512.91501pt x 117.43846pt.
+
+Overfull \hbox (29.21814pt too wide) in paragraph at lines 312--313
+ [][] 
+ []
+
+[8 <./Images/FontV2_O.png> <./Images/FRANCE_FontV2.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+<Images/FRANCE_FontV3.jpeg, id=198, 517.935pt x 125.46875pt>
+File: Images/FRANCE_FontV3.jpeg Graphic file (type jpg)
+
+<use Images/FRANCE_FontV3.jpeg>
+Package pdftex.def Info: Images/FRANCE_FontV3.jpeg used on input line 363.
+(pdftex.def)             Requested size: 517.93372pt x 125.46843pt.
+
+Overfull \hbox (34.23685pt too wide) in paragraph at lines 363--364
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
+ [10 <./Images/FRANCE_FontV3.jpeg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
+ (./rapport.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 376.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
+Package rerunfilecheck Info: File `rapport.out' has not changed.
+(rerunfilecheck)             Checksum: F23BB8C132B61DBC3DBDF4CB39C1E3A5;1666.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
+ ) 
+Here is how much of TeX's memory you used:
+ 10781 strings out of 492995
+ 154720 string characters out of 6132705
+ 257965 words of memory out of 5000000
+ 14071 multiletter control sequences out of 15000+600000
+ 56990 words of font info for 51 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 33i,10n,58p,470b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
+texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
+17/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-dist/
+fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/lm/lmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
+m/lmcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi12.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
+tt12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb>
+Output written on rapport.pdf (11 pages, 337459 bytes).
+PDF statistics:
+ 267 PDF objects out of 1000 (max. 8388607)
+ 228 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 228 words of extra memory for PDF output out of 10000 (max. 10000000)
+
