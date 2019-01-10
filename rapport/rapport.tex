@@ -128,14 +128,19 @@ language=c++,        % choix du langage de programmation
 \newline
 
 Nous allons tout d’abord présenter les classes de notre programme. Puis nous évoquerons les objectifs, problèmes rencontrés et les solutions trouvés pour chacune des classes.
-
-
 	
-	\newpage
+\newpage
 
-\section{Les classes (Diagramme UML)}			
-\subsection{Diagramme UML}
+\section{Les classes - Diagramme UML}			
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.2]{Images/diagrammeUML.jpg}
+\caption{Diagramme UML du programme}
+\label{fig1}
+\end{figure}
+
+\newpage
 \section{Point - Classe \texttt{Point}}	
 \subsection{Objectifs}
 	Tout d'abord, sachant qu'une courbe de Bézier est formée par plusieurs points, il faut avoir une classe définissant un point sur un système de coordonnées dans un plan. Le but de cette classe est alors de définir les point des courbes de Bezier que l'on va tracer. En outre, il faut aussi pouvoir avoir la possibilité de dessiner des points de différentes couleurs.
@@ -228,7 +233,7 @@ Pour certaines courbes de Bézier, on a rencontré quelques problèmes. En raiso
 \centering
 \includegraphics[scale=0.3]{Images/BezierCurbe_problem.png}
 \caption{Courbe non reliée}
-\label{fig1}
+\label{fig2}
 \end{figure}
 
 En effet, cela est dû dans certains cas à un $step\_$ pas assez petit. Mais plus la valeur de cette variable est petite, plus le temps d’exécution sera élevé. C'est pour cela qu'on a décidé de définir $step\_ = 0.000001$ après avoir tester différentes valeurs.
@@ -256,7 +261,7 @@ Les lettres comportant que des courbes de Bézier linéaires ont été plus faci
 \centering
 \includegraphics[scale=0.5]{Images/FRANCE_FontV1.jpeg}
 \caption{Le mot FRANCE avec la police 1}
-\label{fig2}
+\label{fig3}
 \end{figure}
 
 \newpage
@@ -271,7 +276,7 @@ Au début, on a voulu remplir l'intérieur des lettres en traçant plusieurs cou
 \centering
 \includegraphics[scale=0.9]{Images/FontV2_O_Old.png}
 \caption{Première version de la police 2}
-\label{fig3}
+\label{fig4}
 \end{figure}
 
 	Pour résoudre ce problème, on a utilisé l'\textbf{algorithme de remplissage par diffusion (Flood fill ou seed fill)}. Voici son pseudo-code :
@@ -304,14 +309,14 @@ On obtient alors le résultat suivant pour la lettre O :
 \centering
 \includegraphics[scale=0.9]{Images/FontV2_O.png}
 \caption{Lettre O avec la police 2}
-\label{fig4}
+\label{fig5}
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{Images/FRANCE_FontV2.jpeg}
 \caption{Le mot FRANCE avec la police 2}
-\label{fig5}
+\label{fig6}
 \end{figure}
 
 \newpage
@@ -356,13 +361,11 @@ La classe \texttt{FontV3} hérite de la classe \texttt{FontV2}. En utilisant cet
 
 Les images générées ont tous une taille de 500x500 pixels. Donc l'algorithme parcourt tous les pixels de l'image pour ensuite ajouter le contour de pixels rouges selon les différents cas. \\
 
-Cependant, il subsiste encore quelques imperfections au niveau de l'ajout de contour rouge.
-
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{Images/FRANCE_FontV3.jpeg}
+\includegraphics[scale=0.6]{Images/FRANCE_FontV3.jpeg}
 \caption{Le mot FRANCE avec la police 3}
-\label{fig6}
+\label{fig7}
 \end{figure}
  
 \newpage
