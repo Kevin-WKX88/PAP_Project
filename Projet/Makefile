@@ -4,7 +4,6 @@ CC_LIBPNG =  `libpng-config --cflags --ldflags`
 SRCDIR = src
 OBJDIR = obj
 BINDIR = bin
-DOCDIR = doc
 PROG = exe
 
 all : $(BINDIR)/$(PROG)
@@ -32,10 +31,6 @@ $(OBJDIR)/FontV3.o : $(SRCDIR)/FontV3.cpp $(SRCDIR)/FontV3.h
 
 $(BINDIR)/$(PROG) : $(OBJDIR)/main.o $(OBJDIR)/Point.o $(OBJDIR)/Image.o $(OBJDIR)/BezierCurve.o $(OBJDIR)/FontV1.o $(OBJDIR)/FontV2.o $(OBJDIR)/FontV3.o 
 	g++ $(CC_LIBPNG) $^ -o $@ 
-
-#DOXYGEN
-# $(DOCDIR)/doxygen : $(DOCDIR)/Doxyfile
-# 	doxygen $<
 
 clean :
 	rm -rf $(OBJDIR)/*.o

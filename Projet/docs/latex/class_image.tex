@@ -1,0 +1,352 @@
+\hypertarget{class_image}{}\section{Image Class Reference}
+\label{class_image}\index{Image@{Image}}
+
+
+{\ttfamily \#include $<$Image.\+h$>$}
+
+
+
+Collaboration diagram for Image\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_image__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_image_a742d8eafbcfe7e0b66a145bac182adb3}{Image}} (char $\ast$file\+Name, int width, int height)
+\begin{DoxyCompactList}\small\item\em Valued Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_image_a0294f63700543e11c0f0da85601c7ae5}{$\sim$\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_ac34bdffd357a50025e6a72deb02596b5}{write\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Produce the image. \end{DoxyCompactList}\item 
+png\+\_\+bytep $\ast$ \mbox{\hyperlink{class_image_a434149170df3e6fad24cc123c8ff029d}{get\+Pixels}} () const
+\begin{DoxyCompactList}\small\item\em Getter for pixels\+\_\+. \end{DoxyCompactList}\item 
+unsigned int $\ast$ \mbox{\hyperlink{class_image_adb23176701dae47479d4919f55f3aec5}{get\+Pixel\+Color}} (\mbox{\hyperlink{class_point}{Point}} P)
+\begin{DoxyCompactList}\small\item\em Get the R\+GB level intensity of a pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a8d162f3cab956131d58708c09aa560b0}{draw}} (\mbox{\hyperlink{class_point}{Point}} P)
+\begin{DoxyCompactList}\small\item\em Draw a point P. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_aecc7a0365eb204dba714a71bcb86361d}{draw}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\begin{DoxyCompactList}\small\item\em Draw the points in the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a6349aee8ec05bbecb9b6e6430de07d7c}{draw}} (std\+::vector$<$ \mbox{\hyperlink{class_bezier_curve}{Bezier\+Curve}} $>$ curves)
+\begin{DoxyCompactList}\small\item\em Draw the Bezier curves. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\+\_\+}}
+\item 
+char $\ast$ \mbox{\hyperlink{class_image_a1f1849b27396edcc169e7d717ef0e6ab}{file\+Name\+\_\+}}
+\item 
+png\+\_\+structp \mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{png\+Ptr\+\_\+}}
+\item 
+png\+\_\+infop \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{info\+Ptr\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\+\_\+}}
+\item 
+png\+\_\+bytep $\ast$ \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_image_a742d8eafbcfe7e0b66a145bac182adb3}\label{class_image_a742d8eafbcfe7e0b66a145bac182adb3}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Valued Constructor. 
+
+Initialize the image 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the image \\
+\hline
+{\em width} & The width of the image \\
+\hline
+{\em height} & The height of the image \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+11                                                   \{
+12     \textcolor{comment}{// File creation}
+13     \mbox{\hyperlink{class_image_a1f1849b27396edcc169e7d717ef0e6ab}{fileName\_}} = fileName;
+14     \mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\_}} = fopen(fileName, \textcolor{stringliteral}{"wb"}); 
+15     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\_}}) \{
+16         std::cout << \textcolor{stringliteral}{"Erreur de creation du fichier"} << std::endl;
+17         abort();
+18     \}
+19     \textcolor{comment}{// png\_structp creation}
+20     \mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}} = png\_create\_write\_struct(PNG\_LIBPNG\_VER\_STRING, NULL, NULL, NULL);
+21     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}) \{
+22         fclose(\mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\_}});
+23         std::cout << \textcolor{stringliteral}{"Erreur de creation png\_structp"} << std::endl;
+24         abort();
+25     \}
+26 
+27     \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}} = png\_create\_info\_struct(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}); 
+28     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}}) \{
+29         png\_destroy\_write\_struct(\&\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, NULL);
+30         fclose(\mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\_}});
+31         std::cout << \textcolor{stringliteral}{"Erreur de creation png\_infop"} << std::endl;
+32         abort(); \textcolor{comment}{//return 1; }
+33     \}
+34     \textcolor{keywordflow}{if} (setjmp(png\_jmpbuf(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}))) \{
+35         png\_destroy\_write\_struct(\&\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \&\mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}}); 
+36         fclose(\mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\_}});
+37         std::cout << \textcolor{stringliteral}{"Erreur sepjmp"} << std::endl;
+38         abort(); \textcolor{comment}{//return 1; }
+39     \}
+40     png\_init\_io(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\_}});
+41     \textcolor{comment}{// Image Info}
+42     \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}} = width;
+43     \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}} = height;
+44     png\_set\_IHDR(
+45         \mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, 
+46         \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}}, 
+47         \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}}, 
+48         \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}, 
+49         8, 
+50         PNG\_COLOR\_TYPE\_RGB, 
+51         PNG\_INTERLACE\_NONE, 
+52         PNG\_COMPRESSION\_TYPE\_DEFAULT, 
+53         PNG\_FILTER\_TYPE\_DEFAULT
+54     );
+55     png\_write\_info(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}});
+56     
+57     \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}} = (png\_bytep*) malloc(\mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}} * \textcolor{keyword}{sizeof}(png\_bytep));
+58     \textcolor{comment}{// Allocate memory for one row (3 bytes per pixel - RGB)}
+59     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}; y++) \{
+60         \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[y] = (png\_byte*) malloc(3 * \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}} * \textcolor{keyword}{sizeof}(png\_byte));
+61     \}
+62     \textcolor{comment}{// Set white background}
+63     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}; y++) \{
+64         png\_bytep row = \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[y];
+65         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < \mbox{\hyperlink{class_image_a4c2d8a01ecf1b7438f57f93357080e08}{width\_}}; x++) \{
+66             png\_bytep px = \&(row[x * 3]);
+67             px[0] = 255;
+68             px[1] = 255;
+69             px[2] = 255;
+70         \}
+71     \}
+72 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_image_a0294f63700543e11c0f0da85601c7ae5}\label{class_image_a0294f63700543e11c0f0da85601c7ae5}} 
+\index{Image@{Image}!````~Image@{$\sim$\+Image}}
+\index{````~Image@{$\sim$\+Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{$\sim$\+Image()}{~Image()}}
+{\footnotesize\ttfamily Image\+::$\sim$\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+\begin{DoxyCode}
+74               \{
+75     \textcolor{comment}{// Freeing memory and closing}
+76     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}; y++) \{
+77         free(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[y]);
+78     \}
+79     free(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}});
+80     fclose(\mbox{\hyperlink{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}{fp\_}});
+81     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}} \&\& \mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}}) \{
+82         png\_destroy\_write\_struct(\&\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \&\mbox{\hyperlink{class_image_a505878e5e19500e3cc1b940067faa584}{infoPtr\_}});
+83     \}
+84 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_a8d162f3cab956131d58708c09aa560b0}\label{class_image_a8d162f3cab956131d58708c09aa560b0}} 
+\index{Image@{Image}!draw@{draw}}
+\index{draw@{draw}!Image@{Image}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Image\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Draw a point P. 
+
+Modify the pixels on the image to draw a point 
+\begin{DoxyParams}{Parameters}
+{\em P} & the point to draw \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+104                         \{
+105     png\_bytep px = \&(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[\mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}-P.\mbox{\hyperlink{class_point_a86d10ff46e08462c45b15a8c7ef62d61}{getY}}()][P.\mbox{\hyperlink{class_point_ac9d5859db121c7d1b89ca89266dca0a3}{getX}}() * 3]);
+106     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *color = P.\mbox{\hyperlink{class_point_a1aa902dd929328baec8c8f6970284ac2}{getColor}}();
+107     px[0] = color[0];
+108     px[1] = color[1];
+109     px[2] = color[2];
+110 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_image_aecc7a0365eb204dba714a71bcb86361d}\label{class_image_aecc7a0365eb204dba714a71bcb86361d}} 
+\index{Image@{Image}!draw@{draw}}
+\index{draw@{draw}!Image@{Image}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Image\+::draw (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})}
+
+
+
+Draw the points in the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & The list of points to draw \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+112                                         \{
+113     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = points.begin(); it != points.end(); it++) \{
+114         \mbox{\hyperlink{class_image_a8d162f3cab956131d58708c09aa560b0}{draw}}(*it);
+115     \}
+116 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_image_a6349aee8ec05bbecb9b6e6430de07d7c}\label{class_image_a6349aee8ec05bbecb9b6e6430de07d7c}} 
+\index{Image@{Image}!draw@{draw}}
+\index{draw@{draw}!Image@{Image}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Image\+::draw (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_bezier_curve}{Bezier\+Curve}} $>$}]{curves }\end{DoxyParamCaption})}
+
+
+
+Draw the Bezier curves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curves} & The curves to draw \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+118                                               \{
+119     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = curves.begin(); it != curves.end(); it++) \{
+120         \mbox{\hyperlink{class_image_a8d162f3cab956131d58708c09aa560b0}{draw}}(it->getCurvePoints());
+121     \} 
+122 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_image_adb23176701dae47479d4919f55f3aec5}\label{class_image_adb23176701dae47479d4919f55f3aec5}} 
+\index{Image@{Image}!get\+Pixel\+Color@{get\+Pixel\+Color}}
+\index{get\+Pixel\+Color@{get\+Pixel\+Color}!Image@{Image}}
+\subsubsection{\texorpdfstring{get\+Pixel\+Color()}{getPixelColor()}}
+{\footnotesize\ttfamily unsigned int $\ast$ Image\+::get\+Pixel\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{P }\end{DoxyParamCaption})}
+
+
+
+Get the R\+GB level intensity of a pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & The pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The R\+GB color 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+95                                           \{
+96     png\_bytep px = \&(\mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}}[\mbox{\hyperlink{class_image_a64a699c5bb8e8a18c6971a8032806dba}{height\_}}-P.\mbox{\hyperlink{class_point_a86d10ff46e08462c45b15a8c7ef62d61}{getY}}()][P.\mbox{\hyperlink{class_point_ac9d5859db121c7d1b89ca89266dca0a3}{getX}}() * 3]);
+97     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *color = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}[3];
+98     color[0] = px[0];
+99     color[1] = px[1];
+100     color[2] = px[2];
+101     \textcolor{keywordflow}{return} color;
+102 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_image_a434149170df3e6fad24cc123c8ff029d}\label{class_image_a434149170df3e6fad24cc123c8ff029d}} 
+\index{Image@{Image}!get\+Pixels@{get\+Pixels}}
+\index{get\+Pixels@{get\+Pixels}!Image@{Image}}
+\subsubsection{\texorpdfstring{get\+Pixels()}{getPixels()}}
+{\footnotesize\ttfamily png\+\_\+bytep $\ast$ Image\+::get\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for pixels\+\_\+. 
+
+\begin{DoxyReturn}{Returns}
+the pixels\+\_\+ pointer 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+91                                   \{
+92     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}};
+93 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_image_ac34bdffd357a50025e6a72deb02596b5}\label{class_image_ac34bdffd357a50025e6a72deb02596b5}} 
+\index{Image@{Image}!write\+Image@{write\+Image}}
+\index{write\+Image@{write\+Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{write\+Image()}{writeImage()}}
+{\footnotesize\ttfamily void Image\+::write\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Produce the image. 
+
+
+\begin{DoxyCode}
+86                        \{
+87     png\_write\_image(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, \mbox{\hyperlink{class_image_a51351c8507499d09cb9667c20ef01faf}{pixels\_}});
+88     png\_write\_end(\mbox{\hyperlink{class_image_aaf607d2596bac09b13370599d9ba6d8c}{pngPtr\_}}, NULL);
+89 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_image_a1f1849b27396edcc169e7d717ef0e6ab}\label{class_image_a1f1849b27396edcc169e7d717ef0e6ab}} 
+\index{Image@{Image}!file\+Name\+\_\+@{file\+Name\+\_\+}}
+\index{file\+Name\+\_\+@{file\+Name\+\_\+}!Image@{Image}}
+\subsubsection{\texorpdfstring{file\+Name\+\_\+}{fileName\_}}
+{\footnotesize\ttfamily char$\ast$ Image\+::file\+Name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The file name \mbox{\Hypertarget{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}\label{class_image_a4d43b19efb469f7c9fb65e7202d7ba7f}} 
+\index{Image@{Image}!fp\+\_\+@{fp\+\_\+}}
+\index{fp\+\_\+@{fp\+\_\+}!Image@{Image}}
+\subsubsection{\texorpdfstring{fp\+\_\+}{fp\_}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ Image\+::fp\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The file corresponding to the image \mbox{\Hypertarget{class_image_a64a699c5bb8e8a18c6971a8032806dba}\label{class_image_a64a699c5bb8e8a18c6971a8032806dba}} 
+\index{Image@{Image}!height\+\_\+@{height\+\_\+}}
+\index{height\+\_\+@{height\+\_\+}!Image@{Image}}
+\subsubsection{\texorpdfstring{height\+\_\+}{height\_}}
+{\footnotesize\ttfamily int Image\+::height\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The height of the image \mbox{\Hypertarget{class_image_a505878e5e19500e3cc1b940067faa584}\label{class_image_a505878e5e19500e3cc1b940067faa584}} 
+\index{Image@{Image}!info\+Ptr\+\_\+@{info\+Ptr\+\_\+}}
+\index{info\+Ptr\+\_\+@{info\+Ptr\+\_\+}!Image@{Image}}
+\subsubsection{\texorpdfstring{info\+Ptr\+\_\+}{infoPtr\_}}
+{\footnotesize\ttfamily png\+\_\+infop Image\+::info\+Ptr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Information on the image \mbox{\Hypertarget{class_image_a51351c8507499d09cb9667c20ef01faf}\label{class_image_a51351c8507499d09cb9667c20ef01faf}} 
+\index{Image@{Image}!pixels\+\_\+@{pixels\+\_\+}}
+\index{pixels\+\_\+@{pixels\+\_\+}!Image@{Image}}
+\subsubsection{\texorpdfstring{pixels\+\_\+}{pixels\_}}
+{\footnotesize\ttfamily png\+\_\+bytep$\ast$ Image\+::pixels\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The pixels of the image \mbox{\Hypertarget{class_image_aaf607d2596bac09b13370599d9ba6d8c}\label{class_image_aaf607d2596bac09b13370599d9ba6d8c}} 
+\index{Image@{Image}!png\+Ptr\+\_\+@{png\+Ptr\+\_\+}}
+\index{png\+Ptr\+\_\+@{png\+Ptr\+\_\+}!Image@{Image}}
+\subsubsection{\texorpdfstring{png\+Ptr\+\_\+}{pngPtr\_}}
+{\footnotesize\ttfamily png\+\_\+structp Image\+::png\+Ptr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer on the image \mbox{\Hypertarget{class_image_a4c2d8a01ecf1b7438f57f93357080e08}\label{class_image_a4c2d8a01ecf1b7438f57f93357080e08}} 
+\index{Image@{Image}!width\+\_\+@{width\+\_\+}}
+\index{width\+\_\+@{width\+\_\+}!Image@{Image}}
+\subsubsection{\texorpdfstring{width\+\_\+}{width\_}}
+{\footnotesize\ttfamily int Image\+::width\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The width of the image 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Kevin\+Xu/\+Documents/\+Ecole\+\_\+\+Ingé/2\+A/\+S3/\+P\+A\+P/\+P\+A\+P\+\_\+\+Project/\+Projet/src/\mbox{\hyperlink{_image_8h}{Image.\+h}}\item 
+/\+Users/\+Kevin\+Xu/\+Documents/\+Ecole\+\_\+\+Ingé/2\+A/\+S3/\+P\+A\+P/\+P\+A\+P\+\_\+\+Project/\+Projet/src/\mbox{\hyperlink{_image_8cpp}{Image.\+cpp}}\end{DoxyCompactItemize}

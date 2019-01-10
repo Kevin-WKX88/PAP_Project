@@ -1,0 +1,4 @@
+<map id="FontV2" name="FontV2">
+<area shape="rect" id="node2" href="$class_font_v1.html" title="{FontV1\n|# thickness_\l|+ FontV1()\l+ finishLetter()\l+ A()\l+ B()\l+ C()\l+ D()\l+ E()\l+ F()\l+ G()\l+ H()\land 18 more...\l}" alt="" coords="12,313,119,520"/>
+<area shape="rect" id="node3" href="$class_image.html" title="{Image\n|&#45; fp_\l&#45; fileName_\l&#45; pngPtr_\l&#45; infoPtr_\l&#45; width_\l&#45; height_\l&#45; pixels_\l|+ Image()\l+ ~Image()\l+ writeImage()\l+ getPixels()\l+ getPixelColor()\l+ draw()\l+ draw()\l+ draw()\l}" alt="" coords="5,5,126,252"/>
+</map>

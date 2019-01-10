@@ -115,28 +115,43 @@ language=c++,        % choix du langage de programmation
 	\paragraph{\Huge{Préambule}}
 
 	\paragraph{}
-	L'objectif de ce projet est réalisé des polices de caractères en utilisant des courbes de Bézier.\\
-\begin{itemize}
-\item un actif sans risque : $S_t^0$ à l'instant $t$  
-\item un actif risqué (une action) : $S_t$ une variable aléatoire 
-\end{itemize}
+	L'objectif de ce projet est de réalisé des polices de caractères en utilisant des courbes de Bézier. Le programme est implémenté en C++, sans l’aide d’une quelconque bibliothèque extérieure au C++.
+	Trois polices de caractères pour les lettres de l’alphabet en majuscule et sans sérif ont été créée : 	
 	
-	On va utiliser une fonction $f:  \mathbb{R}_+ \rightarrow \mathbb{R}_+$ tout au long du problème. Cette fonction renvoie le montant d'argent gagné pour un certain montant de l'actif risqué en paramètre.\\
-		
+	\begin{enumerate}
+		\item La première police correspond aux glyphes décrivant le contour du caractère en noir dans un bitmap (rectangle de pixels blancs et noirs, les pixels noirs étant donc le contour du caractère). 
+		\item La deuxième police est la première police mais avec l’intérieur des caractères rempli en noir, toujours dans un bitmap. 
+		\item La troisième police est la deuxième police mais avec un contour rouge de deux pixels à l’extérieur du caractère. Ce style de police est très utile pour les sous-titrages des films, pour pouvoir toujours lire le sous-titre quelque soit la scène du film. 
+ 	\end{enumerate}
+
+	Pour fournir les images png de chaque caractère des différentes polices, nous avons utilisé la bibliothèque libpng.
+\newline
+
+Nous allons tout d’abord présenter les classes de notre programme. Puis nous évoquerons les objectifs, problèmes rencontrés et les solutions trouvés pour chacune des classes.
+
+
+	
 	\newpage
 
 \section{Les classes (Diagramme UML)}			
 \subsection{Diagramme UML}
-\subsection{Question 1}
-On a $q_N=\mathbb{Q}(T_1^{(N)}=1+h_N)$ donc $1-q_N=\mathbb{Q}(T_1^{(N)}=1+b_N)$ car $T_1^{(N)}$ ne 
+
+\section{Point}	
+\subsection{Objectifs}
+	Tout d'abord, sachant qu'une courbe de Bézier est formée par plusieurs points, il faut avoir une classe définissant un point sur un système de coordonnées dans un plan. Le but de cette classe est alors de définir les point des courbes de Bezier que l'on va tracer. En outre, il faut aussi pouvoir avoir la possibilité de dessiner des points de différentes couleurs.
+	
+\subsection{Solution}
+Une instance de la classe \texttt{Point} a 3 attributs : 
+\begin{itemize}
+\item La coordonnée $x_$
+\item La coordonnée $y_$
+\item Un tableau $color_$ contenant les niveaux de Rouge, Vert et de Bleu (allant de 0 à 255). 
+
+Cette classe contient aussi les getters et setters pour ces attributs.
 
 \section{Image}	
 % Objectifs		
 \subsection{Réalisation}
-\subsection{Solution}
-
-\section{Point}	
-% Objectifs		
 \subsection{Solution}
 
 \newpage
@@ -222,26 +237,28 @@ L'image a une taille de 500x500 pixels.
 \begin{algorithm}
 	\caption{\texttt{addRedContour}}
 		\begin{algorithmic}[1]
-		\Require 
+		\Require An Image $img$ with a letter drawn by the class FontV2
 		\Ensure Add a contour of two pixels around the letter
-		\Function{addRedContour}{}
+		\Function{addRedContour}{$img$}
 		\For{$x \in [\![1;500]\!]$}
-			\For{$y \in [[ff]]$}
-				\If{The pixel of coordinates $(x-1, y)$ is white or red}
-					\State Color the pixel of coordinates $(x-1, y)$ in red on the Image $img$
-					\State Color the pixel of coordinates $(x-2, y)$ in red on the Image $img$
-				\EndIf
-				\If{The pixel of coordinates $(x+1, y)$ is white or red}
-					\State Color the pixel of coordinates $(x+1, y)$ in red on the Image $img$
-					\State Color the pixel of coordinates $(x+2, y)$ in red on the Image $img$
-				\EndIf
-				\If{The pixel of coordinates $(x, y-1)$ is white or red}
-					\State Color the pixel of coordinates $(x, y-1)$ in red on the Image $img$
-					\State Color the pixel of coordinates $(x, y-2)$ in red on the Image $img$
-				\EndIf
-				\If{The pixel of coordinates $(x, y+1)$ is white or red}
-					\State Color the pixel of coordinates $(x, y+1)$ in red on the Image $img$
-					\State Color the pixel of coordinates $(x, y+2)$ in red on the Image $img$ 
+			\For{$y \in [\![1;500]\!]$}
+				\If{The pixel of coordinates $(x, y)$ is black}
+					\If{The pixel of coordinates $(x-1, y)$ is white or red}
+						\State Color the pixel of coordinates $(x-1, y)$ in red on the Image $img$
+						\State Color the pixel of coordinates $(x-2, y)$ in red on the Image $img$
+						\EndIf
+					\If{The pixel of coordinates $(x+1, y)$ is white or red}
+						\State Color the pixel of coordinates $(x+1, y)$ in red on the Image $img$
+						\State Color the pixel of coordinates $(x+2, y)$ in red on the Image $img$
+					\EndIf
+					\If{The pixel of coordinates $(x, y-1)$ is white or red}
+						\State Color the pixel of coordinates $(x, y-1)$ in red on the Image $img$
+						\State Color the pixel of coordinates $(x, y-2)$ in red on the Image $img$
+					\EndIf
+					\If{The pixel of coordinates $(x, y+1)$ is white or red}
+						\State Color the pixel of coordinates $(x, y+1)$ in red on the Image $img$
+						\State Color the pixel of coordinates $(x, y+2)$ in red on the Image $img$ 
+					\EndIf	
 				\EndIf	
 			\EndFor
 		\EndFor

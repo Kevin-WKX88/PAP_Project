@@ -1,6 +1,0 @@
-digraph "Line"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{Line\n||+ Line()\l+ getP1()\l+ getP2()\l+ setP1()\l+ setP2()\l+ setThickness()\l+ setColor()\l+ getColor()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

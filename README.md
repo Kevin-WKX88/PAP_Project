@@ -15,6 +15,9 @@ make
 + ./bin/exe
 Temps d'éxécution : environ 10 min
 
+# Pour générer la documentation avec doxygen
+cd docs && doxygen
+
 # Langage de programmation
 + C++
 
