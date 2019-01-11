@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  11 JAN 2019 12:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  11 JAN 2019 12:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -966,7 +966,7 @@ File: Images/DiagramUML.jpg Graphic file (type jpg)
 
 <use Images/DiagramUML.jpg>
 Package pdftex.def Info: Images/DiagramUML.jpg used on input line 138.
-(pdftex.def)             Requested size: 331.83388pt x 469.14444pt.
+(pdftex.def)             Requested size: 455.24408pt x 542.11691pt.
  [3 <./Images/DiagramUML.jpg>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 144.
@@ -978,7 +978,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--164
 [4]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 195.
- [5] <Images/BezierCurbe_problem.png, id=168, 365.365pt x 389.455pt>
+ [5] <Images/BezierCurbe_problem.png, id=170, 365.365pt x 389.455pt>
 File: Images/BezierCurbe_problem.png Graphic file (type png)
 
 <use Images/BezierCurbe_problem.png>
@@ -990,7 +990,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
-<Images/FRANCE_FontV1.jpeg, id=176, 1039.885pt x 244.915pt>
+<Images/FRANCE_FontV1.jpeg, id=178, 1039.885pt x 244.915pt>
 File: Images/FRANCE_FontV1.jpeg Graphic file (type jpg)
 
 <use Images/FRANCE_FontV1.jpeg>
@@ -1002,7 +1002,7 @@ Overfull \hbox (36.24435pt too wide) in paragraph at lines 262--263
  []
 
 [7 <./Images/FRANCE_FontV1.jpeg>]
-<Images/FontV2_O_Old.png, id=182, 180.675pt x 212.795pt>
+<Images/FontV2_O_Old.png, id=184, 180.675pt x 212.795pt>
 File: Images/FontV2_O_Old.png Graphic file (type png)
 
 <use Images/FontV2_O_Old.png>
@@ -1013,14 +1013,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
-<Images/FontV2_O.png, id=190, 173.64874pt x 214.8025pt>
+<Images/FontV2_O.png, id=192, 173.64874pt x 214.8025pt>
 File: Images/FontV2_O.png Graphic file (type png)
 
 <use Images/FontV2_O.png>
 Package pdftex.def Info: Images/FontV2_O.png used on input line 310.
 (pdftex.def)             Requested size: 156.28241pt x 193.32045pt.
 
-<Images/FRANCE_FontV2.jpeg, id=191, 1025.8325pt x 234.8775pt>
+<Images/FRANCE_FontV2.jpeg, id=193, 1025.8325pt x 234.8775pt>
 File: Images/FRANCE_FontV2.jpeg Graphic file (type jpg)
 
 <use Images/FRANCE_FontV2.jpeg>
@@ -1036,7 +1036,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 362--363
 
  []
 
-<Images/FRANCE_FontV3.jpeg, id=199, 517.935pt x 125.46875pt>
+<Images/FRANCE_FontV3.jpeg, id=201, 517.935pt x 125.46875pt>
 File: Images/FRANCE_FontV3.jpeg Graphic file (type jpg)
 
 <use Images/FRANCE_FontV3.jpeg>
@@ -1055,12 +1055,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 381.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 381.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: D206E29418147CF9F44E7F34DB5C76D3;1601.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 381.
  ) 
 Here is how much of TeX's memory you used:
  10788 strings out of 492995
  154832 string characters out of 6132705
- 258010 words of memory out of 5000000
+ 258016 words of memory out of 5000000
  14075 multiletter control sequences out of 15000+600000
  56990 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1079,10 +1083,10 @@ ts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
 blic/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
 tt12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on rapport.pdf (12 pages, 517010 bytes).
+Output written on rapport.pdf (12 pages, 517273 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
+ 270 PDF objects out of 1000 (max. 8388607)
+ 228 compressed objects within 3 object streams
  52 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 
