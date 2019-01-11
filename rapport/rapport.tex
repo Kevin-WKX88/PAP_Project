@@ -135,7 +135,7 @@ Nous allons tout d’abord présenter les classes de notre programme. Puis nous 
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.2]{Images/diagrammeUML.jpg}
+\includegraphics[scale=0.2]{Images/DiagramUML.jpg}
 \caption{Diagramme UML du programme}
 \label{fig1}
 \end{figure}
@@ -374,6 +374,8 @@ Les images générées ont tous une taille de 500x500 pixels. Donc l'algorithme 
 	\paragraph{\Huge{Conclusion}}
 
 	\paragraph{}
+	En conclusion, on a réussi à dessiner tous les contours des lettres, les remplir en noir et ajouter un contour rouge de deux pixels. Cependant, il y a encore beaucoup de choses qui peuvent être améliorées. Par exemple, les lettres compliquées sont un peu moins esthétiques et ce n’est pas très facile de dessiner les lettres qui contiennent beaucoup de courbes de Bezier. De plus, on a imposé une taille d'image de 500x500 pixels, donc il y a parfois des problèmes d'anti-aliasing.\\
 	
+	Au niveau de la programmation, l'algorithme de Casteljau peut présenter quelques erreurs d'approximations dans certains cas. En outre, il existe aussi des façons plus optimisés de coder l'algorithme seed fill, mais celle qu'on a utilisé est une version basique. 
 
 \end{document}

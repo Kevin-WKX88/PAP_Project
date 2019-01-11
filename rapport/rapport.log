@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  10 JAN 2019 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  11 JAN 2019 12:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -961,18 +961,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
 
-[2] <Images/diagrammeUML.jpg, id=144, 2734.215pt x 1644.1425pt>
-File: Images/diagrammeUML.jpg Graphic file (type jpg)
+[2] <Images/DiagramUML.jpg, id=144, 1659.19875pt x 2345.76375pt>
+File: Images/DiagramUML.jpg Graphic file (type jpg)
 
-<use Images/diagrammeUML.jpg>
-Package pdftex.def Info: Images/diagrammeUML.jpg used on input line 138.
-(pdftex.def)             Requested size: 546.83331pt x 328.82268pt.
-
-Overfull \hbox (63.13644pt too wide) in paragraph at lines 138--139
- [][] 
- []
-
-[3 <./Images/diagrammeUML.jpg>]
+<use Images/DiagramUML.jpg>
+Package pdftex.def Info: Images/DiagramUML.jpg used on input line 138.
+(pdftex.def)             Requested size: 331.83388pt x 469.14444pt.
+ [3 <./Images/DiagramUML.jpg>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 144.
 
@@ -1048,29 +1043,28 @@ File: Images/FRANCE_FontV3.jpeg Graphic file (type jpg)
 Package pdftex.def Info: Images/FRANCE_FontV3.jpeg used on input line 366.
 (pdftex.def)             Requested size: 310.76338pt x 75.28181pt.
  [10 <./Images/FRANCE_FontV3.jpeg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 379.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 379.
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
-(./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 379.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 379.
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 381.
+[11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 381.
+ (./rapport.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 381.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 381.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: D206E29418147CF9F44E7F34DB5C76D3;1601.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 379.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 381.
  ) 
 Here is how much of TeX's memory you used:
  10788 strings out of 492995
- 154842 string characters out of 6132705
+ 154832 string characters out of 6132705
  258010 words of memory out of 5000000
  14075 multiletter control sequences out of 15000+600000
  56990 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,10n,58p,470b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,10n,58p,529b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
 17/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-dist/
@@ -1085,7 +1079,7 @@ ts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
 blic/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
 tt12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on rapport.pdf (12 pages, 1115097 bytes).
+Output written on rapport.pdf (12 pages, 517010 bytes).
 PDF statistics:
  268 PDF objects out of 1000 (max. 8388607)
  227 compressed objects within 3 object streams
